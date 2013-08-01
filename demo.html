@@ -5,12 +5,12 @@
 		<title> Demo | Responsive Web</title>
 		<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
 		<link href="styles/main.css" type="text/css" rel="stylesheet">
-		<!--[if lt IE 9]>
 		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-		<![endif]-->
+
 		<script type='text/javascript' src='scripts/respond.min.js'></script>
-  	<script type="text/javascript" src="http://cunlock.localhost.com/cuconfig.js"></script>
+  	<script type="text/javascript" src="http://192.168.1.215/cuconfig.js"></script>
   	<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+  	<script type="text/javascript" src="https://voter-infotool.appspot.com/js/loader.js"></script>
 	</head>
 	<body>
 
@@ -52,35 +52,8 @@
 				<h1>Sub-section</h1>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 			</aside>
-
+			<div id="_vit"></div>
+			<script type="text/javascript">vit.load();</script>
 		</div>
-		<script type="text/javascript">
-			var widthHash = {}
-			window.onload = function () {
-				widthHash['cunlock_main_content'] = DomHandler.$('.cunlock_main_content')[0].offsetWidth;
-			}
-			window.onresize = function () {
-				var width = DomHandler.$('.cunlock_main_content')[0].offsetWidth;
-				if(width !== widthHash['cunlock_main_content']){
-					var wrapperDiv = DomHandler.$(".cunlock_wrapper")[0];
-					wrapperDiv.style.width = width + "px";
-					var videoDiv = DomHandler.$('#content_unlock_added_text');
-					videoDiv.style.width = width + "px";
-					var videoDiv = DomHandler.$('.cunlock_panelcontent')[0];
-					videoDiv.style.width = width + "px";
-					videoDiv.style.height = (videoDiv.offsetWidth * (9/16)) + "px";
-					var videoDiv = DomHandler.$('.cunlock_contentgoeshere')[0];
-					videoDiv.style.width = width + "px";
-					videoDiv.style.height = (videoDiv.offsetWidth * (9/16)) + "px";
-					var div1 = DomHandler.$("#cuplayer_alt");
-					div1.style.height = (div1.offsetWidth * 9/16) + "px";
-					div1 = DomHandler.$("#cunlock_skip_ad_container")
-
-					div1 = DomHandler.$(".cunlock_branding")[0];
-					div1.style.width = width + "px";
-					widthHash['cunlock_main_content'] = width;
-				}
-			}
-		</script>
 	</body>
 </html>
