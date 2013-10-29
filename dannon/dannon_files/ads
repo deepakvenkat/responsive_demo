@@ -1,0 +1,27 @@
+{
+var viewReq = new Array();function vu(u) {var i=new Image();i.src=u.replace("&amp;","&");viewReq.push(i);}
+var google_ads = new Array();
+var google_ad;
+var google_radlinks = new Array();
+var google_radlink;
+var google_info = new Object();
+google_ad = {}; 
+google_ad.n = 1; 
+google_ad.type = "html"; 
+google_ad.bidtype = "CPM"; 
+google_ad.targeting_type = ""; 
+google_ad.url = "http://adclick.g.doubleclick.net/aclk?sa=l&amp;ai=CiSYnAq3uUayaELHV0AG_sYDoC5fj4P0Cz5SjwRvRp529KBABIABQgMfhxARgycapi8Ck2A-CARdjYS1wdWItOTQ2NDMyMTc5ODM1OTQ2N6AB3_XL6QPIAQmoAwGqBIoBT9BgBGxI8cMGbOr8Lgc4JcqjViLgdgnRbYaj4mU36R3LYrAYRVAsMAf-rFPnRri_VlQEqpXeBYeGzDlkpiY0QSUP1gKzm3p-24utqyWtp2ipJhDXaOcc-qlTUoIvNEKZk70IFCHr1rpJv-5joJrTXfdth3HKkdiLxAsimdmjljLaFdN-rHJjnqjkgAbA0eC19ZiBiB4&amp;num=1&amp;sig=AOD64_1099bezr_r8nBc9nW-e5D4MhYGSw&amp;client=ca-pub-9464321798359467&amp;adurl="; 
+google_ad.visible_url = "http://ignore_this_destination.com"; 
+google_ad.snippet = "\x3ciframe width\x3d\x22728\x22 height\x3d\x2290\x22                             frameborder\x3d\x220\x22 marginwidth\x3d\x220\x22 marginheight\x3d\x220\x22                             vspace\x3d\x220\x22 hspace\x3d\x220\x22 allowtransparency\x3d\x22true\x22                             scrolling\x3d\x22no\x22 src\x3d\x22http://as.chango.com/links/adxunit/1374596354477?tkn\x3daf65363a-f276-11e2-b9cc-0025900dd24c\x26poo\x3dp\x26cy\x3dUS\x26cu\x3dhttp://adclick.g.doubleclick.net/aclk%3Fsa%3Dl%26ai%3DCiSYnAq3uUayaELHV0AG_sYDoC5fj4P0Cz5SjwRvRp529KBABIABQgMfhxARgycapi8Ck2A-CARdjYS1wdWItOTQ2NDMyMTc5ODM1OTQ2N6AB3_XL6QPIAQmoAwGqBIoBT9BgBGxI8cMGbOr8Lgc4JcqjViLgdgnRbYaj4mU36R3LYrAYRVAsMAf-rFPnRri_VlQEqpXeBYeGzDlkpiY0QSUP1gKzm3p-24utqyWtp2ipJhDXaOcc-qlTUoIvNEKZk70IFCHr1rpJv-5joJrTXfdth3HKkdiLxAsimdmjljLaFdN-rHJjnqjkgAbA0eC19ZiBiB4%26num%3D1%26sig%3DAOD64_1099bezr_r8nBc9nW-e5D4MhYGSw%26client%3Dca-pub-9464321798359467%26adurl%3D\x26uid\x3daf65363a-f276-11e2-b9cc-0025900dd24c\x26ts\x3d1374596354476\x26adpos\x3d2\x26lp\x3df\x26sid\x3d9da9cb20-f3b3-11e2-9750-00259037fe86\x26dc\x3ds5eM\x26ht\x3d90\x26da\x3d10098\x26dma\x3d501\x26cid\x3d12940\x26cat\x3d%5B%5D\x26mw\x3d0.333333333333\x26eid\x3dAdX\x26mr\x3d0.25\x26ebp\x3dp2FnfIaeo311Y2qmfA\x26uf\x3d1\x26bidder\x3dbidder42-east\x26kwid\x3d11496888\x26uiof\x3d1\x26is\x3df\x26agid\x3d20336\x26meta\x3d\x26im\x3dFalse\x26oad\x3ddefault-20120719%3A3%2C3%2C0.0000\x26atid\x3d39495\x26stid\x3dnymag.com\x26rg\x3dNY\x26sig\x3dca429eeb8a9a160bb1b41606b0870b6d\x26kwtp\x3d8606634\x26dsi\x3dnymag.com\x26new\x3d2\x26ct\x3dNEW+YORK\x26bm\x3d5.30256810768\x26wh\x3d728\x26adid\x3d140624\x26wp\x3dUe6tAgAEDSwKNCqxvQAYvwH2r-3kkGiUUhoIdw\x26datc\x3dwashington\x26ibs\x3dTrue\x26kf\x3d0\x26dom\x3dnymag.com\x26url\x3dhttp%3A%2F%2Fnymag.com%2Fnews%2Fintelligencer%2Fdrew-ramsey-kale-2013-7%2F\x26atype\x3dIMMEDIATE\x26st\x3durl_parse\x26anon\x3dFalse\x26kw\x3d1qWZw3TbzrK3mKyQr4Liqg\x22\x3e                         \x3c/iframe\x3e"; 
+google_ad.snippet ="\x3cscript\x3evu(\x22http://googleads.g.doubleclick.net/pagead/adview?ai\x3dCiSYnAq3uUayaELHV0AG_sYDoC5fj4P0Cz5SjwRvRp529KBABIABQgMfhxARgycapi8Ck2A-CARdjYS1wdWItOTQ2NDMyMTc5ODM1OTQ2N6AB3_XL6QPIAQmoAwGqBIoBT9BgBGxI8cMGbOr8Lgc4JcqjViLgdgnRbYaj4mU36R3LYrAYRVAsMAf-rFPnRri_VlQEqpXeBYeGzDlkpiY0QSUP1gKzm3p-24utqyWtp2ipJhDXaOcc-qlTUoIvNEKZk70IFCHr1rpJv-5joJrTXfdth3HKkdiLxAsimdmjljLaFdN-rHJjnqjkgAbA0eC19ZiBiB4\x26sigh\x3dBwR7I14dZ0Y\x22);\x3c/script\x3e" +google_ad.snippet;
+google_ads[0] = google_ad; 
+google_info.feedback_url = "http://www.google.com/url?ct\x3dabg\x26q\x3dhttps://www.google.com/adsense/support/bin/request.py%3Fcontact%3Dabg_afc%26url%3Dhttp://nymag.com/news/intelligencer/drew-ramsey-kale-2013-7/%26gl%3DUS%26hl%3Den%26client%3Dca-pub-9464321798359467%26ai0%3DCiSYnAq3uUayaELHV0AG_sYDoC5fj4P0Cz5SjwRvRp529KBABIABQgMfhxARgycapi8Ck2A-CARdjYS1wdWItOTQ2NDMyMTc5ODM1OTQ2N6AB3_XL6QPIAQmoAwGqBIoBT9BgBGxI8cMGbOr8Lgc4JcqjViLgdgnRbYaj4mU36R3LYrAYRVAsMAf-rFPnRri_VlQEqpXeBYeGzDlkpiY0QSUP1gKzm3p-24utqyWtp2ipJhDXaOcc-qlTUoIvNEKZk70IFCHr1rpJv-5joJrTXfdth3HKkdiLxAsimdmjljLaFdN-rHJjnqjkgAbA0eC19ZiBiB4\x26usg\x3dAFQjCNHt6e2VONqgE2tUaMZbcckD-v2Wbg";
+var google_attribution_text = "AdChoices";
+var google_is_rtl = false;
+if (window.google_ad_request_done) {
+google_ad_request_done(google_ads);
+}
+if (window.google_radlink_request_done) {
+google_radlink_request_done(google_radlinks);
+}
+}

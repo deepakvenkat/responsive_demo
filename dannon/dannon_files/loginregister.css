@@ -1,0 +1,319 @@
+
+
+
+#fb-forgot-litebx .status-wrp {left:355px;top:40px;width:50px;}
+.fb-forgot {padding-left:67px;}
+.fb-forgot input.submit {width:134px !important;max-width:134px !important;}
+.fb-forgot .forgot-thanks input.submit {width:155px !important;max-width:155px !important;margin-bottom:21px;}
+
+
+.fb_login a.login-lightbox {
+    background: url("./dannon_files/fbLogin.png") no-repeat scroll 0 0 transparent !important;
+    display: block;
+    height: 18px;
+    text-indent: -999em;
+    width: 66px;
+}
+
+.jqmOverlay { background-color: #373737; display: none; z-index: 5999 !important; }
+
+#popup-lightbox { display:none; position:absolute; color:#000; overflow:hidden; z-index: 9999; border: 8px solid rgba(0,0,0,0.4); width: 577px; background: rgba(0,0,0,0.4); min-height:0; font-family:Arial,Helvetica,Verdana,Geneva,sans-serif; border-radius:10px; -webkit-border-radius:10px; -moz-border-radius:10px; -moz-background-clip:padding; -webkit-background-clip:padding; background-clip: padding-box; overflow:visible; line-height:1.3em; }
+#popup-lightbox .litebx-content { border-radius:4px; -moz-border-radius:4px; -webkit-border-radius:4px; background:#fff; height:100%; position:relative; }
+#popup-lightbox .head { padding:0; height:auto; margin:12px 30px 20px; position:static;  }
+#popup-lightbox .head:after { content:".";display:block;height:0;clear:both;visibility:hidden; }
+#popup-lightbox .head h1, #utilities #popup-lightbox .head h1 { color:#111; font-size:24px; height:auto; overflow:visible; letter-spacing: -0.015em; text-align:left; }
+#utilities #popup-lightbox .head h1 { margin:0 !important; padding:0 0 10px; border-bottom:1px solid #dddddd; line-height:1em; width:auto; }
+#popup-lightbox .head h5 { background:url(/gfx/sect/registration/login-close-btn.png) 0 0 no-repeat; width:33px; height:33px; border:0; right:-18px; top:-18px; cursor: pointer; margin:0; position: absolute; text-indent: -9999em; }
+#popup-lightbox .lightbox-utilities { background:#242424; text-align:center; padding:12px 0; border-top-left-radius:3px; border-top-right-radius:3px; -moz-border-radius-topleft:3px; -moz-border-radius-topright:3px; -webkit-border-top-left-radius:3px; -webkit-border-top-right-radius:3px; }
+#popup-lightbox .lightbox-utilities ul { margin:0 auto; padding:0; width:258px; }
+#popup-lightbox .lightbox-utilities ul:after { content:".";display:block;height:0;clear:both;visibility:hidden; }
+#popup-lightbox .lightbox-utilities li { margin:0; padding:1px 13px 0; display:inline-block; border-right:1px solid #525252; float:left; height:13px;  }
+#popup-lightbox .lightbox-utilities li.first { padding-left:0; }
+#popup-lightbox .lightbox-utilities li.last { border:0; padding-right:0; }
+#popup-lightbox .lightbox-utilities li a { background:url(/gfx/sect/registration/login-utilities-nav.png) 0 0 no-repeat; text-indent:-9999em; display:block; outline:none; }
+#popup-lightbox .lightbox-utilities li a.nymag { background-position:0 -1px; width:74px; height:14px; }
+#popup-lightbox .lightbox-utilities li a.vulture { background-position:-101px 0; width:47px; height:11px; }
+#popup-lightbox .lightbox-utilities li a.grubstreet { background-position:-176px -1px; width:82px; height:11px; }
+#login-litebx .form-wrp { padding:0 30px 30px 57px; position:relative; }
+#popup-lightbox input.submit { width:auto; max-width:250px; padding:4px 6px 6px; height:30px; }
+#popup-lightbox .form-footer a { text-decoration:none; font-weight:bold; }
+#popup-lightbox .form-footer a span { color:#111; font-weight:normal; }
+#popup-lightbox a { text-decoration:none; color: #1F638A !important; font-weight:bold; }
+#popup-lightbox a:hover { text-decoration: underline; }
+#popup-lightbox .login-reg .submit-btn { padding: 12px 0 0 !important; }
+
+.login-reg h2 { font-size: 15px; font-weight: bold; margin: 0; padding: 0 0 6px; }
+.login-form .form-wrp-left { width:242px; padding-bottom:5px; border-right: 1px solid #E2E3E3; float: left; margin-right: 21px; padding-top: 5px; }
+.login-form .form-wrp-right { float: left; padding: 5px 0 0; width: 208px; }
+.login-form form { clear:both; }
+.login-reg .input-txt .input-wrp { width:204px; clear:both; border-color:#BBBBBB #E0E0E0 #E0E0E0 #BBBBBB; border-style: solid; border-width: 1px; padding:5px 6px; }
+.login-reg .input-txt .input-wrp input { width:204px; border-width: 0; color:#000; padding:0; }
+.login-reg p { color: #7D7D7D; font-family: Verdana,sans-serif; font-size: 10px; line-height: 14px; margin: 0; padding: 0 0 12px !important; }
+.login-reg p.terms { position:absolute;bottom:23px;width:200px; }
+.login-reg p.terms a { font-weight:normal !important;  }
+.login-reg p.note { color: #7D7D7D; font-style: italic; }
+.login-reg label { color: #5D5D5F; display: block; float: left; font: bold 10px Verdana,sans-serif; margin: 9px 9px 4px 0; text-align: left; }
+.login-reg label input { margin-left:0; left:-1px; position:relative; }
+.login-reg label span { font-weight:normal; }
+.login-form .form-wrp-left h2 { float:left; }
+.login-form a.more { font-family: Verdana,sans-serif; font-size: 10px; margin: 22px 0 0; display:block; }
+.login-form a.more span { color:#000; }
+.login-form a.forgot { border-left: 1px solid #C0C0C0; display: block; float: left; font-family: Verdana,sans-serif; font-size: 10px; line-height: 16px; margin-top: 10px; padding: 0 0 1px 8px; font-weight:normal !important; }
+.login-form ul { margin:0; padding:0; list-style: none; }
+.fbbutton-wrp { padding: 6px 0 12px; }
+.fbbutton-wrp a { background:url("./dannon_files/fbLogin-large.png") no-repeat scroll 0 0 transparent; display:block; height:23px; width:168px; overflow:hidden; text-indent:-10000px; }
+#login-litebx.litebx-content #reg-login-form .status-wrp { position:relative; left:0; background:url("/gfx/sect/registration/ico-error.png") no-repeat scroll 0 50% transparent; color:#C56A76; width:195px; font:bold 11px Arial,sans-serif; padding:8px 0 4px 23px; display:none; }
+
+.info-hover { background: url("http://nymag.com/gfx/urr/info-hover.gif") no-repeat scroll 0 0 transparent; cursor: pointer; float:left; height: 12px; margin: 2px 0 0 5px; position: relative; width: 12px; }
+.info-hover-box { background: url("http://nymag.com/gfx/urr/urr-info-hover-bg.gif") no-repeat scroll 0 0 transparent; color: #FFFFFF; display: none; font-family: Verdana,Arial,Helvetica,sans-serif; font-size: 11px; height: 42px; left: 0; line-height: 14px;  padding: 9px 10px 23px 20px; position: absolute; text-transform: none; top:-25px; left:15px; width: 133px; }
+.info-hover.hover .info-hover-box { display:block; }
+#remember-wrp label { font-weight:normal; }
+.login-reg .submit-btn input.submit { -moz-border-radius:2px; -webkit-border-radius:2px; border-radius:2px; }
+
+#popup-lightbox .submit-btn .input-wrp { padding-right: 47px; position: relative; }
+
+.login-reg .submit-btn input.submit { background: url("/gfx/comments/login-btn-bg.gif") repeat-x scroll 0 0 transparent !important; border: 1px solid #DFDFDF; color: #1F638A; cursor: pointer; display: block; font: bold 11px Verdana,sans-serif; overflow: visible; padding: 6px 0; text-transform: uppercase; }
+.login-reg .submit-btn input.submit:hover { border-color:#BBB; }
+
+#popup-lightbox .create-account .head { border:0; margin: 20px 30px 15px 40px; }
+#popup-lightbox .create-account .head h1 { width:400px; padding:10px 0 0 15px !important; float:left; margin:0; height:34px; line-height:1em; border:0 !important; text-align: left; }
+#popup-lightbox .existing .head { margin-bottom: 20px; }
+#popup-lightbox .existing .head h1 { width:485px; height:auto; line-height:1.1em !important; }
+#popup-lightbox .existing li a { text-decoration:none; }
+#popup-lightbox .create-account li a:hover { text-decoration:underline !important; }
+#popup-lightbox .create-account .head .fb-pic { float:left; width:50px; height:50px; padding-right:15px; border-right:1px solid #e4e4e4; }
+#popup-lightbox .create-account .form-wrp { padding:0 90px; margin:0 30px; }
+#popup-lightbox .create-account .login-reg { clear:both; }
+#popup-lightbox .create-account .login-reg form { margin-bottom:60px; }
+#popup-lightbox .create-account .login-reg li { float:none; }
+#popup-lightbox .create-account .login-reg label { float:none; font-weight:normal; font-family:Verdana, Helvetica, sans-serif; font-size:12px; color:#111; }
+#popup-lightbox .create-account .login-reg label span { font-weight:bold; }
+#popup-lightbox .create-account .login-reg .input-txt .input-wrp { width:320px; }
+#popup-lightbox .create-account .login-reg .input-txt .input-wrp input { font-size:19px; width:320px; }
+#popup-lightbox .create-account .login-reg .submit-btn { padding:18px 0 0 !important; width:200px; }
+#popup-lightbox .existing .login-reg .submit-btn { padding:18px 0 0 !important; width:150px; }
+#popup-lightbox .create-account .login-reg #email_address-wrp { margin-bottom:17px; display:none; }
+#popup-lightbox .create-account .login-reg #username-wrp-wrp { margin-top:15px; }
+#popup-lightbox .create-account .login-reg #nymemployee-wrp-wrp { margin:5px 0 15px; display:none; }
+#popup-lightbox .create-account .login-reg #nymemployee-wrp-wrp .input-employee { float:left; display:block; width:166px; }
+#popup-lightbox .create-account .login-reg #nymemployee-wrp-wrp .input-employee.first { margin-right:5px; }
+#popup-lightbox .create-account .login-reg #nymemployee-wrp-wrp .input-employee label { font-size:11px; }
+#popup-lightbox .create-account .login-reg #nymemployee-wrp-wrp .input-employee .input-wrp { width:150px; border-color: #BBBBBB #E0E0E0 #E0E0E0 #BBBBBB; border-style: solid; border-width: 1px; clear: both; padding: 5px 6px; }
+#popup-lightbox .create-account .login-reg #nymemployee-wrp-wrp .input-employee .input-wrp input { width:150px; background:url(/gfx/sect/registration/input-bg-employee.png) center 8px no-repeat; border-width: 0; color: #000000; padding: 0; font-size:19px; }
+#updates-wrp label { margin:15px 0 0; font-size:11px !important; }
+#updates-wrp label span, #terms-wrp label span, #newsletter-wrp label span, #tos-wrp label span, #remember-wrp label span { height: 15px; line-height: 16px; vertical-align: top; font-weight:normal !important; padding-left:5px; }
+#remember-wrp label span { line-height:19px; }
+#terms-wrp { position:relative; }
+#terms-wrp #login_status { width:150px; left:272px !important; background: url("/gfx/sect/registration/ico-error.png") no-repeat scroll 0 5px transparent; clear: both; color: #C74657; display: block; font-size: 11px; font-weight: bold; height: auto; line-height: 1.3em; padding: 8px 0 0 25px; display:none; top:-5px; }
+#terms-wrp label { margin:2px 0 0; font-size:11px !important; }
+#terms-wrp label a { text-decoration:none; font-weight:bold; }
+#popup-lightbox .form-footer { font-family:Arial,Helvetica,sans-serif; font-size:15px; margin:0 30px; padding: 18px 28px 30px; color:#111; border-top:1px solid #ddd; line-height: 1.3em; }  
+#popup-lightbox .create-account .login-reg .status-error { padding:0; background:none; }
+#popup-lightbox .create-account .login-reg .status-error label { color:#c74657; }
+#popup-lightbox .create-account .login-reg .status-error a { text-decoration:none; }
+#popup-lightbox .create-account .login-reg .status-error .input-wrp { border:1px solid #ebbac0; }
+#popup-lightbox .create-account .login-reg .status-error.status-wrp { display:block; clear:both; position:relative; left:-24px; height:auto; width:350px; padding:0; color:#c74657; font-weight:bold; background:url("/gfx/sect/registration/ico-error.png") no-repeat 1px 7px; padding:8px 0 0 25px; font-size:11px; line-height:1.6em; }
+#popup-lightbox .create-account .login-reg .status-error .status-wrp span { color:#161616; }
+#popup-lightbox .create-account .login-reg .paren { font-weight:normal; }
+#popup-lightbox .create-account .login-reg .status-error .paren { color:#000; font-weight:normal; }
+#popup-lightbox .create-account .login-reg #login_status { position:relative;display:block;left:-24px; }
+#popup-lightbox .create-account .newsletters .status-error.status-wrp { position: absolute; bottom:0; left:318px; width:150px; line-height:12px; }
+
+/* REGISTRATION FORM */
+
+.reg-form ul { list-style: none; }
+.reg-form li {padding:0 0 17px!important;margin:0!important;}
+.reg-form ul li label,
+.reg-form ul li.input-txt label,
+.reg-form ul li.input-radio label,
+.reg-form ul li.focus label {display:block; float:left;font-size:11px; margin:6px 9px 0 0; text-align:right; width:135px; }
+
+.reg-form li.input-radio label {margin-top: 1px;}
+.reg-form li.input-radio .input-wrp label {text-align:left;width:auto;}
+.reg-form li.input-radio li {display:inline-block!important;margin:0;float:none;}
+
+.reg-form input[type="checkbox"] {margin:0;}
+
+.reg-form .status-wrp { height:14px;position: absolute; left: 505px; width: 230px; padding: 8px 0 4px 23px; font: 11px Arial, sans-serif; font-weight:bold; color: #5b5b5b;}
+.reg-form #tos-wrp .status-wrp {left:482px;margin-top:3px;}
+.reg-form #gender-wrp {position:relative}
+.reg-form #gender-wrp .status-wrp {top:-4px; left:388px; }
+.reg-form #captcha_status {top:20px;left:-10px;}
+.reg-form .status-error {background: url(/gfx/sect/registration/ico-error.png) no-repeat 0 65%;color:#c56a76;}
+.reg-form .status-ok {background: url(/gfx/sect/registration/ico-ok.png) no-repeat 0 50%; text-indent: -999em;}
+.reg-form .status-wrp img {margin-left:-25px;}
+
+.reg-form #password-wrp-wrp ul { padding:0; margin:0; }
+
+.reg-form li#remember-wrp,
+.reg-form li#remember-wrp label {margin-top:0;font-size:9px;font-weight:normal;color:#444;}
+.reg-form li#remember-wrp {padding-top:6px;width:100%;}
+.reg-form li#remember-wrp label {margin-top:3px;}
+.reg-form li#remember-wrp input {margin-left:0;margin-top:0;vertical-align: middle;}
+
+
+.reg-form #membername-wrp input {background:#fff url(/gfx/sect/registration/input-bg-username.png) no-repeat scroll 0 2px;}
+.reg-form #password-wrp input {background:#fff url(/gfx/sect/registration/input-bg-password.png) no-repeat scroll 0 2px;}
+.reg-form #nymfirst-wrp input,
+.reg-form #nymlast-wrp input {background:#fff url(/gfx/sect/registration/input-bg-nymemployee.png) no-repeat scroll 0 2px;}
+
+.reg-form #captcha-wrp label {margin-top:73px !important;}
+.reg-form ul li.input-checkbox {padding-bottom:5px!important;margin:0;padding-left:145px!important;}
+.reg-form ul li.input-radio label {margin-top:0;}
+.reg-form li#captcha-wrp {padding-bottom:6px; position:relative;}
+.reg-form #captcha-wrp #captcha_id {float:left;text-align:center;width:230px;}
+.reg-form #refreshCaptcha {padding-bottom:8px;}
+.reg-form #captcha_img {display:block;width:228px;height:39px;border:2px solid #ccc;background:#ccc;}
+.reg-form #captcha-wrp #captcha_id p {margin:3px 0 0;clear:both;text-align:right;}
+.reg-form ul li.input-checkbox label {display:block;margin:0;padding:10px 0 0;width:400px;text-align:left;font-weight:normal;color:#222;}
+.reg-form ul li.submit-btn {margin-bottom:0;padding:15px 0 30px 145px!important;width:135px;}
+.reg-form .submit-btn input.submit {width:87px;}
+.reg-form #newsletter-wrp, .reg-form #tos-wrp { padding-bottom: 0 !important; }
+.reg-form #newsletter-wrp label { padding-top:0; }
+
+.reg-form #password-wrp-wrp,
+.reg-form #nymemployee-wrp-wrp,
+#popup-lightbox .fb-box #nymemployee-wrp-wrp,
+.reg-form #gender-wrp {padding-bottom:0!important;width:100%;}
+.reg-form #nymemployee-wrp-wrp {width:402px;}
+
+#popup-lightbox .back {position:absolute;right:35px;font-weight:bold;text-transform:uppercase;top:5px;padding:7px 10px 5px;border-right:1px solid #6ed2ef;line-height:1em;}
+
+#popup-lightbox.reg-box-wrp { width:738px; }
+#popup-lightbox.reg-box-wrp .head { padding:0 0 10px; zoom:1; border-bottom: 1px solid #dbdbdb; }
+#popup-lightbox.reg-box-wrp h1 { float:left; width:250px; padding:0 0 0 16px !important; border-bottom:0 !important; margin:0; line-height:1em; }
+#popup-lightbox.reg-box-wrp .fbbutton-wrp { float:right; position:relative; top:0; padding:0; }
+#popup-lightbox.reg-box-wrp div.fbbutton-wrp { width:365px; }
+#popup-lightbox.reg-box-wrp .fbbutton-wrp .fb-txt { font-size:12px; color:#5671a9; font-weight:bold; margin-right:7px; top:4px; position:relative; float:left; }
+#popup-lightbox.reg-box-wrp .reg-form { height:auto; }
+#popup-lightbox.reg-box-wrp .reg-form ul { padding:0; margin:0; }
+#popup-lightbox.reg-box-wrp .reg-form li { width:380px; }
+#popup-lightbox.reg-box-wrp .reg-form li label {  }
+#popup-lightbox.reg-box-wrp .reg-form #gender-wrp .input-wrp li { width:67px; padding-left:5px !important; }
+#popup-lightbox.reg-box-wrp .reg-form #gender-wrp .input-wrp li label { margin:0; }
+#popup-lightbox.reg-box-wrp .reg-form .submit-btn { padding:15px 0 40px 145px !important; margin-bottom: 30px; }
+#popup-lightbox.reg-box-wrp .reg-form .submit-btn .input-wrp { width:88px; }
+#popup-lightbox.reg-box-wrp .form-wrp { padding:4px 0 0 118px; }
+#popup-lightbox.reg-box-wrp .form-wrp .input-txt .input-wrp { width:218px; float:left; clear:none; }
+#popup-lightbox.reg-box-wrp .form-wrp .input-txt .input-wrp input { width:218px; }
+#popup-lightbox.reg-box-wrp .form-wrp #nymemployee-wrp-wrp {padding:0 !important; display:none; }
+#popup-lightbox.reg-box-wrp .form-wrp a { text-decoration:none; }
+#login-litebx.litebx-content .status-wrp, div#popup-lightbox #login_status { left:382px; padding-top: 8px; position: absolute; }
+#popup-lightbox.reg-box-wrp .reg-form .status-wrp { width:135px; }
+#popup-lightbox.reg-box-wrp .reg-form #tos-wrp .status-wrp { left: 617px; margin-top: 3px; }
+#popup-lightbox.reg-box-wrp .reg-form #captcha-wrp #captcha_id p { padding-bottom:6px !important; }
+#popup-lightbox.reg-box-wrp .reg-form #newletter-wrp label { padding-top:2px; }
+
+#popup-lightbox .logged-in .head h1 { padding:0 0 0 15px !important; max-width:420px !important; }
+#popup-lightbox .logged-in .head h3 { font-size:14px; float:left; width:408px; margin:7px 0 0; padding:0 0 0 15px; font-weight:normal; letter-spacing: 0.01px; }
+#popup-lightbox .logged-in .head h3 a { text-decoration:none; }
+#popup-lightbox .logged-in .form-wrp { padding:0 25px; }
+#popup-lightbox .logged-in .login-reg .form-footer { padding: 18px 0 22px; text-align:center; margin:0 30px; width:auto; }
+#popup-lightbox .logged-in .login-reg .form-footer a { font-weight:normal; }
+#popup-lightbox .logged-in .login-reg .form-footer .closelightbox { font-weight:normal; color:#1F638A; cursor: pointer; padding:2px 2px 0; }
+#popup-lightbox .logged-in .login-reg .form-footer h5 { margin:0; padding:0; font-size:14px; }
+
+#popup-lightbox .newsletters p { font-size:14px; line-height:20px; font-family:Arial,Helvetica,sans-serif; color:#111; padding:20px 0 !important; text-align: center; }
+#popup-lightbox .newsletters.login-reg .newsletter-option { width:200px; float:left; display:block; clear:none; }
+#popup-lightbox .newsletters.login-reg .newsletter-option.first {margin:0 35px 0 7px; }
+#popup-lightbox .newsletters.login-reg .newsletter-option img { border:1px solid #cbcbcb; box-shadow:1px 1px 3px #CCCCCC; margin-bottom:10px; }
+#popup-lightbox .newsletters.login-reg .submit-btn { text-align: center; width:100%; padding-top:20px !important; display:block; clear: both; }
+#popup-lightbox .newsletters.login-reg .submit-btn .input-wrp { padding:0; }
+#popup-lightbox .newsletters.login-reg .submit-btn .input-wrp input { display:inline; }
+#popup-lightbox .newsletters.login-reg form { margin-bottom:23px; position:relative; }
+#popup-lightbox .newsletters.login-reg label { font-size:16px; font-weight:bold; color:#1f638a; font-family:Arial,Helvetica,sans-serif; margin:0 0 2px; width:200px; }
+#popup-lightbox .newsletters ul { margin:0; padding:0; }
+#popup-lightbox .newsletters li { font-size:11px; font-family:Georgia,serif; line-height:15px; }
+
+#popup-lightbox.reg-box-wrp .thank-you .head h1 { width:100%; float:none; text-align:center !important; color:#00bcf4 !important; padding:10px 0 !important; line-height:24px; letter-spacing: 0 !important; }
+#popup-lightbox.reg-box-wrp .thank-you h2 { font-size:16px; text-align:center; margin: 7px 0 18px; }
+#popup-lightbox.reg-box-wrp .thank-you .newsletters p { padding:5px 0 25px !important; }
+#popup-lightbox.reg-box-wrp .thank-you .form-wrp { padding:0 50px; }
+#popup-lightbox.reg-box-wrp .thank-you .newsletters.login-reg form { margin-bottom:45px; position:relative; }
+#popup-lightbox.reg-box-wrp .thank-you .newsletters.login-reg .newsletter-option, #popup-lightbox.register .thank-you .newsletters.login-reg .newsletter-option.first { margin:0 18px 0 0; }
+#popup-lightbox.reg-box-wrp .thank-you .newsletters.login-reg .newsletter-option.last { margin:0; }
+#popup-lightbox.reg-box-wrp .thank-you #reg_newsletter_status { color:#C56A76; font-weight:bold; position:absolute; bottom:-27px; left:192px; padding:0 0 0 23px; height:17px; line-height:19px; }
+#popup-lightbox.reg-box-wrp .thank-you .status-error { background:transparent url(/gfx/sect/registration/ico-error.png) no-repeat 0 0; }
+#popup-lightbox .thank-you .login-reg .form-footer { padding: 15px 28px 20px; text-align:center; }
+#popup-lightbox .thank-you .login-reg .form-footer h5 { margin:10px 0; font-weight:normal; color:#1F638A; cursor: pointer; padding:2px 2px 0; font-size:14px; }
+
+#utilities #popup-lightbox .forgot-password .head h1 { padding-bottom:17px !important; border-bottom-color: #e2e3e3; }
+#popup-lightbox .forgot-password .form-wrp { padding:25px 0 50px 170px; min-height:185px; }
+#popup-lightbox .forgot-password .form-wrp h3 { font-size:16px; margin-bottom:4px; }
+#popup-lightbox .forgot-password .form-wrp p { font-size:12px; }
+#popup-lightbox .forgot-password .form-wrp .login-btn { background: url("/gfx/comments/login-btn-bg.gif") repeat-x scroll 0 0 transparent !important; border: 1px solid #DFDFDF; color: #1F638A; cursor: pointer; font: bold 11px Verdana,sans-serif; overflow: visible; padding: 6px 6px 7px; text-transform: uppercase; border-radius: 2px 2px 2px 2px; width:130px; display:block; text-align:center; text-decoration:none; margin-top:15px; }
+#popup-lightbox .forgot-password .form-wrp a.login-btn:hover { border:1px solid #bbb; }
+#popup-lightbox .forgot-password #login_status { left:398px; top:52px; width:100px; }
+#popup-lightbox .forgot-password .submit-btn { clear:both; }
+#popup-lightbox .forgot-password .form-wrp .more { margin:40px 0 0; display: block; }
+#popup-lightbox .forgot-password #membername-wrp { position:relative; }
+#popup-lightbox .forgot-password .status-wrp { background:url("/gfx/sect/registration/ico-error.png") no-repeat scroll 0 5px transparent; color:#C56A76; width:135px; position:absolute; left:226px; font:bold 11px Arial,sans-serif; padding:8px 0 4px 23px; display:none; top:28px;  }
+
+#popup-lightbox .welcome-back .form-wrp { min-height: 130px; }
+#popup-lightbox .welcome-back .form-wrp h3 { font-weight:normal; font-size:18px; margin:20px 0; line-height:1em; }
+#popup-lightbox .welcome-back .form-wrp h3 span { font-size:11px; line-height:1em; }
+#popup-lightbox .welcome-back .form-wrp .login-btn { border: 1px solid #DFDFDF; color: #1F638A; cursor: pointer; font: bold 11px Verdana,sans-serif; overflow: visible; padding:0; text-transform: uppercase; border-radius: 2px 2px 2px 2px; -moz-border-radius:2px; -webkit-border-radius:2px; width:130px; display:block; background: url("/gfx/sect/registration/login-fb-account-btn.png") 0 0 no-repeat; text-indent:-9999em; width:216px; height:28px; margin-bottom: 20px; }
+#popup-lightbox .welcome-back .form-wrp a.login-btn:hover { border:1px solid #bbb; }
+#popup-lightbox .welcome-back .login-diff-account { font-size:10px; font-family:Verdana, sans-serif; font-weight:normal; line-height: 1em; }
+
+#updates-wrp label span, #terms-wrp label span, #newletter-wrp label span, #tos-wrp label span, #remember-wrp label span { font-weight: normal !important; height: 15px; line-height: 19px; padding-left: 5px; vertical-align: top; }
+
+.button {cursor: pointer}
+.login-form:after,
+.form-wrp:after,
+.form-wrp form:after,
+.form-wrp ul:after,
+.form-wrp ul li:after,
+.form-wrp ul li label:after,
+li#password-wrp-wrp ul:after,
+li#nymemployee-wrp-wrp ul:after,
+#popup-lightbox.register .reg-form .submit-btn:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+
+#login-wrp .register-ajax, #popup-lightbox .register-ajax { display: none; position: absolute; right: 0; top: 0; }
+
+#wrap .membership li {padding-left:0;padding-right:0;}
+
+.form-wrp .focus input { background-image:none !important; }
+
+#utilities .fbpic {display:none;position:absolute;top:2px;right:16px;}
+#utilities.fb_connected.fb_show .fbpic {display:block;}
+
+#utilities .fb_login {display:none;}
+#utilities.fb_notconnected .fb_login {display:block;}
+
+#wrap .membership .fbpic img,
+#wrap .membership .fbpic * {width:14px;height:14px;}
+#wrap .membership .fb_login {padding-top:0;padding-bottom:0;padding-left:7px;padding-right:7px;}
+#wrap .membership #logged_out_bar .fb_login {height:22px;}
+#wrap .membership .fb_login a {font-size:11px;margin:1px 0 3px;}
+#wrap .membership li.fb_login a {display:inline-block;padding:0 0 0 1px;}
+#wrap .membership li a.FB_Link {display:inline;padding:0;}
+#wrap .membership li cite {font-weight:bold;}
+#wrap .membership li a#nav-mynewyork {border-left:1px solid #666565;border-right:1px solid #666565;margin-top:2px;position:relative;display:block;height:18px;padding:0;background-image:url(./dannon_files/global-fff.png);background-repeat:no-repeat;}
+#wrap .membership li.hover a#nav-mynewyork {background-image:url(./dannon_files/global-fff-on.png);/* border-color:transparent; */}
+#wrap .membership li span#mynewyork-wrp {line-height:14px;border-top:1px solid #666565;border-bottom:1px solid #666565;display:block;position:relative;height:14px;padding:2px 16px 2px 6px;top:-1px;}
+#utilities.fb_connected.fb_show .membership li span#mynewyork-wrp {padding-right:36px;}
+#wrap #utilities.fb_notconnected .membership li span#mynewyork-wrp {padding:2px 16px 2px 7px;}
+
+#utilities.fb_connected .first #sub_nav_mynewyork {position:relative;top:-1px;right:-1px;}
+#utilities.fb_connected .first,
+#utilities #logged_in_bar .first {background:transparent !important;padding-right:0;margin-right:7px;position:relative;z-index:100;}
+#utilities.fb_connected #logged_out_bar .first {margin-right:0;}
+#utilities.fb_connected .logout {background-image:url(./dannon_files/bar-383838.png);}
+
+.FBConnectButton_Large .FBConnectButton_Text {line-height:16px;-webkit-text-size-adjust: none;}
+.FBConnectButton_Medium .FBConnectButton_Text {line-height:14px;-webkit-text-size-adjust: none;}
+.FBConnectButton_Small .FBConnectButton_Text {line-height:10px;-webkit-text-size-adjust: none;}
+
+ul.status-error .input-checkbox label { color:#000 !important; }
+ul.status-error .submit-btn .input-wrp { border:0 !important; }
+
+
+
+
+
+
+
+
+
+

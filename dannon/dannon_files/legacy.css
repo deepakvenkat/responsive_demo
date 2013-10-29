@@ -1,0 +1,453 @@
+/*~  LEGACY STYLES -- DEPRECATED
+----------------------------------------------------------------------*/
+.row:after,
+.block:after,
+#navigation:after,
+#lead:after,
+#global-info:after,
+#main:after,
+#section:after,
+#descriptor:after,
+#lead:after,
+#listings-sponsored:after  {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+#content-secondary .block {
+	background: #FCFCFC url("http://images.nymag.com/images/2/bg-hatch.gif");
+	border: 1px solid #FFF;
+	margin: 0 0 7px;
+}
+
+=======
+.text2{COLOR: #000000;FONT-SIZE: 8pt}  
+.text3{COLOR: #000000;FONT-SIZE: 11pt;FONT-WEIGHT: bold}  
+.text4{COLOR: #000000;FONT-SIZE: 14pt;FONT-WEIGHT: bold}  
+.text5{COLOR: #660000;FONT-SIZE: 18pt;FONT-WEIGHT: bold;text-transform: uppercase}
+.text6{COLOR: #000000;FONT-SIZE: 14pt;FONT-WEIGHT: bold;text-transform: uppercase} 
+.text7{COLOR: #666666; font-family: Georgia, "Times New Roman", Times, serif; FONT-SIZE: 14pt;FONT-WEIGHT: bold; text-transform: uppercase} 
+STRONG{COLOR: #000000;FONT-WEIGHT: bold}  
+.headline2{COLOR: #a70909;FONT-SIZE: 12pt;FONT-WEIGHT: bold;TEXT-DECORATION: none}
+.blackhdr2{COLOR: #000000;FONT-SIZE: 11pt;FONT-WEIGHT: bold;TEXT-DECORATION: none}
+.text{COLOR: #000000;FONT-SIZE: 9pt}               
+.greyhdr{COLOR: #cccccc;FONT-SIZE: 14pt;FONT-WEIGHT: bold;TEXT-DECORATION: none}
+.greyhdr2{COLOR: #cccccc;FONT-SIZE: 12pt;FONT-WEIGHT: bold;TEXT-DECORATION: none}
+A.greyhdr{COLOR: #666666;FONT-SIZE: 14pt;TEXT-DECORATION: none}  
+A.blackhdr2{COLOR: #000000;FONT-SIZE: 11pt;FONT-WEIGHT: bold;TEXT-DECORATION: none}  
+.medwhitetext {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #FFFFFF;
+}
+
+a.medwhitetext:hover {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #ffffff;
+}
+
+.greytextsmall {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #cccccc;
+}
+
+.subhead_red {
+	color: #660000;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 14pt;
+	font-weight: bold;
+}
+
+/* Legacy Wedding Guide classes*/
+
+TD.weddingscolor {BACKGROUND-COLOR: #cdd2da}  
+TD.weddingscolor2 {BACKGROUND-COLOR: #f0dff0}  
+
+.weddingsleftnav { 	
+	font-family: Arial, Helvetica, sans-serif;
+	color:#333333;
+	font-size: 8pt; 
+	background-color: #cdd2da;
+}
+
+.weddingshomebig { 	
+	font-family: Arial, Helvetica, sans-serif;
+	color:#333333;
+	font-size: 11pt; 
+}
+
+.weddingshomesmall { 	
+	font-family: Arial, Helvetica, sans-serif;
+	color:#333333;
+	font-size: 9pt; 
+}
+
+.weddingslistingsheader {
+	font-size: 18pt; 
+	font-family: Arial, Helvetica, sans-serif;
+	color: #996699;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.weddingslistingslinks {
+	font-size: 11pt; 
+	font-family: Arial, Helvetica, sans-serif;
+	color: #000066;
+	font-weight: bold;
+}
+
+.weddingssubheads {
+	font-size: 10pt; 
+	font-family: Arial, Helvetica, sans-serif;
+	color: #000066;
+	font-weight: bold;
+}
+
+.weddingsbox1 {
+	background-color: #ffffff;
+	padding: 2px;
+	border-width: 3px;
+	border-style: solid;
+	border-color: #cccccc;
+	vertical-align: middle;
+	font-size: 11px;	
+}
+
+.weddingsbox2 {
+	background-color: #ffffff;
+	padding: 2px;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #cccccc;
+	vertical-align: middle;
+	font-size: 11px;
+}
+
+.weddingsrelatedlinks { 	
+	font-family: Arial, Helvetica, sans-serif;
+	color:#333333;
+	font-size: 8pt; 
+}
+
+/*
+	Weddings Listings Pages
+*/
+
+h2.directory {
+	font: normal 38px/1.2 Georgia, Garamond, Times, "Times New Roman", serif;
+	color: #77224c;
+	margin: .3em 0 0;
+}
+
+#weddings-listings {
+	font: normal 12px/1.54 Georgia, Garamond, Times, "Times New Roman", serif;
+}
+
+#weddings-listings p {
+	margin-top: 0;
+}
+
+#weddings-listings h3.name {
+	font: bold 16px/1.54 Georgia, Garamond, Times, "Times New Roman", serif;
+	margin-bottom: 0px;
+}
+
+#weddings-listings cite {
+	font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;
+	font-size: 11px;
+	font-style: italic;
+}
+
+/* Legacy Movies fonts for Cinema Source Pages */
+
+body.text  {
+	font-family: Arial, Helvetica, sans-serif;
+	COLOR: #000000; 
+	font-weight: normal;
+	font-size: 12px;
+}
+
+.whitetextbold {
+	font-family: Arial, Helvetica, sans-serif;
+	COLOR: #ffffff; 
+	font-weight: bold;
+	font-size: 12px;
+}
+
+.whitetext {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #ffffff;
+}
+
+.medium {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #000000;
+}
+
+a.medium {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #000000;
+}
+
+.mediumbold {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+}
+
+a.mediumbold {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+}
+
+.larger {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.bigbold {
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	font-size: 20px;
+	letter-spacing: 1px;
+}
+
+body.tribecafilmfestival #related-modules {
+	border: none;
+	border-bottom: 8px solid #ECEAE8;
+	margin: -13px -12px 0 -13px;
+	padding: 0;
+}
+
+/*
+	Investment advisers splash page - one big column 
+*/
+
+body.investmentadvisers #content #directory .column {
+	float: left;
+	margin-top: 0;
+	margin-right: 4%;
+	width: 95%;
+}
+
+body.investmentadvisers h4.banded {
+	border: 1px solid #E5E6E6;
+	border-width: 1px 0;
+	font: bold 10px Georgia, Garamond, Times, "Times New Roman", serif;
+	margin: 0 0 12px;
+	padding: 6px 4px;
+	position: relative;
+	text-transform: uppercase;
+}
+
+body.investmentadvisers #mag-features .content h3 {
+	font: 17px/1.3 Georgia, "Times New Roman", Times, serif;
+	margin: 2px 0 2px;
+	line-height: 1.5em;
+}
+
+body.investmentadvisers #mag-features .content p {
+	font: normal 11px/1.2 Georgia, "Times New Roman", Times, serif;
+	margin-top: 0;
+}
+
+
+/*
+	Legacy image module
+*/
+.legacy-image {
+	clear: both;
+}
+
+.legacy-image, .legacy-image-left, .legacy-image-right {
+	margin: 0 0 12px;
+	min-width: 175px;
+}
+
+.legacy-image-left {
+	clear: left;
+	float: left;
+	margin-right: 12px;
+}
+
+.legacy-image-right {
+	clear: right;
+	float: right;
+	margin-right: 12px;
+}
+
+.legacy-image p, .legacy-image-left p, .legacy-image-right p {
+	margin: 0;
+	text-align: center;
+}
+
+.legacy-image ul, .legacy-image ul li, .legacy-image-left ul, .legacy-image-left ul li, .legacy-image-right ul, .legacy-image-right ul li {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.legacy-image ul, .legacy-image-left ul, .legacy-image-right ul {
+	margin: 4px 0;
+	padding-top: 1px;
+	width: 60%;
+}
+
+.legacy-image ul li, .legacy-image-left ul li, .legacy-image-right ul li {
+	font-size: 9px;
+	line-height: 1.3;
+	margin: 4px 0;
+}
+
+.legacy-image ul li cite, .legacy-image-left ul li cite, .legacy-image-right ul li cite {
+	font-style: normal;
+	text-transform: uppercase;
+}
+
+.legacy-image ul li a, .legacy-image-left ul li a, .legacy-image-right ul li a {
+	background: url("http://images.nymag.com/images/2/ico-enlarge.gif") no-repeat 1px 0;
+	padding-left: 13px;
+}
+
+.legacy-image .caption, .legacy-image-left .caption, .legacy-image-right .caption {
+	padding: 3px 0 6px;
+}
+
+.legacy-image .caption p, .legacy-image-left .caption p, .legacy-image-right .caption p {
+	text-align: left;
+}
+
+.legacy-image .caption a, .legacy-image-left .caption a, .legacy-image-right .caption a {
+	font-weight: bold;
+}
+
+/*
+	Now In Section
+*/
+#content-secondary .module-in-section .head {
+	padding-top: 0;
+	text-align: center;
+}
+
+#content-secondary .module-in-section .head h5, #content-secondary .module-in-section .head h6 {
+	background: url("http://images.nymag.com/images/2/bg-border-beveled.gif") repeat-x 0 100%;
+	color: #000;
+	margin: 0 14px;
+	text-transform: uppercase;
+}
+
+#content-secondary .module-in-section .head img {
+	border: none;
+}
+
+#content-secondary .module-in-section .head h5 {
+	font-size: 15px;
+	padding: 10px 0 8px;
+}
+
+#content-secondary .module-in-section .head h6 {
+	font: normal 10px Georgia, Garamond, "Times New Roman", Times, serif;
+	padding: 7px 0;
+}
+
+#content-secondary .module-in-section .content {
+padding: 0 14px 13px;
+}
+
+body.section-4col #content-secondary .module-in-section .content {
+padding: 0 10px 13px;
+}
+
+#content-secondary .module-in-section .content h5 {
+	font-size: 12px;
+	line-height: 1.25;
+	margin-bottom: 0;
+}
+
+body.ad-column-180 #content-secondary .module-in-section .content h5 {
+	margin-top: 0;
+	text-align: center;
+}
+
+#content-secondary .module-in-section .content p {
+	margin-top: 0;
+}
+
+#content-secondary .module-in-section .content ul, #content-secondary .module-in-section .content li {
+	list-style: none;
+	margin-left: 0;
+	padding-left: 0;
+}
+
+#content-secondary .module-in-section .content ul {
+	margin: 0;
+}
+
+#content-secondary .module-in-section .content li {
+	background: url("http://images.nymag.com/images/2/bullet-gray.gif") no-repeat 0 7px;
+	padding-left: 7px;
+}
+
+#content-secondary .module-in-section .column {
+	width: 157px;
+}
+
+body.ad-column-180 #content-secondary .module-in-section .col-1 {
+	float: none;
+	text-align: center;
+	margin: 7px 0 10px;
+	width: auto;
+}
+
+body.ad-column-300 #content-secondary .module-in-section .col-1,
+body.fixed_right_column #content-secondary .module-in-section .col-1 {
+	float: right;
+}
+
+body.ad-column-300 #content-secondary .module-in-section .col-2,
+body.fixed_right_column #content-secondary .module-in-section .col-2 {
+	margin-right: 157px;
+}
+
+#content-secondary .module-in-section .content h6 {
+	font-size: 11px;
+	line-height: 1.3;
+	margin: 0 0 10px;
+}
+
+body.ad-column-180 #content-secondary .module-in-section .content h6 {
+	margin-top: 10px;
+	text-align: center;
+}
+
+#content-secondary .module-in-section .info p {
+	margin-top: 0;
+	line-height: 1.3;
+}
+#content-secondary .module-in-section p.listed-by a {
+	color: #666;
+	text-decoration: none;
+}
+
+#content-secondary .module-in-section p.listed-by img {
+	display: block;
+	margin-top: 3px;
+}
+
+#content-secondary .module-in-section p.more a {
+	background: url("http://images.nymag.com/images/2/arrow-more-green.gif") no-repeat 100% .3em;
+	padding-right: 8px;
+	color: #7a9d5c;
+	text-transform: lowercase;
+}

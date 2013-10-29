@@ -1,0 +1,188 @@
+#search-results-navigation,
+#ad-splash,
+#advertising-top,
+#content-secondary,
+#navigation,
+#global-info,
+#text-size,
+.ad-featured-property,
+#section .col-2 #advertising-skyscraper,
+#section #advertising-bg,
+#article-bottom, 
+#feature-article-bottom, 
+.entry-header h3, 
+.blog-header-illo, 
+#blog-header-nav-next, 
+#blog-header-nav-previous, 
+.entry-footer, 
+#entry-bookmarks, 
+.blog-post-nav, 
+#google-bottom, 
+#footer ul, 
+.entry-header h5, 
+#feature-article-more, 
+#article-tools, 
+.tab-box, 
+.tab-box-atop-summary,
+.movie-menu,
+.movie-summarylink,
+.menu-tools, 
+.crumbtrail, 
+#sort-nav, 
+.summarybox-button, 
+.adbox, 
+#listings-sponsored,
+.review-options, 
+.readerratebox,
+#tracking,
+.summary-tools, 
+.slideshow-button, 
+.results-phonelink,
+#shopamatic_gallery_wrap .slide-nav,
+#shopamatic_gallery_wrap .slide-count,
+#shopamatic_gallery_wrap .tools ul {
+	display: none;
+}
+
+body { 
+	font: 12px/1.5 "Times New Roman", Times, serif; 
+}
+
+#content-primary-wrap {
+	float: none;
+}
+
+#story p, body.ad-column-180 #content-primary, body.ad-column-300 #content-primary, #splash-blog {
+	width: 6.25in;
+}
+
+#story table {
+	float: left;
+}
+
+.ratingstats td.averagescore {
+	font-size: 30px;
+}
+.ratingstats table, .summary-reader-avg {
+	font-size: 125%;
+}
+.summary-reader-avg strong {
+	font-size: 140%;
+}
+.readersummary-full {
+	width: 5in;
+}
+.readersum-score table {
+	width: 1.5in;
+	margin-left: 15px;
+}
+.summary-photobox {
+	margin-top: 20px;
+	/*float: right;*/
+}
+
+body.section-4col #section-content, body.section-3col-splash #section-content {
+	float: none;
+	width: 100%;
+}
+
+body.section-4col #section-content, body.section-3col-splash #section-content {
+	column-count: 2; 
+	column-gap: 8mm;
+}
+
+#wrap #content-primary-wrap, #wrap #section {
+	background: none;
+}
+
+body #wrap #content-primary-wrap, body #wrap #content-primary {
+	margin-right: 0;
+}
+
+#lead, #lead-double, #lead-review .content, body.home #related-modules, .ad-featured-property, #section .col-2 #advertising-skyscraper {
+	border: none;
+}
+
+#brand h1#logo {
+	width: 5.0in;
+}
+
+#brand h1#logo a {
+	background-image: none;
+	text-indent: 0;
+	text-align: center;
+}
+
+#content-secondary .block {
+	border: 1px solid #E2E2E2;
+}
+
+body.section-3col #section .col-1, body.section-3col #section .col-2 {
+	width: 40%;
+}
+
+body.section-3col #section .col-1 {
+	margin-right: 2%;
+}
+
+#footer {
+	float: left;
+	width: 100%;
+}
+
+/*-  IE/Win hacks
+----------------------------------------------------------------------*/
+/*
+	Self-clearing floats
+\*/
+* html .row,
+* html #navigation,
+* html #global-info,
+* html #content-layout,
+* html #content,
+* html #section,
+* html #lead,
+* html #descriptor,
+* html #lead h2.ruled,
+* html #lead #full-lead,
+* html #real-estate,
+* html #ad-full ul,
+* html #article,
+* html #search-results,
+* html #search-bottom form,
+* html .module-slideshow ul,
+* html .module-package .content .feature a,
+* html #cover-archive,
+* html #article-bottom,
+* html #listings-sponsored,
+* html .block {
+	height: 1%;
+}
+/**/
+
+/*
+	Layout hacks
+\*/
+* html #article-content {
+  /*display: inline;*/
+}
+
+* html #brand h1#logo {
+	margin: 0;
+	width: 6.5in;
+}
+
+* html #footer {
+	display: none;
+}
+/**/
+
+/* For Fashion Designer Bios */
+body.profile #ad-main, body.profile #taxonomy, body.profile #footer, body.profile .content-footer {
+	display: none;
+}
+
+/* For SAM slideshow*/
+#shopamatic_gallery_wrap .all-photos {
+	display: none;
+}
