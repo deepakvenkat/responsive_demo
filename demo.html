@@ -9,11 +9,11 @@
 		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 
 		<script type='text/javascript' src='scripts/respond.min.js'></script>
-		<script type="text/javascript">
-  		var content_unlock_parameters = {
-			 	refresh_threshold : 0,
- 				asynchronous_mode : false
- 			};
+		 <script type="text/javascript">
+  // 		var content_unlock_parameters = {
+		// 	 	refresh_threshold : 0,
+ 	// 			asynchronous_mode : false
+ 	// 		};
   	</script>
   	<script type="text/javascript" src="http://cunlock.localhost.com/cuconfig.js"></script>
   	<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
@@ -23,9 +23,20 @@
   			console.log(" in add load callback")
   			alert("boom");
   		}
-  	// 	function GMContentUnlockEventHandlerOnReady() {
-		 //  	// GMContentUnlockEventHandler.attachEvent('adsLoaded', adLoadCallback);
-			// }
+  		function freeViewAllowed () {
+  			console.log("=====freeViewAllowed=====");
+  		}
+
+  		function adPlaybackEnded() {
+  			console.log("=====adplayback ended=====");
+  		}
+
+  		function GMContentUnlockEventHandlerOnReady() {
+		  	// GMContentUnlockEventHandler.attachEvent('adsLoaded', adLoadCallback);
+		  	GMContentUnlockEventHandler.attachEvent('freeViewAllowed', freeViewAllowed);
+		  	GMContentUnlockEventHandler.attachEvent('adPlaybackEnded', adPlaybackEnded);
+
+			}
   	</script>
 
 	</head>
@@ -60,19 +71,21 @@
 			</header>
 
 			<div class="cunlock_main_content" id="main">
-				<h1 class="first">Main section</h1>
+				<h1 class="first cunlock_first_paragraph">
+          Main section
+        </h1>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 				<button id = "async-button"> Async test</button>
 			</div>
 
 			<aside>
 				<h1>Sub-section</h1>
+        <img src="octoliberty.png"/ width="200">
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 			</aside>
 
 		</div>
 		<script type="text/javascript">
-
  			$("#async-button").click(function() {
  				GMContentUnlockAsyncEventTriggered();
  			});
