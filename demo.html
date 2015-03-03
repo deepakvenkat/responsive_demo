@@ -6,43 +6,80 @@
 		<title> Demo | Responsive Web</title>
 		<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
 		<link href="styles/main.css" type="text/css" rel="stylesheet">
-		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <script type="text/javascript">
+      var content_unlock_parameters = {
+        refresh_threshold : 1,
+        asynchronous_mode : false
+      };
+    
+      function callbackLog(event) {
+        console.debug("======" + event + "======")
+      }
+
+      function GMContentUnlockEventHandlerOnReady() {
+        GMContentUnlockEventHandler.attachEvent('pageWillNotLock', function () { callbackLog("pageWillNotLock")});
+        GMContentUnlockEventHandler.attachEvent('pageLocked', function () { callbackLog("pageLocked")});
+        GMContentUnlockEventHandler.attachEvent('pageUnlocked', function () { callbackLog("pageUnlocked")});
+
+        GMContentUnlockEventHandler.attachEvent('firstQuartile', function () { callbackLog("firstQuartile")});
+        GMContentUnlockEventHandler.attachEvent('secondQuartile', function () { callbackLog("secondQuartile")});
+        GMContentUnlockEventHandler.attachEvent('thirdQuartile', function () { callbackLog("thirdQuartile")});
+
+        GMContentUnlockEventHandler.attachEvent('videoComplete', function () { callbackLog("videoComplete")});
+        GMContentUnlockEventHandler.attachEvent('adStarted', function () { callbackLog("adStarted")});
+        GMContentUnlockEventHandler.attachEvent('adSkipped', function () { callbackLog("adSkipped")});
+      }
+      function popscience(event) {
+        var ready;
+        if (event.data !== "triggergm") return;
+        if (typeof GMContentUnlockAsyncEventTriggered !== "undefined")
+          ready = GMContentUnlockAsyncEventTriggered();
+        if (!ready) {
+          if ( typeof GMContentUnlockEventHandler !== "undefined" && !! GMContentUnlockEventHandler.attachEvent)
+            GMContentUnlockEventHandler.attachEvent('asyncModeReady', GMContentUnlockAsyncEventTriggered)
+          else {
+            GMContentUnlockEventHandlerOnReady = function() {
+              GMContentUnlockEventHandler.attachEvent('asyncModeReady', GMContentUnlockAsyncEventTriggered)
+            }
+          }
+        }
+      }
+      if (window.attachEvent) {
+        window.attachEvent('onmessage', popscience);
+      } else if (window.addEventListener) {
+        window.addEventListener("message", popscience, false);
+      }
+    </script>
+
+    // <script type="text/javascript" id="GMCUScriptTag" src="http://cunlock.localhost.com/cuconfig.js?propertyID=1"></script>
+    <!--script type="text/javascript" src="testing_script.js"></script-->
+
+
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 
 		<script type='text/javascript' src='scripts/respond.min.js'></script>
-		 <script type="text/javascript">
-  // 		var content_unlock_parameters = {
-		// 	 	refresh_threshold : 0,
- 	// 			asynchronous_mode : false
- 	// 		};
-  	</script>
-  	<script type="text/javascript" src="http://cunlock.localhost.com/cuconfig.js"></script>
+
   	<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
   	<!--script type="text/javascript" src="dannon/mutation.js"></script-->
   	<script type="text/javascript">
-  		function adLoadCallback() {
-  			console.log(" in add load callback")
-  			alert("boom");
-  		}
-  		function freeViewAllowed () {
-  			console.log("=====freeViewAllowed=====");
-  		}
 
-  		function adPlaybackEnded() {
-  			console.log("=====adplayback ended=====");
-  		}
-
-  		function GMContentUnlockEventHandlerOnReady() {
-		  	// GMContentUnlockEventHandler.attachEvent('adsLoaded', adLoadCallback);
-		  	GMContentUnlockEventHandler.attachEvent('freeViewAllowed', freeViewAllowed);
-		  	GMContentUnlockEventHandler.attachEvent('adPlaybackEnded', adPlaybackEnded);
-
-			}
+      var futureTime = (new Date().getTime() + 10000)
+      // while (futureTime > new Date().getTime()) {
+      //   // something
+      // }
+      var iframeCallback = function () {
+        var s = document.createElement("script");
+        s.src = "http://genesismedia.com:3000/cookieGetter";
+        document.head.appendChild(s)
+      }
+      document.domain = "cunlock.localhost.com";
   	</script>
 
 	</head>
 	<body>
+    <!-- <iframe src="http://cunlock.localhost.com/demo/iframe_tester.html" width=1 height=1></iframe> -->
 		<div id="wrapper">
-
+    <!-- <iframe src="http://someotherdomain.com/demo/iframe_tester.html"></iframe> -->
 			<header>
 
 				<nav id="skipTo">
@@ -71,24 +108,52 @@
 			</header>
 
 			<div class="cunlock_main_content" id="main">
-				<h1 class="first cunlock_first_paragraph">
-          Main section
+				<h1 class="first cunlok_first_paragraph">
+          <i>Main section</i>
         </h1>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-				<button id = "async-button"> Async test</button>
+            <a href="CU_TESTPAGE_2.html">Another page</a>
+				<p class="cunlock_exclude">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				<button id="async-button"> Async test</button>
 			</div>
 
 			<aside>
 				<h1>Sub-section</h1>
-        <img src="octoliberty.png"/ width="200">
+        <img src="octoliberty.png" width="200">
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p id="values"></p>
 			</aside>
-
 		</div>
 		<script type="text/javascript">
+      // var img = new Image();
+      // img.src = "http://genesismedia.com:3000/cookieSetter";
+      // setTimeout(iframeCallback)
  			$("#async-button").click(function() {
- 				GMContentUnlockAsyncEventTriggered();
+   			var a = GMContentUnlockAsyncEventTriggered();
+          alert(a);
  			});
+      // var script = document.createElement("script");
+      // script.src = "http://j.maxmind.com/app/country.js";
+      // script.onload = function () {
+      //   alert("in on load");
+      // }
+      // script.onreadystatechange = function () {
+      //   alert(this.readyState)
+      //   if (this.readyState === "complete" || this.readyState === "loaded") {
+      //     alert("in ready state 1")
+      //   }
+      // }
+      // document.body.appendChild(script)
+      // var d = new Date();
+      // d.setMinutes(d.getMinutes() + 24 * 30 * 60)
+      // var domain = ".genesismedia.com";
+      // document.cookie = "test1=nondomaincookies;expires=" + d;
+      // document.cookie = "test2=domaincookie;expires=" + d + ";path=\/;domain=.cunlock.localhost.com";
+            // $(window).load(function () {
+            //      var event = new CustomEvent('pressPlusLightBoxNotOpen');
+            //     document.dispatchEvent(event);
+            //     console.debug("window load fired")
+            // })
 		</script>
+
 	</body>
 </html>
