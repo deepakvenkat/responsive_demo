@@ -1,0 +1,68 @@
+/* the default rating is placed as a background image in the ul */
+/* use the background position according to the table above to display the required images*/
+.ratinggroup strong, .ratinggroup span {display:block; float:left;  height:16px;}
+.ratingaverage{float:right;}
+.ratinguser{}
+.ratingaverage strong, .ratingaverage span, .ratinguser strong, .ratinguser span{ display:block; float:left;  height:16px;}
+.rating{
+    width:64px;
+    height:11px;
+    padding:0;
+    float:left;
+    margin:0;
+    list-style:none;
+    position:relative;
+    background: url(http://images.meredith.com/parents/images/template/shell/stars.gif) no-repeat 0 0;
+}
+/* add these classes to the ul to effect the change to the correct number of stars */
+.zero {background-position:0 0}
+.half{background-position:0 -11px}
+.one {background-position:0 -22px}
+.onehalf{background-position:0 -33px}
+.two {background-position:0 -44px}
+.twohalf{background-position:0 -55px}
+.three {background-position:0 -66px}
+.threehalf {background-position:0 -77px}
+.four {background-position:0 -88px}
+.fourhalf{background-position:0 -99px}
+.five {background-position:0 -110px}
+
+ul.rating li {
+    /*ie5 mac doesn't like it if the list is floated\*/
+    float:left;
+    /* end hide*/
+    text-indent:-999em;
+}
+ul.rating li a {
+    cursor:default;
+    position:absolute;
+    left:0;
+    top:0;
+    width:12px;
+    height:11px;
+    text-decoration:none;
+    z-index: 200;
+    border:none;
+}
+ul.rating.capture li a{
+    cursor: pointer;
+}
+ul.rating li.s1 a {left:0}
+ul.rating li.s2 a {left:13px;}
+ul.rating li.s3 a {left:26px;}
+ul.rating li.s4 a {left:39px;}
+ul.rating li.s5 a {left:52px;}
+ul.rating.capture li a:hover {
+    z-index:2;
+    width:64px;
+    height:11px;
+    overflow:hidden;
+    left:0;
+    background: url(http://images.meredith.com/parents/images/template/shell/stars.gif) no-repeat 0 0;
+}
+ul.rating.capture li.s1 a:hover {background-position:0 -121px;}
+ul.rating.capture li.s2 a:hover {background-position:0 -132px;}
+ul.rating.capture li.s3 a:hover {background-position:0 -143px}
+ul.rating.capture li.s4 a:hover {background-position:0 -154px}
+ul.rating.capture li.s5 a:hover {background-position:0 -165px}
+

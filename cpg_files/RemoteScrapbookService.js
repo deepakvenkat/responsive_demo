@@ -1,0 +1,2 @@
+if(typeof dwr=="undefined"||dwr.engine==undefined){throw new Error("You must include DWR engine before including this file");}(function(){if(dwr.engine._getObject("RemoteScrapbookService")==undefined){var a;a={};a._path="/dwr";a.storeScrapbookValue=function(e,c,b,d){return dwr.engine._execute(a._path,"RemoteScrapbookService","storeScrapbookValue",arguments);
+};dwr.engine._setObject("RemoteScrapbookService",a);}})();

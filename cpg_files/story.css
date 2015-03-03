@@ -1,0 +1,44 @@
+/* ----[Story Toolbar]---- */
+#storyTools{border-top:1px #000 dotted;border-bottom:1px #000 dotted;padding:5px;margin:10px 0;clear:both;}
+.tools{margin:0;list-style:none;}
+.tools li{float:left;padding:0 3px;line-height:17px;height:17px;}
+.tools li.printLink{_padding-top:2px;}
+
+/* ----[Story Content]---- */
+.storyBrandLogo{padding:0 5px 5px;width:120px;height:60px;}
+#storyIntro{padding-top:5px;}
+.byline{color:#999;padding-top:5px;}
+.storyContent {line-height: 160%;}
+.storyContent p, .storyContent li{padding:5px 0;}
+.storyContent .sscredit {font-size:12px;}
+.storyContent span.ACThead3{font-size:17px;font-family:Tahoma, Verdana, Geneva, sans-serif;}
+
+.storyContent .imgLeft{float:left;margin:10px 10px 10px 0;}
+.storyContent .imgRight{float:right;margin:10px 0 10px 10px;}
+.storyContent .imgRight a, .storyContent .imgLeft a {border:none;}
+.storyContent img#enlargeImg {border:none;padding:0;}
+
+.storyContent .linkedimgleft {clear:both;}
+
+/* ----[Pagination]---- */
+#pagination{text-align:right;margin-bottom:8px;}
+.nextPage{float:left;padding-top:10px;font-weight:bold;}
+#pagination a{font-weight:bold;}
+#pagination span.nmbspacing a{font-weight:normal;}
+#pagination span.nmbspacing strong{color:#ce1f81;}
+
+/* ----[Cat listing]---- */
+.childCatListing{background-color:#fff;padding:5px;}
+.childCatListing ul.majlink li{display:inline-block;width:30%;}
+
+/* ----[Outbrain]--- */
+#outbrainContainer{float:left;width:650px;margin-top:20px;padding:5px;}
+#outbrain_widget_0{float:left;width:650px;background:#fff;}
+#outbrainContainer h2{margin-top:10px;}
+    #outbrainContainer .outbrain_column{width:285px;margin:10px;border-left:1px solid #ccc;padding-left:20px;}
+    #outbrainContainer .outbrain_column:first-child{width:304px;border:0 none;padding: 0;}
+#outbrainContainer .recommendations_ul{list-style:disc outside;padding-left:15px;}
+#outbrainContainer li{margin-bottom:8px;}
+
+/* ----[Story Comments]---- */
+#recipecomments {margin-top:13px}

@@ -1,0 +1,1725 @@
+/* ---- [ GLOBAL DEFINITIONS & RESETS ] ---- */
+body {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #555;
+    font-size: 13px;
+}
+
+body.blankShell {
+    background: #fff url();
+}
+
+li, p, h1, h2, h3, h4, h5, form {
+    border: 0 none;
+    margin: 0;
+    padding: 0;
+}
+
+ul, ol {
+    border: 0 none;
+    margin: 0 0 0 20px;
+    padding: 0;
+
+.margin-left:35px;
+    }
+
+h1, .ACThead1 {
+    font-size: 30px;
+    font-weight: normal;
+    letter-spacing: 0;
+    color: #000;
+    font-family: Tahoma, Verdana, Geneva, sans-serif;
+}
+
+h2, .ACThead2 {
+    font-size: 17px;
+    font-weight: bold;
+    letter-spacing: 0;
+    color: #000;
+    font-family: Tahoma, Verdana, Geneva, sans-serif;
+}
+
+h3, .ACThead3, .chunkhead, .heading3 {
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 0;
+    color: #000;
+    font-family: Tahoma, Verdana, Geneva, sans-serif;
+}
+
+h4, .ACThead4 {
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 0;
+    color: #000;
+}
+
+h5, .ACThead5 {
+    font-size: 12px;
+    font-weight: normal;
+    letter-spacing: 0;
+    color: #666;
+}
+
+span.ACThead2, span.ACThead3, span.ACThead4 {
+    display: block;
+}
+
+/* ---- [ UTILITY ] ---- */
+hr {
+    clear: both;
+    margin: 0 0 5px;
+
+.margin:3px 0;
+padding: 7px 0 0;
+height: 1px;
+border: 0;
+border-bottom:1px solid #DDD;
+    }
+
+hr.dotted {
+    clear: both;
+    margin: 0 0 5px;
+
+.margin:3px 0;
+padding:7px 0 0;
+height:1px;
+border:0;
+border-bottom: 1px dotted #000;
+    }
+
+.clearall {
+    clear: both;
+    font-size: 1px;
+    line-height: 0;
+
+.display:inline;
+    }
+
+.smSpacer {
+    font-size: 1px;
+    height: 10px;
+}
+
+.spacer {
+    padding: 20px 0;
+}
+
+ul.majlink, ul.topicsLinkList, .catAssocOneCol ul, .catAssocTwoCol ul {
+    margin: 0;
+    list-style: none;
+}
+
+ul.majlink li, ul.topicsLinkList li, .catAssocOneCol ul li, .catAssocTwoCol ul li {
+    padding: 0 0 5px 0px;
+}
+
+/* ---- [ SITE COLORS ] ----
+if you modify/add to these, please change the color description below  */
+.brandcol1 {
+    background-color: #9A3168;
+}
+
+/* Fuscia */
+.brandcol2 {
+    background-color: #3A200F;
+}
+
+/* Dark Brown */
+.brandcol3 {
+    background-color: #028684;
+}
+
+/* Teal */
+.brandcol4 {
+    background-color: #8FA829;
+}
+
+/* Green */
+.brandcol7 {
+    background-color: #FFBD00;
+}
+
+/* Yellow */
+.brandcol5 {
+    background-color: #EEF3E7;
+}
+
+/* Light Grey */
+.brandcol9 {
+    background-color: #F1F8D5;
+}
+
+/* Light Green/Yellow */
+.brandcol10 {
+    background-color: #CCC;
+}
+
+/* Grey */
+.brandcol6 {
+    background-color: #000;
+}
+
+/* black */
+.brandcol8 {
+    background-color: #fff;
+}
+
+/* white */
+
+.txtcol1 {
+    color: #ce1f81;
+}
+
+/* Pink text */
+.txtcol2 {
+    color: #999;
+}
+
+/* Grey text */
+.txtcol3 {
+    color: #555;
+}
+
+/* Dark Grey text */
+.txtcol4 {
+    color: #fff;
+}
+
+/* white text */
+.txtcol5 {
+    color: #faa61a;
+}
+
+/* Orange text */
+
+strong {
+    color: #3A200F;
+}
+
+.breadcrumb strong {
+    color: #028684;
+}
+
+/* ---- [ LINK STYLING ] ---- */
+a {
+    color: #000;
+    text-decoration: none;
+    border-bottom: 1px solid #dfdfdf;
+    margin-bottom: 2px;
+}
+
+a:visited {
+    color: #000;
+    text-decoration: none;
+    border-bottom: 1px solid #dfdfdf;
+    margin-bottom: 2px;
+}
+
+a:hover {
+    color: #ce1f81;
+    text-decoration: none;
+    border-bottom: 1px solid #ce1f81;
+    margin-bottom: 2px;
+}
+
+/*.headLink a{color:#3A200F;border-bottom:1px solid #EEF3E7;}
+.headLink a:visited{color:#3A200F;border-bottom:1px solid #EEF3E7;}
+.headLink a:hover {color:#3A200F;border-bottom:1px solid #3A200F;}*/
+
+.imgLeftbox ul.majlink a {
+    font-size: 14px;
+    font-weight: bold;
+    width: 170px;
+}
+
+.imgLeftbox ul.majlink li.modlink a {
+    font-size: 11px;
+    font-weight: bold;
+}
+
+/* [ Brown Bold links ] */
+a.lc1 {
+    color: #3A200F;
+    font-weight: bold;
+    border-bottom: 1px solid #EEF3E7;
+}
+
+a.lc1:visited {
+    color: #3A200F;
+    font-weight: bold;
+    border-bottom: 1px solid #EEF3E7;
+}
+
+a.lc1:hover {
+    color: #3A200F;
+    font-weight: bold;
+    border-bottom: 1px solid #3A200F;
+}
+
+/* [ White links ] */
+a.lc2 {
+    color: #fff;
+    border-bottom: 0 none;
+}
+
+a.lc2:visited {
+    color: #fff;
+    border-bottom: 0 none;
+}
+
+a.lc2:hover {
+    color: #fff;
+    border-bottom: 0 none;
+    text-decoration: underline;
+}
+
+/* [Small Grey links ] */
+a.lc3 {
+    color: #999;
+    border-bottom: 0 none;
+}
+
+a.lc3:visited {
+    color: #999;
+    border-bottom: 0 none;
+}
+
+a.lc3:hover {
+    color: #999;
+    border-bottom: 0 none;
+    text-decoration: underline;
+}
+
+/* [ Footer Links ] */
+#footer ul a, #footer .linkcol a {
+    font-weight: normal;
+    color: #999;
+    text-decoration: none;
+    border-bottom: 1px solid #DCDACD;
+    margin-bottom: 2px;
+}
+
+#footer ul a:visited, #footer .linkcol a:visited {
+    font-weight: normal;
+    color: #999;
+    text-decoration: none;
+    border-bottom: 1px solid #DCDACD;
+    margin-bottom: 2px;
+}
+
+#footer ul a:hover, #footer .linkcol a:hover {
+    font-weight: normal;
+    color: #999;
+    text-decoration: none;
+    border-bottom: 1px solid #999;
+    margin-bottom: 2px;
+}
+
+#footer #top, #footer #bottom {
+    height: 20px;
+    margin: 15px 0;
+    padding: 0 10px;
+}
+
+/* ---- [ Link Overrides ] ---- */
+a.mainItem, a.mainItem:hover, a.mainItem:visited, a.imgLnk, a.imgLnk:hover, a.imgLnk:visited, #roadblock_continue a, #roadblock_continue a:hover,
+.imgdiv a, .imgdiv a:visited, .imgdiv a:hover, .nlrow a, .nlrow a:hover, #sponsored a, #sponsored a:hover, .imgleftholder a,
+.imgleftholder a:hover, .imgleftholder a:visited, .imgrightholder a, .imgrightholder a:hover, .imgrightholder a:visited,
+.imgtopholder a, .imgtopholder a:visited, .imgtopholder a:hover, #banner a, #banner a:visited, #banner a:hover
+	.imgLeft a, .imgLeft a:visited, .imgLeft a:hover, #addthis a, #addthis a:visited, #addthis a:hover, #ssimg a, #ssimg a:visited,
+#ssimg a:hover, .targeterTable a, .targeterTable a:visited, .targeterTable a:hover, .lastSlide a, .lastSlide a:hover,
+.lastSlide a:visited, #enlargeImg, #adcolumn a, #adcolumn a:hover, .promoContainer a, .promoContainer a:hover,
+#topadsponsorlogo a, #topadsponsorlogo a:hover, #buzz a, #buzz a:visited, #buzz a:hover, a.arrowopen, a.arrowopen:hover,
+a.arrowopen:visited, a.arrowclose, a.arrowclose:hover, a.arrowclose:visited, .ssInterrupt a, .ssInterrupt a:hover,
+.ssInterrupt a:visited, .sponsorModule a, .sponsorModule a:hover, .sponsorModule a:visited, .sponsorImage a, .sponsorImage a:hover,
+.sponsorImage a:visited {
+    border: 0 none;
+    margin-bottom: 0;
+}
+
+/* ----[Text Buttons]---- */
+a.linkButton, a.linkButton:visited {
+    font-weight: normal;
+    color: #fff;
+    border: 0 none;
+}
+
+a.linkButton:hover {
+    font-weight: normal;
+    color: #fff;
+    border: 0 none;
+}
+
+a.smPink {
+    display: block;
+    padding: 0 0 0 9px;
+    text-align: center;
+    font-size: 11px;
+}
+
+a.smPink span {
+    display: block;
+    line-height: 18px;
+    padding: 0 9px 0 0;
+    cursor: pointer;
+}
+
+/* ---- [ PAGE STRUCTURE ] ---- */
+#omnireport {
+    position: absolute;
+    line-height: 1px;
+    font-size: 1px;
+}
+
+.noJS {
+    text-align: center;
+    padding: 10px;
+}
+
+#wrapper {
+    width: 995px;
+    border: 1px solid #ccc;
+    border-top: 0 none;
+    margin: 0 auto;
+    text-align: left;
+    background-color: #fff;
+    position: relative;
+}
+
+#wrapperwide {
+    width: 1134px;
+    border: 1px solid #ccc;
+    border-top: 0 none;
+    margin: 0 auto;
+    text-align: left;
+    background-color: #fff;
+    position: relative;
+}
+
+#wrapperwide #singlecolumn {
+    width: 815px;
+}
+
+#wrapperwide #singlecolumnwell {
+    width: 805px;
+}
+
+#pagebody {
+    background-color: #fff;
+    position: relative;
+}
+
+/* -------[Home/Channel/Parent/Child/Story Page Layout -- 165(170)/490(500)]------- */
+#contentwell {
+    background-color: #fff; /*width:502px;*//*border-left:174px solid #fff; The width and color of the left rail */
+    border-right: 319px solid #fff; /* The width and color of the right rail */
+}
+
+#leftcolumn {
+    float: left;
+    width: 170px;
+    padding: 5px 0 5px 5px;
+    margin-left: -230px;
+
+.position:relative;
+    }
+
+#maincolumn {
+    float: left;
+    margin-right: -445px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 5px 0 5px 0;
+    width: 676px;
+}
+
+#maincontentwell {
+    margin: 0 auto;
+    width: 660px;
+    text-align: left;
+    position: relative;
+}
+
+/* -------[SingleColumn Page Layout -- 670(675)]------- */
+#singlecolumn {
+    background-color: #fff;
+    width: 676px;
+    border-right: 319px solid #fff; /* The width and color of the right rail */
+}
+
+#singlecolumnwell {
+    background-color: #fff;
+    width: 660px;
+    padding: 5px 0;
+    margin: 0 0 0 10px;
+    _margin: 0 0 0 5px;
+    float: left;
+}
+
+/* -------[SingleColumn Page Store Layout -- 985(995)]------- */
+#singlecolumn.store {
+    width: 995px;
+    border-right: 0 none;
+    padding: 0;
+}
+
+.store #singlecolumnwell {
+    width: 975px;
+}
+
+/* -------[SingleColumn Page Wide Layout -- 780(790)]------- */
+#singlecolumn.wide {
+    width: 790px;
+}
+
+#singlecolumnwell.wide {
+    width: 780px;
+    padding: 5px 0;
+    margin: 0 auto;
+    float: left;
+}
+
+/* -------[Ad Column Layout -- 310(320)]------- */
+#rightcolumn, #adwell {
+    float: right;
+    width: 310px;
+    padding: 5px;
+    margin-right: -320px;
+    _position: relative;
+}
+
+#adcolumn {
+    margin-bottom: 10px;
+    padding-left: 5px;
+}
+
+/* -------[Alternate Shell Overrides]------- */
+.recipePrintShell, .printableShell, .storePrintShell {
+    background: #fff url();
+}
+
+#printstory, #ltcol {
+    width: 640px;
+    padding: 0 0 0 10px;
+}
+
+#printstory h1, #printstory p, #printstory #instructions b, #printstory .time, #printstory .chunkhead {
+    color: #000;
+}
+
+#printstory #enlargeImg {
+    display: none;
+}
+
+.storePrintShell #singlecolumn {
+    border-right: 0 none;
+}
+
+.checkoutShell #singlecolumn {
+    width: 980px;
+    border-right: 0 none;
+    background: url();
+}
+
+/* ---- [ COMMON PAGE ELEMENTS ] ---- */
+/* ---- [ Top Features Bar ] ---- */
+.topfeatures {
+    text-align: center;
+    padding: 5px 0;
+    margin-bottom: 5px;
+}
+
+.topfeatures .bracket {
+    font-size: 20px;
+    color: #faa62a;
+}
+
+.topfeatures ul {
+    list-style: none;
+    margin: 0;
+    font-size: 13px;
+    display: inline;
+}
+
+.topfeatures li {
+    display: inline;
+    padding: 0 0 0 9px;
+    margin: 0 0 0 2px;
+}
+
+.topfeatures li.firstlink {
+    display: inline;
+    border-left: 0px none;
+}
+
+.topfeatures li.hotlink {
+    background: transparent url('http://images.meredith.com/fc/images/template/shell/bullet_orange.gif') left no-repeat;
+}
+
+/* ---- [ Temporary Header Promo ] ---- */
+.fpPromo {
+    float: right;
+    margin-top: -58px;
+}
+
+.fpPromo a {
+    display: block;
+    height: 70px;
+    width: 213px;
+}
+
+/* ---- [ Banner ] ---- */
+#bannerwrapper {
+    width: 985px;
+    overflow: hidden;
+    margin-left: 10px;
+}
+
+.bannertd {
+    width: 768px;
+    align: right;
+}
+
+#banner {
+    float: right;
+}
+
+#topcover {
+    float: left;
+    width: 200px;
+    margin-left: 10px;
+}
+
+#topcover img {
+    float: left;
+    height: 66px;
+}
+
+#topcover ul {
+    float: left;
+    width: 125px;
+    _height: 1px;
+    padding-left: 5px;
+    padding-top: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ---- [ Header ] ---- */
+#header {
+    margin-bottom: 1px;
+    padding-top: 5px;
+    height: 100px;
+}
+
+/* IE needs a height... */
+.logo {
+    width: 350px;
+    text-align: center;
+    float: left;
+    height: 50px;
+    padding: 10px 0 0 10px;
+}
+
+#header.thinHead {
+    border-bottom: 1px dotted #CCC;
+    height: 60px;
+}
+
+#header.thinHead .logo {
+    padding: 5px;
+    float: none;
+    width: 205px;
+}
+
+.thinHead .utilLinks {
+    float: right;
+    padding: 10px 15px 0 0;
+}
+
+ul.utilLinks {
+    list-style: none;
+}
+
+ul.utilLinks li {
+    display: inline;
+}
+
+/* ---- [ Search Form ] ---- */
+#headerSearch {
+    width: 343px;
+    height: 60px;
+    padding: 29px 23px 0;
+    float: left;
+}
+
+.searchContainer {
+    padding: 10px 0 0 0;
+}
+
+.searchButton {
+    vertical-align: top;
+}
+
+.searchFields {
+    float: left;
+}
+
+.searchBGBox {
+    padding: 4px 0 0 5px;
+    height: 28px;
+    width: 231px;
+}
+
+.searchBGBox input {
+    border: 0 none;
+    width: 200px;
+    padding: 0px 3px;
+    color: #CCC;
+    font-size: 14px;
+}
+
+.searchTypes {
+    width: 180px;
+}
+
+.searchSponsors {
+    font-size: 11px;
+    float: right;
+    position: relative;
+    top: -16px;
+    padding: 0 7px 5px 0;
+    width: 117px;
+}
+
+#nvbsrchbut {
+    padding-left: 5px;
+}
+
+.leftColSearch #nvbsrchbut {
+    *padding-left: 1px;
+}
+
+.leftColSearch .searchBGBox {
+    padding: 4px 0 0 5px;
+    height: 28px;
+    width: 105px;
+    background: url(http://images.meredith.com/parents/images/template/shell/searchBg_110.gif) no-repeat;
+}
+
+.leftColSearch .searchBGBox input {
+    width: 90px;
+}
+
+/* ---- [ Comm Links ] ---- */
+.commLinks {
+    font-size: 10px;
+    font-color: #000;
+}
+
+/* ---- [ Add This / Yahoo Buzz Buttons ] ---- */
+#addthis {
+    float: right;
+    margin-top: 4px;
+}
+
+/* ---- [ Sponsor Logo / Module / Brand Logo ] ---- */
+#topadsponsorlogo, .brandLogo {
+    float: right;
+    padding: 0 5px 5px;
+    width: 120px;
+    height: 60px;
+    background-color: #fff;
+    text-align: right;
+}
+
+.sponsorModule {
+    margin: 10px 0;
+    padding: 10px 0 10px 10px;
+    width: auto;
+}
+
+.sponsorContent {
+}
+
+.sponsorLeft {
+    float: left;
+    padding: 5px 0 5px 10px;
+    background-color: #f2f2f2;
+}
+
+.sponsorLeft p {
+    padding: 5px 0 5px 10px;
+}
+
+p.sponsorArrow {
+    background: transparent url(http://images.meredith.com//bhg/images/advertising/sponsmod-orange_arrow.gif) no-repeat scroll 0 5px;
+}
+
+.sponsorLeft ul.majlink {
+    padding-left: 10px;
+}
+
+.sponsorWide {
+    width: 485px;
+}
+
+.sponsorNarrow {
+    width: 300px;
+}
+
+.sponsorRight {
+    float: right;
+    width: 150px;
+    text-align: center;
+    padding: 0 auto;
+}
+
+.sponsorRight p {
+    font-size: 9px;
+    color: #999;
+    padding: 5px;
+}
+
+.sponsorRight img {
+    border: none;
+}
+
+/* ---- [ Breadcrumb ] ---- */
+.breadCrumb {
+    padding: 5px 0;
+    margin: 0px 0px 5px 0px;
+    font-size: 10px;
+    border-bottom: 1px dotted #000;
+    border-top: 1px dotted #000;
+    color: #000;
+}
+
+.breadCrumb .bold {
+    color: #000;
+}
+
+/* ---- [ Connect With Us ] ---- */
+#connectwithcontainer {
+    background: url(http://images.meredith.com/fc/images/template/shell/connectBG.gif) no-repeat;
+    height: 60px;
+    width: 300px;
+}
+
+.connectLink {
+    height: 60px;
+    float: right;
+    width: 53px;
+    text-align: center;
+}
+
+.connectLink img {
+    margin-top: 9px;
+}
+
+.connectLink span.connectText {
+    font-size: 10px;
+}
+
+/* Form */
+#pm_login_fields {
+    padding: 5px 10px;
+}
+
+#pm_login_fields li {
+    clear: both;
+}
+
+#pm_login_fields label {
+    width: 65px;
+    text-align: right;
+    display: block;
+    float: left;
+}
+
+#pm_login_fields input {
+    float: left;
+    width: 190px;
+    margin-left: 5px;
+}
+
+#pm_login_add_fields {
+    display: none;
+}
+
+#pm_login_profile_type {
+    width: 195px;
+    margin-left: 5px;
+    _margin-left: 2px;
+}
+
+#pm_login_date_fields {
+    padding-left: 68px;
+}
+
+.validation-advice {
+    color: #9A3168;
+    clear: both;
+}
+
+.newsLinkBundlesTxt {
+    float: left;
+    width: 280px;
+    padding-top: 4px;
+}
+
+.newsLink_promo {
+    color: #028684;
+    font-size: 11px;
+}
+
+.newsCheck {
+    float: left;
+    width: 25px;
+    margin-top: 0;
+
+.margin-top:1px;
+    }
+
+#pm_optIn_div {
+    clear: both;
+    padding-left: 10px;
+    float: left;
+    width: 210px;
+    font-size: 11px;
+}
+
+#pm_login_dynamic_newsletter_container {
+    padding-left: 10px;
+}
+
+#pm_login_submit {
+    float: right;
+}
+
+.indicate_load_msg {
+    clear: both;
+    float: none;
+    text-align: center;
+    padding-top: 10px;
+    float: left;
+    width: 85%;
+}
+
+.indicate_load {
+    float: left;
+    padding-top: 10px;
+}
+
+.noBullet {
+    list-style: none;
+    margin: 0;
+}
+
+.tool-text {
+    background-color: #f3f3f3;
+    color: #3A200F;
+    padding: 5px;
+    width: 200px;
+    word-wrap: normal;
+    border: thin solid #CCC;
+}
+
+/* ---- [ Footer ] ---- */
+#footer {
+    font-size: 11px;
+    margin-top: 1px;
+    color: #999;
+}
+
+#footer hr {
+    width: 98%;
+    margin-left: 10px;
+}
+
+#footer ul {
+    margin: 0;
+}
+
+#footer ul li {
+    list-style: none;
+    padding: 0 0 3px 0;
+}
+
+.topfootlinks {
+    padding: 10px 0;
+    margin: 10px;
+    border-top: 1px solid #CCC;
+    border-bottom: 1px solid #CCC;
+}
+
+.topfootlinks strong {
+    float: left;
+    padding-right: 10px;
+}
+
+.topfootlinks ul.inlinelinks {
+    margin-left: 0;
+}
+
+.topfootlinks ul.inlinelinks li {
+    float: left;
+}
+
+.topfootlinks ul.inlinelinks li.floatright {
+    float: right;
+}
+
+#footer #copyright {
+    padding: 10px 15px;
+}
+
+#footer #mainlinks {
+    padding: 10px 10px 5px;
+}
+
+#footer .mwntext {
+    font-weight: bold;
+}
+
+#footer .linkcol {
+    padding-left: 14px;
+}
+
+#footer .footercol, #footer .footercolmid, #footer .footercolright {
+    width: 248px;
+    padding: 0 5px;
+}
+
+#footer .footercol ul li {
+    float: left;
+    width: 50%;
+}
+
+#footer .footercolfirst {
+    width: 125px;
+    padding: 0 0 0 10px;
+}
+
+#footer .footercolmid {
+    border-left: 1px dotted #000;
+    border-right: 1px dotted #000;
+    margin: 0 50px;
+    padding: 0 50px;
+}
+
+#footer .footercolmid li {
+    float: left;
+    width: 50%;
+}
+
+#footer .footercol ul, #footer .footercolmid ul {
+    padding: 3px 0 0;
+}
+
+#footer #top .linkcol {
+    padding: 0 0 3px 14px;
+    width: 510px;
+}
+
+#footer #rgm {
+    float: left;
+    padding: 3px 5px 0 0;
+}
+
+#footer .rgm {
+    width: 370px;
+}
+
+#footer .parentsNet, #footer .womensNet {
+    padding: 5px 0 0 10px;
+    clear: both;
+}
+
+#footer #footersearch {
+    border-top: 1px dotted #000;
+    border-bottom: 1px dotted #000;
+}
+
+#footer #footersearch form {
+    margin: 0 auto;
+    width: 310px;
+}
+
+#footer .parentslogo, #footer .mwntext {
+    text-align: center;
+    width: 180px;
+}
+
+/* ---- [Mootab Base] ----*/
+#tabheader, #tabbody {
+    width: 305px;
+}
+
+/* Set the width of the tab box here */
+
+#tabheader {
+    position: relative;
+    float: left;
+    line-height: normal;
+}
+
+#tabheader ul.tablist {
+    margin: 0;
+    list-style: none;
+}
+
+#tabheader .tablist li {
+    position: relative;
+    float: left;
+    padding: 0 0 0 5px;
+    cursor: pointer;
+    border: 1px dotted #fff;
+    border-bottom: 0 none;
+}
+
+#tabheader .tablist li.active {
+    position: relative;
+    float: left;
+    padding: 0 0 0 5px;
+}
+
+#tabheader span {
+    float: left;
+    display: block;
+    padding: 7px 5px 7px 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#tabheader .active span {
+    padding: 7px 5px 7px 5px;
+    margin: 0;
+}
+
+#tabheader .over span {
+    padding: 7px 5px 7px 5px;
+    margin: 0;
+}
+
+#tabbody {
+}
+
+#tabbody hr {
+    clear: both;
+    margin: 0;
+    padding: 3px 0;
+    text-align: center;
+    width: 95%;
+    height: 1px;
+    border: 0px;
+    border-bottom: 1px dotted #c7bcae;
+}
+
+#tabbody .xb1 {
+    background: #e5d7d3;
+}
+
+/* Note: This should be the same color as your border */
+#tabbody .xtop .xb1 {
+    background: #fff;
+}
+
+/* Note: This should be the same color as your border */
+#tabbody .xb2, #tabbody .xb3, #tabbody .xb4 {
+    background: #fff;
+    border-left: 1px solid #e5d7d3;
+    border-right: 1px solid #e5d7d3;
+}
+
+#tabbody .xboxcontent {
+    padding: 5px 10px;
+    background: #fff;
+    border: 0 solid #e5d7d3;
+    border-width: 0 1px;
+}
+
+.mootabs_panel {
+    display: none;
+}
+
+#tabbody .mootabs_panel.active {
+    display: block;
+}
+
+/*info module tabs */
+#infoModTabs {
+    margin-bottom: 10px;
+}
+
+#infoModTabs #tabbody {
+    border: 1px dotted #000;
+    padding: 0;
+    clear: both;
+}
+
+#infoModTabs #tabbody ol {
+    padding-left: 14px;
+    padding-bottom: 15px;
+}
+
+#infoModTabs #tabbody li {
+    color: #ce1f81;
+    font-weight: bold;
+    padding-left: 4px;
+    padding-bottom: 8px;
+}
+
+#infoModTabs #tabbody li a {
+    font-weight: normal;
+}
+
+#infoModTabs #tabbody div.ACThead2 {
+    padding: 10px 0 14px 14px;
+}
+
+#infoModTabs .mootabs_panel {
+    padding: 3px 0 5px;
+}
+
+#infoModTabs #tabheader {
+    width: 307px;
+}
+
+#infoModTabs #tabheader .tablist li {
+    padding: 0 5px;
+    color: #000;
+    border: 1px dotted #000;
+    border-bottom: 0 none;
+}
+
+#infoModTabs #tabheader .tablist li.active {
+    color: #ffffff;
+    border: 1px dotted #000;
+    border-bottom: 0 none;
+    background: #faa61a;
+}
+
+#infoModTabs #tabheader .tablist li.over {
+    color: #000;
+    border: 1px dotted #000;
+    border-bottom: 0 none;
+    background: #fff;
+}
+
+#infoModTabs #tabheader .active span {
+}
+
+/* ---- [ BORDERS ] ---- */
+.slashWrap {
+    background-image: url(http://images.meredith.com/fc/images/template/shell/bg_border.gif);
+    padding: 5px;
+}
+
+/* White Background, Grey Border, Straight Corner */
+.box1 {
+    border: 2px solid #F0EFEE;
+    background: #fff;
+}
+
+/* ---- [ COMMON PAGE MODULES ] ---- */
+
+/* ---- Image Left/Right/Top ---- */
+.imgleftholder {
+    float: left;
+    margin-right: 10px;
+}
+
+.imgrightholder {
+    float: right;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+.imgtopholder {
+}
+
+.imgLeftbox ul.majlink {
+    display: table;
+    WIDTH: 150 PX;
+}
+
+#networkLinks .imgLeftbox ul.majlink {
+    width: auto;
+}
+
+/* Fixes lists next to floated images */
+.imgLeftbox p, .imgRightbox p, .imgTopbox p, .modlinklist p {
+    padding: 5px 0 5px 10px;
+}
+
+/*.imgLeftbox ul, .imgRightbox ul, .imgTopbox ul, .modlinklist ul{padding-left:10px;}*/
+/*.imgBorder img, .imgtopholder img, .modquicklink img, .imgrightholder img, .imgleftholder img, .sectionSlide img{border:1px dotted #ccc;padding:3px;}*/
+
+/* ----[PARENT]---- */
+#application .categoryleftwell {
+    float: left;
+    margin-right: 10px;
+    overflow: hidden;
+    width: 175px;
+}
+
+#application .categoryrightwell {
+    float: left;
+    overflow: hidden;
+    width: 475px;
+}
+
+/* ----[ACTIONS]---- */
+.actionspanel img {
+    margin-left: 5px;
+    margin-right: 3px;
+    vertical-align: middle;
+}
+
+/* ----[SKIN FOR Email Content Module]---- */
+#emclp {
+    position: absolute;
+    left: 150px;
+    top: 100px;
+    z-index: 10;
+    border: 1px solid #aaa;
+}
+
+#emclp #form {
+    background: #efefef url(http://images.meredith.com/fc/images/template/stafbg.gif) no-repeat 0 0;
+
+.width:400px;
+.height:319px;
+    }
+
+#emclp #instructions {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#stafhead {
+    background-image: url(http://images.meredith.com/fc/images/app/sharelogo.jpg);
+}
+
+#staffoot {
+    background-image: url(http://images.meredith.com/pp/images/sendtoafriend/stafbtm.gif);
+}
+
+#emclp #staffoot #stafclose {
+    position: absolute;
+    top: 10px;
+    left: 270px;
+    width: 120px;
+}
+
+#response {
+    display: none;
+    background-color: #F8F0EE;
+}
+
+.stafsendbtn {
+    background-image: url(http://images.meredith.com/fc/images/template/emlsend.gif);
+    height: 15px;
+    width: 26px;
+}
+
+#emclp #form div.stafsendbtn span {
+    display: none;
+}
+
+#emclp h3 {
+    display: none;
+}
+
+.altbgcolor {
+    background-color: #FEAACE;
+}
+
+.defaultbgcolor {
+    background-color: #FFF;
+}
+
+.error {
+    color: #f00;
+}
+
+.infoModRow {
+    line-height: 50px;
+    vertical-align: middle;
+    padding: 2px 8px;
+}
+
+.infoModRow ul.majlink li {
+    background: none;
+}
+
+.iMod #tabbody ul {
+    list-style: none;
+    margin-left: 10px;
+}
+
+.iMod #tabbody #Tab3 ul {
+    list-style: disc;
+    margin-left: 30px;
+    margin-right: 15px;
+}
+
+.iMod #tabbody .mootabs_panel ul li div {
+    float: left;
+    clear: both;
+}
+
+.iMod #tabbody .mootabs_panel ul li div img {
+    width: 50px;
+    height: 50px;
+}
+
+.iMod #tabbody .mootabs_panel ul li span {
+    float: left;
+    padding-top: 11px;
+}
+
+#stayConnected {
+    background: url("http://images.meredith.com/parents/images/2009/10/300x125_StayConnected.jpg");
+    width: 300px;
+    height: 125px;
+    margin: 0 auto;
+}
+
+#stayConnected a {
+    width: 90px;
+    margin: 25px 5px 0;
+    height: 90px;
+    float: left;
+}
+
+/* Sponsored Links */
+.rightsidesponsor span.ACThead3 {
+    font-size: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.rightsidesponsor li {
+    list-style: none;
+
+.text-indent: -15px;
+    }
+
+.rightsidesponsor a {
+    color: #b6136e;
+    font-weight: bold;
+    font-size: 11px;
+}
+
+.coziIframe {
+    margin-left: 5px;
+}
+
+.mpItemTitle {
+    float: right;
+    width: 175px;
+    margin-right: 28px;
+    margin-top: 20px;
+}
+
+/* ---- Footer Network Links ---- */
+
+#networkLinks {
+    margin-top: 120px;
+}
+
+#networkLinks span.ACThead2 {
+    display: block;
+    color: #3A200F;
+    list-style: none outside none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 11px;
+    float: left;
+    padding: 0 3px;
+    line-height: 18px;
+    width: 200px;
+    text-align: right;
+    clear: both;
+}
+
+#networkLinks ul.majlink {
+    float: left;
+    list-style: none;
+    margin: 0;
+}
+
+#networkLinks li {
+    float: left;
+    line-height: 11px;
+    font-size: 11px;
+    border-left: 1px solid #DFDFDF;
+    padding: 0 10px;
+    margin: 3px 0;
+}
+
+#networkLinks ul.majlink li {
+    background: none;
+    padding: 0 4px;
+}
+
+#networkLinks li:first-child {
+    border-left: none;
+    border-right: 1px solid #DFDFDF;
+}
+
+#networkLinks a {
+    font-size: 11px;
+}
+
+#networkLinks .MB10 {
+    margin-bottom: 0;
+}
+
+#copyright img {
+    margin: -4px 0 0 112px;
+}
+
+#cpyrtleft {
+    float: left;
+    width: 200px;
+}
+
+#cpyrtright {
+    float: left;
+    width: 600px;
+    margin-left: -5px;
+}
+
+.snProduct {
+    display: inline-block;
+    margin: .5em;
+    padding: 0;
+    text-align: center;
+}
+.showlThumbs .snProduct { width: 400px; }
+.showmThumbs .snProduct { width: 200px; }
+.showsThumbs .snProduct { width: 130px; }
+
+.snWidget{
+    margin:1em 0.5em;
+}
+
+.snMore{
+    font-style:oblique;
+}
+
+ /*video section styles */
+.video {
+    position: relative;
+}
+
+.fc.roundedCornerWithWhiteBG {
+    clear: both;
+}
+
+.fc.roundedCornerWithWhiteBG .heading2 {
+    color: #000000;
+    float: left;
+    font-family: Tahoma, Verdana, Geneva, sans-serif;
+    font-size: 17px;
+    font-weight: bold;
+    letter-spacing: 0px;
+}
+
+.moreVideosList .thumbnail {
+    float: left;
+    width: 165px;
+    margin-bottom: 15px;
+    list-style: none;
+}
+
+.videoLeft {
+    width: 165px;
+    float: left;
+}
+
+.videoRight {
+    float: left;
+    clear: both;
+    width: 465px;
+    padding-right: 15px;
+}
+
+.videoPlayer {
+    display: block;
+    position: relative;
+    background-color: #cccccc;
+}
+
+.playvideoLarge {
+    width: 100%;
+    height: 100%;
+    background: url(http://www.recipe.com/recipe/images/temps/shell/2012/play_overlay_large.png) no-repeat scroll 50% 50% transparent;
+    cursor: pointer;
+    display: block;
+    left: 0;
+    opacity: 0.6;
+    position: absolute;
+    top: 0;
+    z-index: 49;
+}
+
+.playervideoSmall, .playvideoSmall, .recipeDetailVideo .playvideoLarge {
+    border: 1px solid #777;
+    width: 100%;
+    height: 100%;
+    background: url(http://www.recipe.com/recipe/images/temps/shell/2012/play_overlay.png) no-repeat scroll 50% 50% transparent;
+    cursor: pointer;
+    display: block;
+    left: 0;
+    opacity: 0.6;
+    position: absolute;
+    top: 0;
+    z-index: 100;
+}
+
+.thumbTime, .videoStats {
+    font-size: .9em;
+    color: #666;
+}
+
+.videoSummary, .videoStats {
+    margin-top: 5px;
+}
+
+.videoMore {
+    clear: both;
+    float: right;
+    font-weight: bold;
+}
+
+.slideImgWell .videoPlayer img {
+    border: 0;
+}
+
+.slideImgWell .videoRight {
+    width: 300px;
+    padding-right: 0;
+}
+
+.recipeDetailVideo .videoTitle, .recipeDetailVideo .videoMore {display: none;}
+.recipeDetailVideo .videoRight {padding-right: 0;width: 210px;}
+.recipeDetailVideo .videoPlayer{background: transparent;}
+
+/* Shop Nation Footer Links */
+#shopNationWrapper {
+    border-top: 1px dotted #000;
+    margin: 10px auto 0;
+    width: 970px;
+}
+#shopNationWrapper:after {
+    clear: both;
+    content: " ";
+    display: block;
+    font-size: 0;
+    height: 0;
+    visibility: hidden;
+}
+#shopNationWrapper h2 {
+    margin: 10px 0;
+}
+#snTop:after {
+    clear: both;
+    content: " ";
+    display: block;
+    font-size: 0;
+    height: 0;
+    visibility: hidden;
+}
+#shopLogo {
+    background: transparent no-repeat center;
+    float: right;
+}
+#shopLogo.bhg-home {
+    background-image: url('http://images.meredith.com/recipe/images/shopnation/recipeSnLogo.png');
+    width: 230px;
+    height: 50px;
+}
+#shopLogo.dc-fashion {
+    background-image: url('http://images.meredith.com/lhj/images/shopnation/lhjShopLogo.png');
+    margin-top: -10px;
+    width: 210px;
+    height: 60px;
+}
+#shopLogo.parents {
+    background-image: url("http://images.meredith.com/parents/images/shopnation/parShopLogo.png");
+    width: 220px;
+    height: 105px;
+    margin-top: -30px;
+}
+#searchMain {
+    height: 39px;
+    float: left;
+    margin-top: 4.5px;
+}
+#snSearchText {
+    border: 1px solid #ccc;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    -moz-box-shadow: inset 0 0 3px #ccc;
+    -webkit-box-shadow: inset 0 0 3px #ccc;
+    box-shadow: inset 0 0 3px #ccc;
+    color: #333;
+    float: left;
+    font-size: 12px;
+    height: 12px;
+    margin: 0 5px 0 0;
+    padding: 13.5px 10px;
+    width: 630px;
+}
+#snSearchText:focus {
+    outline: 0 none;
+}
+#snSearchButton {
+    background: url('http://images.meredith.com/fc/images/shopnation/searchIcon.png') no-repeat center;
+    border: 0 none;
+    cursor: pointer;
+    height: 39px;
+    overflow: hidden;
+    text-indent: -9999px;
+    width: 39px;
+}
+#shopNationLinks .heading4 {
+    color: #000;
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 5px 0;
+}
+#shopNationLinks ul {
+    margin: 0;
+}
+.shopNationLinkList {
+    display: block;
+    width: 48%;
+    float: left;
+}
+.shopNationLinkList li {
+    display: inline-block;
+    width: 200px;
+    margin-bottom: 3px;
+    margin-left: 20px;
+}
+.shopNationLinkList li:before {
+    color: #d62486;
+    content: "\2022";
+    font-size: 1.25em;
+    margin-left: -0.9em;
+    margin-right: 0.5em;
+    position: relative;
+}
+#shopNationTopBrands {
+    border-right: 1px dotted #000;
+    margin-right: 10px;
+}

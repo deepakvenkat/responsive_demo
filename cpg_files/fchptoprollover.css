@@ -1,0 +1,38 @@
+ #hptoprollover{
+      position:absolute;
+      z-index:588;
+      top:30px;
+      left:260px;
+      width:490px;
+  }
+  #hptoprolloverlayer .medformname{
+	font-family: "Arial", Arial, sans-serif;
+	font-size: 11px;
+	
+  }
+  #hptoprolloverlayer .fieldname{
+  	font-weight:bold;
+  }
+  #hptoprollovermore{
+      position:absolute;
+      z-index:589;
+      top:32px;
+      left:410px;
+  }
+  #hptoprolloverclose{
+      float:right;
+      margin-right:20px;
+  }
+  #hptoprolloverlayer{
+      display:none;
+      position:absolute;
+      z-index:590;
+      top:0;
+      left:0;
+  }
+  #top_close { top:0px; }
+  #bottom_close { top:443px; }
+
+/*overwrite wrapper*/
+#wrapper {}
+#wrapper .topfeatures {padding: 0 0 49px 0;}

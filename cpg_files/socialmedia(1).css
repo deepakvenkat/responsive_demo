@@ -1,0 +1,71 @@
+/* ---- Recommendation ---- */
+.recommend {display:inline;}
+.recommendicon {padding-left:20px; padding-bottom:5px; float:left; background:url(http://images.meredith.com/fc/images/template/shell/icons/rec.gif) no-repeat top left;}
+
+/* ---- Comments ---- */
+.commentrow{padding:5px 0;margin:5px 0;border-bottom:1px solid #F0EFEE;}
+.commentrow .reportabuselink {float:right;}
+.reportcomment {margin-top:-16px;}
+.commentdetail .createdate{float:left;font-size:11px;}
+#comments, #commentform{padding-bottom:5px;}
+#commentform textarea {width:99%;  margin-bottom:5px; height:100px; overflow:visible;}
+#commentsubmit {background-image:url(http://images.meredith.com/fc/images/template/shell/buttons/btn_submit.gif); width:79px; height:23px;}
+#commentformcontainer {text-align:right;}
+.commentpagination{padding-bottom:5px;}
+.commentpagination a {border:none;font-weight:bold;}
+.commentpagination a.disable{color: #ccc; cursor: text;}
+.pages a{padding:0 5px;}
+
+
+/* ---- Share Bar ---- */
+#sb ul.tools {border-top:none;margin:2px 0 0 0;padding:0;}
+.socialToolbar {line-height:normal; border:none;}
+#sb {background:transparent; height:42px; text-align:left; bottom:0; }
+#sb_inner{position:relative; background:url(http://images.meredith.com/bhg/images/socialmedia/bar.png) no-repeat; width:1017px; height:42px;  margin:0 auto; }
+#sb_inner #sb_logo{margin:16px 0 0 10px;}
+#sb_inner div#sb_search{margin:14px 3px 0 15px; position:relative; }
+#sb_inner input {height:16px; width:140px; background:#fff url(http://images.meredith.com/bhg/images/socialmedia/search.gif) 130px 3px no-repeat;}
+#sb_logo a{text-decoration:none;border:none;}
+#sb_sharetext{margin:17px 5px 0 0;}
+#sb a { border:none; }
+a.sb_getmagazinestext,
+a.sb_getmagazinestext:visited,
+a.sb_getmagazinestext:hover{margin-top:17px; display:block;text-decoration:none; color:#666666; }
+.sb_seperator,.sm_separator{border-left:1px solid #CCCCCC;height:23px;margin:13px 10px 2px;width:1px; .margin:13px 7px 2px;}
+#sb_like{margin:16px 0 0 0; width:90px;}
+.socialToolbar ul li.fbLike {padding-top:6px;}
+.fbLike{width: 80px; padding-top:0;}
+#sb_close{height:25px; width:25px; background:url(http://images.meredith.com/bhg/images/socialmedia/close.png) no-repeat; cursor:pointer; top:-3px; left:997px; position:absolute;}
+.dialog iframe{border:none; overflow:hidden;}
+.sb-tip{background-color:#FCF9DE; z-index:10000; font-weight:bold;font-size:9px; padding:2px 5px; letter-spacing:0px; -moz-border-radius:5px; webkit-border-radius:5px;border-radius:5px;}
+#sb_search_link{height:20px; width:22px; position:absolute; top:0; left:125px; .left:135px;}
+.socialToolbar {float: left; height: 37px; line-height: 37px;width: 100%; margin: 0 0 0 0;}
+.socialToolbar ul li {line-height:21px; vertical-align:top;}
+.socialToolbar ul li {float: left;padding-top: 5px; padding-left: 1px; padding-right: 1px; line-height: 27px;}
+.socialToolbar ul li.icons a{border:none;}
+.socialToolbar ul li img{vertical-align:middle;}
+#sb .socialToolbar ul li {margin-top:10px; border:none; padding:0 1px 0 1px;}
+.st_sharethis_custom img{margin-top:2px;}
+#sb_getmagazines{height:42px; width:210px; background:url(http://images.meredith.com/fc/images/sharebar/subscribe.gif) bottom right no-repeat; text-align:left;}
+#sb_facebook{margin:14px 0 0 0; background:url(http://images.meredith.com/parents/images/sharebar/facebook.png) no-repeat scroll 0 0 transparent; }
+#stwrapper{position:fixed !important; top:222px !important; left:400px !important;}
+#sb_share img {margin:12px 2px 4px; vertical-align:middle;}
+#sb_email img {margin:12px 2px 4px; vertical-align:middle;}
+#sb_more img {margin:16px 2px 4px; vertical-align:middle;}
+#email_share img  {margin-left:6px; vertical-align:middle;}
+
+/* ---- Share This Email Position Override ---- */
+#stwrapper {position:fixed !important; top: 222px !important; left: 400px !important;}
+
+/* ---- Shell ater for share bar---- */
+#wrapper{margin-bottom:27px !important;}
+
+#shareToolbar .socialToolbar{border:none; background-color:#f7f6f4;}
+#shareToolbar .socialToolbar a {margin-left: 10px; margin-right:5px; }
+#shareToolbar .socialToolbar ul li img{vertical-align:middle;}
+#shareToolbar .socialToolbar a.st_twitter_custom{margin-left:0px;}
+#shareToolbar .socialToolbar a.st_email_custom{margin-left:0px;}
+#shareToolbar .socialToolbar a.st_sharethis_custom{margin-left:0px;}
+#shareToolbar .socialToolbar ul li.icons a{border:none;}
+
+

@@ -1,0 +1,544 @@
+﻿<!doctype html>
+<html>
+    <head>
+        <title>NuCu</title>
+		<meta charset="UTF-8">
+		<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+		<!-- // <script src="js/1.7.2.jquery.min.js"></script> -->
+		<script	type="text/javascript"	src="http://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"></script>
+		
+		<script type="text/javascript">
+		//flashvars.retailTag			= "http://pubads.g.doubleclick.net/gampad/ads?sz=640x360&iu=%2F6062%2Fiab_vpaid_samples&ciu_szs=300x250&impl=s&gdfp_req=1&env=vp&output=xml_vast2&unviewed_position_start=1&url=[referrer_url]&correlator=[timestamp]&cust_params=iab_vast_samples%3Dvpaidoverlay"
+		//flashvars.retailTag			= "http://bs.serving-sys.com/BurstingPipe/adServer.bs?cn=is&c=23&pl=VAST&pli=9617470&PluID=0&pos=7544&ord=1353359746&cim=1"
+		//flashvars.retailTag			= "http://ad.doubleclick.net/pfadx/N270.130667.DOUBLECLICKADVERTISI/B6436143;dcadv=2215309;dcove=o;sz=0x0;ord=%5Btimestamp%5D;dcmt=text/xml"
+		//flashvars.retailTag			= "http://pubads.g.doubleclick.net/gampad/ads?sz=400x300&iu=%2F6062%2Fiab_vast_samples&ciu_szs=300x250%2C728x90&impl=s&gdfp_req=1&env=vp&output=xml_vast2&unviewed_position_start=1&url=[referrer_url]&correlator=[timestamp]&cust_params=iab_vast_samples%3Dlinear"
+		//flashvars.retailTag			= "http://ad.crwdcntrl.net/5/c=1890/pe=y?http://adserver.adtechus.com/adrawdata/3.0/5372.1/3101980/0/16/ADTECH;KVabbr=${aud_ids}";
+		//flashvars.retailTag			= "http://ad.doubleclick.net/pfadx/N4270.928084.GENESISMEDIA/B7992273.4;sz=0x0;ord=244599573;dcmt=text/xml";
+		//flashvars.retailTag			= "http://rtr.innovid.com/r1.53e128ae0715e7.35544741;cb=357377117";
+		//"./testData/toyotaVpaid.xml"
+		//flashvars.retailTag			= "./testData/vastTest.xml" //"./testData/toyotaVpaid.xml"
+		//flashvars.retailTag			= "./testData/toyotaVpaid.xml"
+		//flashvars.backfillTag		= "./testData/toyotaVpaid.xml" //"http://adserver.adtechus.com/adrawdata/3.0/5372.1/3241369/0/16/ADTECH";
+		////ad_url: "http://ad.crwdcntrl.net/5/c=1890/pe=y?http://adserver.adtechus.com/adrawdata/3.0/5372.1/3136130/0/16/ADTECH;KVabbr=${aud_ids}", //Tremor
+		//ad_url: "http://ad.crwdcntrl.net/5/c=1890/pe=y?http://adserver.adtechus.com/adrawdata/3.0/5372.1/3101982/0/16/ADTECH;KVabbr=${aud_ids}", //Standard 
+		//, {id:10, name:"Tremor - Direct VAST XML",				url:"http://adserver.adtechus.com/adrawdata/3.0/5372.1/3136130/0/16/ADTECH"}
+		//, {id:11, name:"Doritos - Direct VAST XML",				url:"./testData/doritos.xml"}
+			var adList 	=
+			[
+			{id:0, name:"Empty URL", url:""}
+			, {id:1, name:"Toyota VPAID - Direct VPAID XML, local",	url:"./testData/toyotaVpaid.xml"}
+			, {id:2, name:"Toyota VPAID - VAST RESPONSE",			url:"http://rtr.innovid.com/r1.53e128ae0715e7.35544741;cb=357377117"}
+			, {id:3, name:"Adobe VPAID - Direct VAST XML, local",	url:"./testData/vastTest.xml"}
+			, {id:4, name:"Adobe VPAID - VAST RESPONSE",			url:"http://ad.doubleclick.net/pfadx/N4270.928084.GENESISMEDIA/B7992273.4;sz=0x0;ord=244599573;dcmt=text/xml"}
+			, {id:5, name:"Google Linear - Direct VAST XML",		url:"./testData/googleLinear.xml"}
+			, {id:6, name:"Google Linear - VAST RESPONSE",			url:"http://pubads.g.doubleclick.net/gampad/ads?sz=640x360&iu=/6062/iab_vast_samples/skippable&ciu_szs=300x250,728x90&impl=s&gdfp_req=1&env=vp&output=xml_vast2&unviewed_position_start=1&url=[referrer_url]&correlator=[timestamp]"}
+			, {id:7, name:"Mineralwater Linear - VAST RESPONSE",	url:"http://ad.doubleclick.net/pfadx/N270.130667.DOUBLECLICKADVERTISI/B6436143;dcadv=2215309;dcove=o;sz=0x0;ord=%5Btimestamp%5D;dcmt=text/xml"}
+			, {id:8, name:"Adtech Linear - VAST RESPONSE",			url:"http://adserver.adtechus.com/adrawdata/3.0/5372.1/3241369/0/16/ADTECH"}
+			, {id:9, name:"Chilis VPAID - Direct VAST XML",			url:"./testData/chilis.xml"}//wrapper
+			, {id:10, name:"Tremor Ad VAST RESPONSE",				url:"http://objects.tremormedia.com/embed/swf/vpaidacudeo.swf?adData=http%3A//app.scanscout.com/ssframework/adStreamJSController.xml%3Fa%3Dgetadscheduleforcontent%26PI%3D61988%26scheduleVersion%3D3%26HI%3D61988|preroll|4ni3ehedcf2irau464ckte%26AI%3D0%26ssCI%3D1455151%26format%3Dacudeo%26ss_acceptNonvideo%3DY%26ss_logURL%3Dhttp%3A%2F%2Fl0.scanscout.com%26PRI%3D4ni3ehedcf2irau464ckte%26vpaidType%3Ddirect%26PawF%3D1&ssOI=1"}
+			, {id:11, name:"Tremor - Direct VAST XML",				url:"./testData/tremor.xml"}
+			, {id:12, name:"DORITOS - Direct VAST XML",				url:"./testData/adobeVast.xml"}//inline
+			//, {id:13, name:"EMPTY",									url:"./testData/empty.xml"}//inline
+			]
+			
+			
+			var activePlayer				= "retail";
+			var legacyIndex					= 1;
+			var selectedRetailIndex			= 2;
+			var selectedBackfillIndex		= 0;
+			var playerReady					= false;
+			var adReady						= false;
+			var adUserStarted				= false;
+			
+			var devMode						= true;
+			var isLocking					= true;
+			var isPausedOnLoad				= true;
+			var backgroundColor				= "0x000000";
+			var controlBarAlign				= "bottom";
+			var controlBarAlpha				= "1.00"
+			var controlBarHeight			= "36";
+			var controlBarColor				= "0x282828";
+			var buttons						= "muteToggle,fullscreenToggle";
+			var retailTag					= encodeURIComponent(adList[selectedRetailIndex].url);
+			var backfillTag					= encodeURIComponent(adList[selectedBackfillIndex].url);
+			var timeOut						= 12;
+			var legacyMode					= false;
+			var CTP							= false;
+			
+			var flashvars					= {};
+				flashvars.devMode			= devMode;
+				flashvars.buttons			= buttons;
+				flashvars.volume			= 0.05;
+				flashvars.jsFunction		= "jsFooFunction";
+				flashvars.pauseOnLoad		= isPausedOnLoad;
+				flashvars.locking			= isLocking;
+				flashvars.backgroundColor	= backgroundColor;
+				flashvars.controlBarColor	= controlBarColor;
+				flashvars.controlBarAlpha	= controlBarAlpha;
+				flashvars.controlBarAlign	= controlBarAlign;
+				flashvars.controlBarHeight	= controlBarHeight;
+				flashvars.retailTag			= retailTag;
+				flashvars.backfillTag		= backfillTag;
+				flashvars.timeOut			= timeOut;
+				flashvars.legacyMode		= legacyMode;
+				flashvars.CTP				= CTP;
+				
+			var params						= {};
+				params.scale				= "noscale";
+				params.salign				= "tl";
+				params.wmode				= "gpu";
+				params.allowfullscreen		= "true";
+				params.allowscriptaccess	= "always";
+				
+			var attributes					= {};
+				attributes.id				= "player";
+				attributes.name				= "player";
+			
+			console.dir(flashvars)
+			swfobject.embedSWF
+			(
+				"http://cunlock.localhost.com/adg/assets/player.swf"
+				, "swfContainer"
+				, "100%"
+				, "100%"
+				, "11.1.0"
+				, false//"expressInstall.swf"
+				, flashvars
+				, params
+				, attributes
+			);
+			
+			// PROOF-OF-CONCEPT NEW CUSTOM METHODS --------
+			function jsCallbackFunction(a,b,c)
+			{
+				report("DEFAULT JS: "+a+" > "+b)
+			}
+			
+			function doLegacy(index)
+			{
+				switch(index)
+				{
+					case 0:
+						var fooMedia = "http://www.youtube.com/embed/ugo7Y2lRsxc";
+						//var fooMedia = "<![CDATA[http://gcdn.2mdn.net/MotifFiles/html/1295336/ADOBE_30_640x360_138939994593510_H263_high.flv]]>";
+						player.initWithVast("<VAST version='2.0'><Ad id='5192726'><InLine><AdSystem>AdTech</AdSystem><AdTitle>Z_CUBS_Standard_Test_Template</AdTitle><Impression><![CDATA[http://ad.crwdcntrl.net/4/to=y|c=1890|p=4648|rand=618717122]]></Impression><Impression><![CDATA[]]></Impression><Creatives><Creative AdID='5192726'><Linear><Duration>60</Duration><TrackingEvents><Tracking event='start'><![CDATA[http://bcp.crwdcntrl.net/5/c=1890/seg=videostart/seg=campaign^5192726^23778…ilter=16;no_of_slates=1;abandons=2;current_ad=1;exclude=none;abbr=$aud_ids]]></Tracking><Tracking event='start'><![CDATA[http://adserver.adtechus.com/adcount/3.0/5372/3101982/0/16/AdId=5192726;BnId=6;ct=337461557;st=1133;adcid=1;itime=618717122;reqtype=25;]]></Tracking><Tracking event='start'><![CDATA[http://pix.genesismedia.com/a0bc.png?Z_CUBS_Standard_Test_Template^5192726^…&pi=0&sd=undefined&pl=73&pu=0&dv=Desktop&br=Chrome&bv=39&sn=Radar%20Online]]></Tracking><Tracking event='start'><![CDATA[http://gmpx.bzgint.com/collectorx/a0bc.png?title=Z_CUBS_Standard_Test_Templ…&pi=0&sd=undefined&pl=73&pu=0&dv=Desktop&br=Chrome&bv=39&sn=Radar%20Online]]></Tracking><Tracking event='start'><![CDATA[http://b.scorecardresearch.com/p?c1=1&c2=16170130&c3=bs&c5=09&cv=2.0&cj=1]]></Tracking><Tracking event='firstQuartile'><![CDATA[http://pix.genesismedia.com/t25f.png?Z_CUBS_Standard_Test_Template^5192726^…&pi=0&sd=undefined&pl=73&pu=0&dv=Desktop&br=Chrome&bv=39&sn=Radar%20Online]]></Tracking><Tracking event='firstQuartile'><![CDATA[http://gmpx.bzgint.com/collectorx/t25f.png?title=Z_CUBS_Standard_Test_Templ…&pi=0&sd=undefined&pl=73&pu=0&dv=Desktop&br=Chrome&bv=39&sn=Radar%20Online]]></Tracking><Tracking event='firstQuartile'><![CDATA[http://bcp.crwdcntrl.net/5/c=1890/b=11645531?Z_CUBS_Standard_Test_Template^5192726^23778142^3101982]]></Tracking><Tracking event='midpoint'><![CDATA[http://pix.genesismedia.com/f50s.png?Z_CUBS_Standard_Test_Template^5192726^…&pi=0&sd=undefined&pl=73&pu=0&dv=Desktop&br=Chrome&bv=39&sn=Radar%20Online]]></Tracking><Tracking event='midpoint'><![CDATA[http://gmpx.bzgint.com/collectorx/f50s.png?title=Z_CUBS_Standard_Test_Templ…&pi=0&sd=undefined&pl=73&pu=0&dv=Desktop&br=Chrome&bv=39&sn=Radar%20Online]]></Tracking><Tracking event='midpoint'><![CDATA[http://bcp.crwdcntrl.net/5/c=1890/b=11645532?Z_CUBS_Standard_Test_Template^5192726^23778142^3101982]]></Tracking><Tracking event='thirdQuartile'><![CDATA[http://pix.genesismedia.com/s75t.png?Z_CUBS_Standard_Test_Template^5192726^…&pi=0&sd=undefined&pl=73&pu=0&dv=Desktop&br=Chrome&bv=39&sn=Radar%20Online]]></Tracking><Tracking event='thirdQuartile'><![CDATA[http://gmpx.bzgint.com/collectorx/s75t.png?title=Z_CUBS_Standard_Test_Templ…&pi=0&sd=undefined&pl=73&pu=0&dv=Desktop&br=Chrome&bv=39&sn=Radar%20Online]]></Tracking><Tracking event='thirdQuartile'><![CDATA[http://bcp.crwdcntrl.net/5/c=1890/b=11645533?Z_CUBS_Standard_Test_Template^5192726^23778142^3101982]]></Tracking><Tracking event='complete'><![CDATA[http://pix.genesismedia.com/o100l.png?Z_CUBS_Standard_Test_Template^5192726…&pi=0&sd=undefined&pl=73&pu=0&dv=Desktop&br=Chrome&bv=39&sn=Radar%20Online]]></Tracking><Tracking event='complete'><![CDATA[http://gmpx.bzgint.com/collectorx/o100l.png?title=Z_CUBS_Standard_Test_Temp…&pi=0&sd=undefined&pl=73&pu=0&dv=Desktop&br=Chrome&bv=39&sn=Radar%20Online]]></Tracking><Tracking event='complete'><![CDATA[http://bcp.crwdcntrl.net/5/c=1890/seg=videoend/seg=campaign^5192726^2377814…ilter=16;no_of_slates=1;abandons=2;current_ad=1;exclude=none;abbr=$aud_ids]]></Tracking></TrackingEvents><VideoClicks><ClickTracking><![CDATA[http://adserver.adtechus.com/adlink/5372/3101982/0/16/AdId=5192726;BnId=6;itime=618717122;nodecode=yes;link=]]></ClickTracking><ClickTracking><![CDATA[http://pix.genesismedia.com/click.png?Z_CUBS_Standard_Test_Template^5192726…&pi=0&sd=undefined&pl=73&pu=0&dv=Desktop&br=Chrome&bv=39&sn=Radar%20Online]]></ClickTracking><ClickTracking><![CDATA[http://gmpx.bzgint.com/collectorx/click.png?title=Z_CUBS_Standard_Test_Temp…&pi=0&sd=undefined&pl=73&pu=0&dv=Desktop&br=Chrome&bv=39&sn=Radar%20Online]]></ClickTracking><ClickThrough><![CDATA[http://www.genesismedia.com]]></ClickThrough></VideoClicks><MediaFiles><MediaFile delivery='progressive' type='video/x-flv' scalable='true' maintainAspectRatio='true'>"+fooMedia+"</MediaFile></MediaFiles></Linear></Creative></Creatives><Extensions><Extension type='GM'><VisorDuration>3000</VisorDuration><VisorIconSpacing>8</VisorIconSpacing><VisorBarHeight>64</VisorBarHeight><VisorColor>000000</VisorColor><VisorTracking></VisorTracking><Facebook><Url>https://www.facebook.com/nike</Url><UrlLinkMethod>direct</UrlLinkMethod><Tracking></Tracking></Facebook><Twitter><Url></Url><UrlLinkMethod>Sharing</UrlLinkMethod><Message>https://twitter.com/nike</Message><Tracking></Tracking></Twitter><AutoPlay>false</AutoPlay><CountdownDuration>-1</CountdownDuration><Trackings><Tracking event='progress' value='15'> <![CDATA[]]></Tracking><Tracking event='progress' value='15'> <![CDATA[http://pix.genesismedia.com/billable.png?Z_CUBS_Standard_Test_Template^5192…&pi=0&sd=undefined&pl=73&pu=0&dv=Desktop&br=Chrome&bv=39&sn=Radar%20Online]]></Tracking><Tracking event='progress' value='15'> <![CDATA[http://gmpx.bzgint.com/collectorx/billable.png?title=Z_CUBS_Standard_Test_T…&pi=0&sd=undefined&pl=73&pu=0&dv=Desktop&br=Chrome&bv=39&sn=Radar%20Online]]></Tracking></Trackings><MoatAds enable='true'></MoatAds></Extension></Extensions></InLine></Ad></VAST>");
+					break;
+					case 1:
+						player.initWithVastUrl("http://adserver.adtechus.com/adrawdata/3.0/5372.1/3136182/0/16/ADTECH", true);
+					break;
+					case 2:
+						player.initWithSingleSlate
+						(
+							"http://qa.contentunlock.s3.amazonaws.com/QA_SprintTesting/Sprint51/Regression/vpaid_101714_245PM.swf"
+							,"<VAST version='2.0'><Ad id='5192726'><InLine><AdSystem>AdTech</AdSystem><AdTitle>Z_CUBS_Standard_Test_Template</AdTitle><Impression><![CDATA[http://ad.crwdcntrl.net/4/to=y|c=1890|p=4648|rand=618717122]]></Impression><Impression><![CDATA[]]></Impression><Creatives><Creative AdID='5192726'><Linear><Duration>60</Duration><TrackingEvents><Tracking event='start'><![CDATA[http://bcp.crwdcntrl.net/5/c=1890/seg=videostart/seg=campaign^5192726^23778…ilter=16;no_of_slates=1;abandons=2;current_ad=1;exclude=none;abbr=$aud_ids]]></Tracking><Tracking event='start'><![CDATA[http://adserver.adtechus.com/adcount/3.0/5372/3101982/0/16/AdId=5192726;BnId=6;ct=337461557;st=1133;adcid=1;itime=618717122;reqtype=25;]]></Tracking><Tracking event='start'><![CDATA[http://pix.genesismedia.com/a0bc.png?Z_CUBS_Standard_Test_Template^5192726^…&pi=0&sd=undefined&pl=73&pu=0&dv=Desktop&br=Chrome&bv=39&sn=Radar%20Online]]></Tracking><Tracking event='start'><![CDATA[http://gmpx.bzgint.com/collectorx/a0bc.png?title=Z_CUBS_Standard_Test_Templ…&pi=0&sd=undefined&pl=73&pu=0&dv=Desktop&br=Chrome&bv=39&sn=Radar%20Online]]></Tracking><Tracking event='start'><![CDATA[http://b.scorecardresearch.com/p?c1=1&c2=16170130&c3=bs&c5=09&cv=2.0&cj=1]]></Tracking><Tracking event='firstQuartile'><![CDATA[http://pix.genesismedia.com/t25f.png?Z_CUBS_Standard_Test_Template^5192726^…&pi=0&sd=undefined&pl=73&pu=0&dv=Desktop&br=Chrome&bv=39&sn=Radar%20Online]]></Tracking><Tracking event='firstQuartile'><![CDATA[http://gmpx.bzgint.com/collectorx/t25f.png?title=Z_CUBS_Standard_Test_Templ…&pi=0&sd=undefined&pl=73&pu=0&dv=Desktop&br=Chrome&bv=39&sn=Radar%20Online]]></Tracking><Tracking event='firstQuartile'><![CDATA[http://bcp.crwdcntrl.net/5/c=1890/b=11645531?Z_CUBS_Standard_Test_Template^5192726^23778142^3101982]]></Tracking><Tracking event='midpoint'><![CDATA[http://pix.genesismedia.com/f50s.png?Z_CUBS_Standard_Test_Template^5192726^…&pi=0&sd=undefined&pl=73&pu=0&dv=Desktop&br=Chrome&bv=39&sn=Radar%20Online]]></Tracking><Tracking event='midpoint'><![CDATA[http://gmpx.bzgint.com/collectorx/f50s.png?title=Z_CUBS_Standard_Test_Templ…&pi=0&sd=undefined&pl=73&pu=0&dv=Desktop&br=Chrome&bv=39&sn=Radar%20Online]]></Tracking><Tracking event='midpoint'><![CDATA[http://bcp.crwdcntrl.net/5/c=1890/b=11645532?Z_CUBS_Standard_Test_Template^5192726^23778142^3101982]]></Tracking><Tracking event='thirdQuartile'><![CDATA[http://pix.genesismedia.com/s75t.png?Z_CUBS_Standard_Test_Template^5192726^…&pi=0&sd=undefined&pl=73&pu=0&dv=Desktop&br=Chrome&bv=39&sn=Radar%20Online]]></Tracking><Tracking event='thirdQuartile'><![CDATA[http://gmpx.bzgint.com/collectorx/s75t.png?title=Z_CUBS_Standard_Test_Templ…&pi=0&sd=undefined&pl=73&pu=0&dv=Desktop&br=Chrome&bv=39&sn=Radar%20Online]]></Tracking><Tracking event='thirdQuartile'><![CDATA[http://bcp.crwdcntrl.net/5/c=1890/b=11645533?Z_CUBS_Standard_Test_Template^5192726^23778142^3101982]]></Tracking><Tracking event='complete'><![CDATA[http://pix.genesismedia.com/o100l.png?Z_CUBS_Standard_Test_Template^5192726…&pi=0&sd=undefined&pl=73&pu=0&dv=Desktop&br=Chrome&bv=39&sn=Radar%20Online]]></Tracking><Tracking event='complete'><![CDATA[http://gmpx.bzgint.com/collectorx/o100l.png?title=Z_CUBS_Standard_Test_Temp…&pi=0&sd=undefined&pl=73&pu=0&dv=Desktop&br=Chrome&bv=39&sn=Radar%20Online]]></Tracking><Tracking event='complete'><![CDATA[http://bcp.crwdcntrl.net/5/c=1890/seg=videoend/seg=campaign^5192726^2377814…ilter=16;no_of_slates=1;abandons=2;current_ad=1;exclude=none;abbr=$aud_ids]]></Tracking></TrackingEvents><VideoClicks><ClickTracking><![CDATA[http://adserver.adtechus.com/adlink/5372/3101982/0/16/AdId=5192726;BnId=6;itime=618717122;nodecode=yes;link=]]></ClickTracking><ClickTracking><![CDATA[http://pix.genesismedia.com/click.png?Z_CUBS_Standard_Test_Template^5192726…&pi=0&sd=undefined&pl=73&pu=0&dv=Desktop&br=Chrome&bv=39&sn=Radar%20Online]]></ClickTracking><ClickTracking><![CDATA[http://gmpx.bzgint.com/collectorx/click.png?title=Z_CUBS_Standard_Test_Temp…&pi=0&sd=undefined&pl=73&pu=0&dv=Desktop&br=Chrome&bv=39&sn=Radar%20Online]]></ClickTracking><ClickThrough><![CDATA[http://www.genesismedia.com]]></ClickThrough></VideoClicks><MediaFiles><MediaFile delivery='progressive' type='video/x-flv' scalable='true' maintainAspectRatio='true'>http://www.youtube.com/embed/ugo7Y2lRsxc</MediaFile></MediaFiles></Linear></Creative></Creatives><Extensions><Extension type='GM'><VisorDuration>3000</VisorDuration><VisorIconSpacing>8</VisorIconSpacing><VisorBarHeight>64</VisorBarHeight><VisorColor>000000</VisorColor><VisorTracking></VisorTracking><Facebook><Url>https://www.facebook.com/nike</Url><UrlLinkMethod>direct</UrlLinkMethod><Tracking></Tracking></Facebook><Twitter><Url></Url><UrlLinkMethod>Sharing</UrlLinkMethod><Message>https://twitter.com/nike</Message><Tracking></Tracking></Twitter><AutoPlay>false</AutoPlay><CountdownDuration>-1</CountdownDuration><Trackings><Tracking event='progress' value='15'> <![CDATA[]]></Tracking><Tracking event='progress' value='15'> <![CDATA[http://pix.genesismedia.com/billable.png?Z_CUBS_Standard_Test_Template^5192…&pi=0&sd=undefined&pl=73&pu=0&dv=Desktop&br=Chrome&bv=39&sn=Radar%20Online]]></Tracking><Tracking event='progress' value='15'> <![CDATA[http://gmpx.bzgint.com/collectorx/billable.png?title=Z_CUBS_Standard_Test_T…&pi=0&sd=undefined&pl=73&pu=0&dv=Desktop&br=Chrome&bv=39&sn=Radar%20Online]]></Tracking></Trackings><MoatAds enable='true'></MoatAds></Extension></Extensions></InLine></Ad></VAST>"
+							,false
+							,"http://adserver.adtechus.com/adrawdata/3.0/5372.1/3136182/0/16/ADTECH"
+							,10
+							,null
+						);
+					break;
+				}
+			}
+			
+			function jsFooFunction(a,b,c)
+			{
+				//a = playerId
+				//b = eventType
+				//c = eventObject
+				switch(b)
+				{
+					//PLAYER EVENTS -------------
+					case "playerLoaded":
+						report(a,b);
+					break;
+					case "playerDataError":
+						report(a,b);
+					break;
+					case "playerReady":
+						playerReady = true;
+						if(legacyMode) doLegacy(legacyIndex);
+						report(a,b);
+					break;
+					case "playerError":
+						playerReady = false;
+						report(a,b);
+					break;
+					case "playerSizeChange":
+						report(a,b,c.width+"|"+c.height);
+					break;
+					case "playerNormalscreen":
+						report(a,b);
+					break;
+					case "playerFullscreen":
+						report(a,b);
+					break;
+					case "playerVolumeChange":
+						report(a,b,c.volume);
+					break;
+					case "playerMuted":
+						report(a,b);
+					break;
+					case "playerUnmuted":
+						report(a,b);
+					break;
+					case "playerLocked":
+						report(a,b);
+					break;
+					
+					//AD EVENTS -----------------
+					case "retailDataReady": report(a,b); break;
+					case "retailDataError": report(a,b); break;
+					case "backfillDataReady": report(a,b); break;
+					case "backfillDataError": report(a,b); break;
+					
+					case "retailAdLoadError": report(a,b); break;
+					case "retailAdError": report(a,b); break;
+					case "retailAdPlayError": report(a,b); break;
+					
+					case "backfillAdLoadError": report(a,b); break;
+					case "backfillAdError": report(a,b); break;
+					case "backfillAdPlayError": report(a,b); break;
+					
+					case "ctpInteractionTimerStarted": report(a,b); break;
+					case "ctpInteractionTimerStopped": report(a,b); break;
+					case "ctpInteractionTimedOut": report(a,b); break;
+					case "userInteractionStart": report(a,b); break;
+					
+					case "retailAdLoadReady" || "backfillAdLoadReady":
+						activePlayer = (retailAdLoadReady) ? "retail" : "backfill";
+						checkSpaceNow();
+						spaceChecker();
+						report(a,b);
+					break;
+					case "retailAdReady" ||"backfillAdReady":
+						adReady = true;
+						report(a,b);
+						updateTitle(activePlayer);
+						if(!CTP) resumeAd();
+					break;
+					case "adError":
+						report(a,b);
+					break;
+					case "adLoaded":
+						report(a,b);
+					break;
+					case "adImpression":
+						report(a,b);
+					break;
+					case "adStarted":
+						report(a,b,c.adId);
+						
+					break;
+					case "adDurationChange":
+						report(a,b,c.duration);
+						updateDuration(c.duration);
+					break;
+					case "adStopped":
+						report(a,b);
+					break;
+					
+					case "adResumed":
+						report(a,b);
+					break;
+					
+					case "adPaused":
+						report(a,b);
+					break;
+					
+					//AD VIDEO EVENTS -----------
+					case "adVideoStart":
+						report(a,b);
+					break;
+					
+					case "adVideoFirstQuartile":
+						report(a,b);
+					break;
+					
+					case "adVideoMidpoint":
+						report(a,b);
+					break;
+					
+					case "adVideoThirdQuartile":
+						report(a,b);
+					break;
+					
+					case "adVideoComplete":
+						report(a,b);
+					break;
+					
+				}
+			}
+			
+			function updateTitle($activePlayer)
+			{
+				var newTitle = ($activePlayer == "retail")? adList[selectedRetailIndex].name:adList[selectedBackfillIndex].name;
+				var el = $('#title');
+				el.html(newTitle);
+			}
+			
+			function updateStatus($status)
+			{
+				var el = $('#status');
+				el.html($status);
+			}
+			
+			function updateDuration($duration)
+			{
+				var d = $duration;
+				var el = $('#duration');
+				el.html(d);
+			}
+			
+			function updateTime($time)
+			{
+				var t = $time;
+				var el = $('#time');
+				el.html(t);
+			}
+			
+			function report(playerID, msg, data)
+			{
+				var tmp = (data != null || data != undefined) ? (": "+data) : "";
+				console.log("JS* "+playerID+":: "+msg+""+tmp);
+				updateStatus(msg);
+			}
+			
+			// EXPOSED CONTROL CALLBACKS ------------------
+			function resumeAd()
+			{
+				if(player)
+				{
+					console.error("RESUME AD: playing? "+player.playing());
+					if( !player.playing() ) player.resumeAd();
+				}
+			}
+			
+			function pauseAd()
+			{
+				if(player) 
+				{
+					console.error("PAUSE AD: playing? "+player.playing());
+					if( player.playing() ) player.pauseAd();
+				}
+			}
+			
+			function locked()
+			{
+				if( player && player.locking() ) player.resumeAd();
+			}
+			
+			// PROOF-OF-CONCEPT FUNCTIONAL METHODS --------
+			function toggleSize()
+			{
+				var el = $('#playerWrapper');
+				if(el.width() == 720)
+				{
+					el.width(640);
+					el.height(480);
+				}else{
+					el.width(720);
+					el.height(405);
+				}
+			}
+			
+			function crazySize()
+			{
+				var win = $( window );
+				var el = $('#playerWrapper');
+				if(el.width() == 720)
+				{
+					el.width(Math.floor(Math.random() * win.width()/2) + 320);
+					el.height(Math.floor(Math.random() * win.height()/2) + 240);
+				}else{
+					el.width(720);
+					el.height(405);
+				}
+			}
+			
+			function rollUp()
+			{
+				$('#wrapper').slideUp( 500, function() {
+					$(this).hide();
+				});
+			}
+			
+			function rollDown()
+			{
+				$('#wrapper').slideDown( 500, function() {
+					$(this).show();
+				});
+			}
+			
+			function checkSpaceNow()
+			{
+				spaceChecker();
+			}
+			
+			function checkSpace()
+			{
+				/*
+				$( window ).bind( "scroll", function()
+				{
+					spaceChecker();
+				});
+				*/
+				var  win = $( window );
+				win.addEventListener('scroll',spaceChecker,false);
+			}
+			
+			function spaceChecker()
+			{
+				var win = $( window );
+				var el = $('#wrapper');
+				var winPos = win.scrollTop() + win.height();
+				var elPos = el.offset().top + el.height();
+				console.debug((winPos > elPos)+" | "+((win.scrollTop() < el.offset().top)));
+				if( (winPos > elPos) && (win.scrollTop() < el.offset().top) )
+				{
+					console.debug("JS sending play");
+					resumeAd();
+				}else{
+					console.debug("JS sending pause  ");
+					pauseAd();
+				}
+			}
+			
+			$( document ).ready(function()
+			{
+				
+			});
+			
+		</script>
+		
+		<style>
+		
+		#controls
+		{
+			position: fixed;
+			z-index: 2000;
+			margin: 0 auto; padding: 10px;
+			background: rgba(0,0,0,0.60);
+		}
+		
+		#content
+		{
+			margin: 0 auto; padding: 0;
+		}
+		
+		#blockAbove, #blockBelow
+		{
+			width: 100%; height: auto;
+			margin: 0 auto; padding: 10px;
+			
+		}
+		
+		#wrapper
+		{
+			margin: 0 auto; padding: 0;
+		}
+		
+		#titleBar
+		{
+			width: 722px; height: 36px;
+			margin: 0 auto; padding: 0;
+			background: rgba(0,0,0,0.40);
+		}
+		
+		#playerWrapper
+		{
+			width: 720px; height: 405px;
+			margin: 0 auto; padding: 0;
+			border: 1px solid black;
+			background: #FFF;
+		}
+		
+		p
+		{
+			margin: 0 auto; padding: 0;
+			font-family:Arial;
+			text-align: justify;
+			text-justify: inter-word;
+		}
+		
+		ul
+		{
+			list-style-type: none;
+			margin: 0; padding: 10px 8px;
+			display: block;
+		}
+		
+		ul li
+		{
+			margin: 0; padding: 0;
+			display: inline-block;
+			vertical-align: middle;
+			font-family: "Arial";
+			background: rgba(255,255,255,0.30);
+		}
+		#title
+		{
+			font-size: 10pt;
+			width: 50%;
+		}
+		#status
+		{
+			font-size: 9pt;
+			width: 24%;
+		}
+		#time, #duration
+		{
+			font-size: 9pt;
+			width: 12%;
+		}
+		</style>
+		
+		
+	</head>
+	<body>
+		<div id="controls">
+			<button type="button" onclick="resumeAd()">PLAY</button>
+			<button type="button" onclick="pauseAd()">PAUSE</button>
+			<button type="button" onclick="locked()">LOCK</button>
+			<button type="button" onclick="toggleSize()">16:9 > 4:3</button>
+			<button type="button" onclick="crazySize()">CRAZY SIZES</button>
+		</div>
+		<div id="content">
+			<div id="blockAbove">
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. <b>Lorem ipsum dolor sit amet, consectetur adipiscing elit</b>. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. </p>
+				<p><b>Lorem ipsum dolor sit amet, consectetur adipiscing elit</b>. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. <i>Lorem ipsum dolor sit amet, consectetur adipiscing elit</i>. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. <i>Lorem ipsum dolor sit amet, consectetur adipiscing elit</i>. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. <b>Curabitur tortor</b>. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. </p>
+				<p>Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. Quisque volutpat condimentum velit. <i>Sed dignissim lacinia nunc</i>. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam nec ante. Sed lacinia, urna non tincidunt mattis, tortor neque adipiscing diam, a cursus ipsum ante quis turpis. Nulla facilisi. <i>Pellentesque nibh</i>. Ut fringilla. Suspendisse potenti. Nunc feugiat mi a tellus consequat imperdiet. Vestibulum sapien. <i>In scelerisque sem at dolor</i>. Proin quam. Etiam ultrices. </p>
+				<p><i>Maecenas mattis</i>. Suspendisse in justo eu magna luctus suscipit. Sed lectus. Integer euismod lacus luctus magna. <i>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos</i>. Quisque cursus, metus vitae pharetra auctor, sem massa mattis sem, at interdum magna augue eget diam. <b>Nunc feugiat mi a tellus consequat imperdiet</b>. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi lacinia molestie dui. Praesent blandit dolor. Sed non quam. In vel mi sit amet augue congue elementum. Morbi in ipsum sit amet pede facilisis laoreet. Donec lacus nunc, viverra nec, blandit vel, egestas et, augue. Vestibulum tincidunt malesuada tellus. </p>
+				<p>Ut ultrices ultrices enim. <i>Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh</i>. Curabitur sit amet mauris. <b>Sed non quam</b>. Morbi in dui quis est pulvinar ullamcorper. <b>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi lacinia molestie dui</b>. Nulla facilisi. Integer lacinia sollicitudin massa. Cras metus. Sed aliquet risus a tortor. <b>Donec lacus nunc, viverra nec, blandit vel, egestas et, augue</b>. Integer id quam. Morbi mi. Quisque nisl felis, venenatis tristique, dignissim in, ultrices sit amet, augue. Proin sodales libero eget ante. Nulla quam. Aenean laoreet. <i>Donec lacus nunc, viverra nec, blandit vel, egestas et, augue</i>. Vestibulum nisi lectus, commodo ac, facilisis ac, ultricies eu, pede. </p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. <b>Lorem ipsum dolor sit amet, consectetur adipiscing elit</b>. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. </p>
+				<p><b>Lorem ipsum dolor sit amet, consectetur adipiscing elit</b>. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. <i>Lorem ipsum dolor sit amet, consectetur adipiscing elit</i>. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. <i>Lorem ipsum dolor sit amet, consectetur adipiscing elit</i>. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. <b>Curabitur tortor</b>. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. </p>
+				<p>Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. Quisque volutpat condimentum velit. <i>Sed dignissim lacinia nunc</i>. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam nec ante. Sed lacinia, urna non tincidunt mattis, tortor neque adipiscing diam, a cursus ipsum ante quis turpis. Nulla facilisi. <i>Pellentesque nibh</i>. Ut fringilla. Suspendisse potenti. Nunc feugiat mi a tellus consequat imperdiet. Vestibulum sapien. <i>In scelerisque sem at dolor</i>. Proin quam. Etiam ultrices. </p>
+				<p><i>Maecenas mattis</i>. Suspendisse in justo eu magna luctus suscipit. Sed lectus. Integer euismod lacus luctus magna. <i>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos</i>. Quisque cursus, metus vitae pharetra auctor, sem massa mattis sem, at interdum magna augue eget diam. <b>Nunc feugiat mi a tellus consequat imperdiet</b>. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi lacinia molestie dui. Praesent blandit dolor. Sed non quam. In vel mi sit amet augue congue elementum. Morbi in ipsum sit amet pede facilisis laoreet. Donec lacus nunc, viverra nec, blandit vel, egestas et, augue. Vestibulum tincidunt malesuada tellus. </p>
+				<p>Ut ultrices ultrices enim. <i>Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh</i>. Curabitur sit amet mauris. <b>Sed non quam</b>. Morbi in dui quis est pulvinar ullamcorper. <b>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi lacinia molestie dui</b>. Nulla facilisi. Integer lacinia sollicitudin massa. Cras metus. Sed aliquet risus a tortor. <b>Donec lacus nunc, viverra nec, blandit vel, egestas et, augue</b>. Integer id quam. Morbi mi. Quisque nisl felis, venenatis tristique, dignissim in, ultrices sit amet, augue. Proin sodales libero eget ante. Nulla quam. Aenean laoreet. <i>Donec lacus nunc, viverra nec, blandit vel, egestas et, augue</i>. Vestibulum nisi lectus, commodo ac, facilisis ac, ultricies eu, pede. </p>
+			</div>
+			<div id="wrapper">
+				<div id="titleBar">
+					<ul>
+						<li id="title"></li>
+						<li id="status">Status</li>
+						<li id="time">0</li>
+						<li id="duration">0</li>
+					</ul>
+				</div>
+				<div id="playerWrapper">
+					<div id="swfContainer">
+						<a href="http://www.adobe.com/go/getflashplayer">
+							<img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player" />
+						</a>
+					</div>
+				</div>
+			</div>
+			<div id="blockBelow">
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. <b>Lorem ipsum dolor sit amet, consectetur adipiscing elit</b>. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. </p>
+				<p><b>Lorem ipsum dolor sit amet, consectetur adipiscing elit</b>. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. <i>Lorem ipsum dolor sit amet, consectetur adipiscing elit</i>. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. <i>Lorem ipsum dolor sit amet, consectetur adipiscing elit</i>. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. <b>Curabitur tortor</b>. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. </p>
+				<p>Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. Quisque volutpat condimentum velit. <i>Sed dignissim lacinia nunc</i>. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam nec ante. Sed lacinia, urna non tincidunt mattis, tortor neque adipiscing diam, a cursus ipsum ante quis turpis. Nulla facilisi. <i>Pellentesque nibh</i>. Ut fringilla. Suspendisse potenti. Nunc feugiat mi a tellus consequat imperdiet. Vestibulum sapien. <i>In scelerisque sem at dolor</i>. Proin quam. Etiam ultrices. </p>
+				<p><i>Maecenas mattis</i>. Suspendisse in justo eu magna luctus suscipit. Sed lectus. Integer euismod lacus luctus magna. <i>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos</i>. Quisque cursus, metus vitae pharetra auctor, sem massa mattis sem, at interdum magna augue eget diam. <b>Nunc feugiat mi a tellus consequat imperdiet</b>. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi lacinia molestie dui. Praesent blandit dolor. Sed non quam. In vel mi sit amet augue congue elementum. Morbi in ipsum sit amet pede facilisis laoreet. Donec lacus nunc, viverra nec, blandit vel, egestas et, augue. Vestibulum tincidunt malesuada tellus. </p>
+				<p>Ut ultrices ultrices enim. <i>Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh</i>. Curabitur sit amet mauris. <b>Sed non quam</b>. Morbi in dui quis est pulvinar ullamcorper. <b>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi lacinia molestie dui</b>. Nulla facilisi. Integer lacinia sollicitudin massa. Cras metus. Sed aliquet risus a tortor. <b>Donec lacus nunc, viverra nec, blandit vel, egestas et, augue</b>. Integer id quam. Morbi mi. Quisque nisl felis, venenatis tristique, dignissim in, ultrices sit amet, augue. Proin sodales libero eget ante. Nulla quam. Aenean laoreet. <i>Donec lacus nunc, viverra nec, blandit vel, egestas et, augue</i>. Vestibulum nisi lectus, commodo ac, facilisis ac, ultricies eu, pede. </p>
+			</div>
+		</div>
+	</body>
+</html>

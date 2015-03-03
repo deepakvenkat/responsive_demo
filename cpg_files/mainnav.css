@@ -1,0 +1,68 @@
+/* ----[Containers]---- */
+#mainnav li {margin:0; padding:0; list-style:none;}
+#mainnav li {display:block;}
+#mainnav ul.navList {padding:0; margin:0; list-style:none; position:absolute; left:-9999px;}
+#mainnav li.li-top:hover ul.navList {left:0;}
+#mainnav :hover ul.navList a {white-space:nowrap;}
+#mainnav :hover ul.navList b {position:absolute;}
+#mainnav :hover ul.navList.right {left:auto; right:0;}
+#mainnav table {border-collapse:collapse; margin-top:-1px;}/* IE6 */
+#mainnav iframe {display:none;/*sorry for IE5*/display/**/:block;/*sorry for IE5*/position:absolute;/*must have*/top:33;/*must have*/left:0;/*must have*/z-index:-1;/*must have*/filter:mask();/*must have*/width:170px;/*must have for any big value*/height:160px/*must have for any big value*/; }
+#mainnav .ie6 *{line-height:14px;}
+
+/* ----[Bar]---- */
+#menuWrap {float:left; height:48px;width:995px;position:relative;margin-left:10px;_margin-left:5px;text-transform:uppercase;z-index:585;}
+#mainnav {margin:0; padding:0; list-style:none; white-space:nowrap; text-align:left; float:left;}
+
+/* All mainnav links */
+#mainnav a {display:block;text-decoration:none;border:0px none;margin-bottom:0;}
+
+/* ----[Top Level Links]---- */
+#mainnav li.li-top {float:left; display:block;border-left:1px dotted #000;margin-top:3px;padding:0 5px 0 5px;}
+ul#mainnav > li:first-child{border-left:none;}
+#mainnav li.li-top a.top {float:left;color:#523920;line-height:40px;font-size:13px;padding:0 17px;_padding:0 16px;font-weight: bold; }
+#mainnav li.li-top a span {background: url('http://images.meredith.com/fc/images/template/shell/nav/nav_arrowd.gif') no-repeat scroll right; padding-right: 10px;}
+body:nth-of-type(1) #mainnav li.li-top a.top{padding:0 14px;}/* Safari 3+ Hack */
+#mainnav li.first {border-left:0 none;}
+#mainnav li.first a.top{}
+
+    /* Top Level Link - Hoover */
+	#mainnav :hover a:hover {color:#CE1F81;}
+
+	/* Top Level Link - IE6 Hover */
+    #mainnav li a.top:hover {z-index:200;}
+    #mainnav li a.top:hover {position:relative;color:#CE1F81;}
+
+/* ----[Dropdown]---- */
+#mainnav ul.navList {padding:3px 5px;border:3px solid #ccc;/*border-bottom:3px solid #ccc;*/min-width:170px;_width:170px;background:#fff;}
+
+	/* Dropdown link */
+    #mainnav ul.navList a{color:#000;font-size:13px;font-weight:normal;line-height:25px;padding:0 10px 0 15px;}
+    #mainnav ul.navList li.categoryLi {position:relative; border-bottom: 1px solid #CCCCCC;height:25px;width:170px;} /* adding height and width for IE7 */
+    #mainnav ul.navList li.categoryLi:last-child {border-bottom-width: 0px;}
+    #mainnav ul.navList li.categoryLi img.small_arrow {position:absolute; left: 165px; top: 10px;}
+    #mainnav ul.navList li.categoryLi img.nav_dd_arrow {display:none; position:absolute; left: 169px; top: 0px;z-index:100;}
+
+	/* Dropdown Link - Hover */
+	#mainnav li.li-top:hover {position:relative;}
+	#mainnav li.li-top:hover > a {background:#fff;}
+    #mainnav li.li-top:hover ul :hover > a {text-decoration:underline;}
+	#mainnav li.li-top:hover ul.navList {margin-top:40px;}
+
+	/* Dropdown Link - IE6 Hover */
+    #mainnav ul.navList a:hover{color:#523920;text-decoration:underline;position:relative;z-index:5;}/* IE6 */
+
+    /* Dropdown change background on hover */
+    #mainnav li.li-top ul.navList li.categoryLi:hover {background-color:#CE1F81;display:block;}
+    #mainnav li.li-top ul.navList li.categoryLi:hover a.lc1 {color:#FFFFFF;text-decoration: none;font-weight: bold;}
+
+    /* 3rd tier links */
+    #mainnav ul.subChildren {display:none;position:absolute;left:175px;top:-1px;background-color:#FFFFFF; border:3px solid #cccccc; margin:0; padding: 3px 0;text-transform:capitalize;}
+    #mainnav ul.subChildren li a {color:#000;}
+    #mainnav ul.navList li.categoryLi:hover ul.subChildren {display:block;}
+    #mainnav ul.navList li.categoryLi ul.subChildren li.majlink a:hover {color:#CE1F81;}
+    #mainnav ul.navList li.categoryLi:hover img.nav_dd_arrow {display:block;}
+
+/* ----[Account Links]---- */
+.navAcct{font-size:12px;font-weight:700;float:right;padding:40px 35px 0 0;}
+.navAcct a{font-size:12px;font-weight:700;color:#ce1f81;text-decoration:none;border:none;}

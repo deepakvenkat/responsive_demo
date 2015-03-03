@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="keywords" content="news breaking news business">
+    <title> Demo | Responsive Web</title>
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
+    <link href="styles/main.css" type="text/css" rel="stylesheet">
+
+    <!--script type="text/javascript" src="http://192.168.80.43/cuconfig.js"></script-->
+    <!--script type="text/javascript" src="testing_script.js"></script-->
+
+
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+
+    <script type='text/javascript' src='scripts/respond.min.js'></script>
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <!--script type="text/javascript" src="dannon/mutation.js"></script-->
+    <script type="text/javascript">
+      function pageWillNotLock() {
+        console.log("=====page will not Lock=====");
+
+      }
+      function pageLocked () {
+        console.log("=====pageLocked=====");
+      }
+
+      function pageUnlocked() {
+        console.log("=====page unlocked=====");
+      }
+
+      function GMContentUnlockEventHandlerOnReady() {
+        GMContentUnlockEventHandler.attachEvent('pageWillNotLock', pageWillNotLock);
+        GMContentUnlockEventHandler.attachEvent('pageLocked', pageLocked);
+        GMContentUnlockEventHandler.attachEvent('pageUnlocked', pageUnlocked);
+      }
+      var futureTime = (new Date().getTime() + 10000)
+      // while (futureTime > new Date().getTime()) {
+      //   // something
+      // }
+
+    </script>
+
+  </head>
+  <body>
+    <!--iframe src="http://genesismedia.com:3000/demo_iframe" width=1 height=1 onload="iframeCallback()"></iframe-->
+    <!-- <embed src='http://www.adapticom1.net/adapticom/SoundEffects/Star_Trek-Red_Alert.wav'  hidden=true autostart=true loop=false></embed> -->
+    <div id="wrapper">
+
+      <header>
+
+        <nav id="skipTo">
+          <ul>
+            <li>
+              <a href="#main" title="Skip to Main Content">Skip to Main Content</a>
+            </li>
+          </ul>
+        </nav>
+
+        <h1>Demo</h1>
+
+        <nav>
+          <ul>
+            <li><a href="#" title="Home">Home</a></li>
+            <li><a href="#" title="About">About</a></li>
+            <li><a href="#" title="Work">Work</a></li>
+            <li><a href="#" title="Contact">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div id="banner">
+
+        </div>
+
+      </header>
+
+      <div class="cunlock_main_content" id="main">
+        <h1 class="first cunlock_first_paragraph">
+          <i>Main section</i>
+        </h1>
+        <p class="cunlock_exclude">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <button id="async-button">  test</button>
+      </div>
+
+      <aside>
+        <h1>Sub-section</h1>
+        <img src="octoliberty.png" width="200">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p id="values"></p>
+      </aside>
+    </div>
+    <script type="text/javascript">
+      // function GMCookieService (gmCookie) {
+      //   alert(gmCookie.last_lock_at);
+      //   console.log(gmCookie);
+      // }
+      // var img = new Image();
+      // img.src = "http://php.genesismedia.com/cookie.php?action=set&publisher_name=here_media&session_depth=22&free_views=1&pafe_locks=10&unit_expansions=10&adStarted=10&adCompleted=6&total_unlocks=10&free_views_after_unlocking=0&begin_date=1396990768078&last_lock_at=0&expires=Wed,%2030%20Apr%202014%2021:24:57%20GMT";
+      // $("#async-button").click(function() {
+      //   var s = document.createElement('script');
+      //   s.src = "http://php.genesismedia.com/cookie.php?action=get&publisher_name=here_media";
+      //   var s1 = document.getElementsByTagName('script')[0];
+      //   s1.parentNode.insertBefore(s, s1)
+      // })
+      // var xhr = new XMLHttpRequest();
+      // xhr.onload = function (e) {
+      //   console.log(xhr.response)
+      // }
+      // xhr.open("get", "http://adserver.adtechus.com/adrawdata/3.0/5372.1/3151946/0/16/ADTECH;KVDev=iphone;cors=yes", true);
+      // xhr.send();
+
+      // var iframe = document.createElement("iframe");
+      // iframe.src = "http://someotherdomain.com/demo/iframe_tester.html"
+      // document.body.appendChild(iframe)
+      // a = function () {};
+      //   window.addEventListener("message", function (event) {
+      //   console.log("In parent : " + event.data);
+      //   console.log("In parent triggering");
+      //   event.source.postMessage("roger that", "*");
+      //   setTimeout(function () {console.log("After the post message")}, 500);
+      //   return;
+      // }, false);
+    </script>
+    <script type="text/javascript" id="gm-script-tag" src="estester.js?prop1=something&prop2=something"></script>
+
+  </body>
+</html>
+

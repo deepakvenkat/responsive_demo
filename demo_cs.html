@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="keywords" content="news breaking news business">
+    <title> Demo | Responsive Web</title>
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
+    <link href="styles/main.css" type="text/css" rel="stylesheet">
+    <script type="text/javascript">
+      var content_unlock_parameters = {
+        refresh_threshold : 2,
+        asynchronous_mode : false
+      };
+      function pageWillNotLock() {
+        console.log("=====page will not Lock=====");
+
+      }
+      function pageLocked () {
+
+        console.log("=====pageLocked=====");
+      }
+
+      function pageUnlocked() {
+        console.log("=====page unlocked=====");
+      }
+
+      function GMContentUnlockEventHandlerOnReady() {
+        GMContentUnlockEventHandler.attachEvent('pageWillNotLock', pageWillNotLock);
+        GMContentUnlockEventHandler.attachEvent('pageLocked', pageLocked);
+        GMContentUnlockEventHandler.attachEvent('pageUnlocked', pageUnlocked);
+      }
+    </script>
+
+    <!--script type="text/javascript" src="testing_script.js"></script-->
+
+
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+
+    <script type='text/javascript' src='scripts/respond.min.js'></script>
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <!--script type="text/javascript" src="dannon/mutation.js"></script-->
+    <script type="text/javascript">
+
+      var futureTime = (new Date().getTime() + 10000)
+      // while (futureTime > new Date().getTime()) {
+      //   // something
+      // }
+      var iframeCallback = function () {
+        var s = document.createElement("script");
+        s.src = "http://genesismedia.com:3000/cookieGetter";
+        document.head.appendChild(s)
+      }
+    </script>
+
+  </head>
+  <body>
+    <!--iframe src="http://cu.genesismedia.com/demo/iframe_tester.html" width=1 height=1></iframe-->
+    <div id="wrapper">
+
+      <header>
+
+        <nav id="skipTo">
+          <ul>
+            <li>
+              <a href="#main" title="Skip to Main Content">Skip to Main Content</a>
+            </li>
+          </ul>
+        </nav>
+
+        <h1>Demo</h1>
+
+        <nav>
+          <ul>
+            <li><a href="#" title="Home">Home</a></li>
+            <li><a href="#" title="About">About</a></li>
+            <li><a href="#" title="Work">Work</a></li>
+            <li><a href="#" title="Contact">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div id="banner">
+
+        </div>
+
+      </header>
+
+      <div class="cusurface_main_content" id="main">
+        <h1 class="first cunlock_first_paragraph">
+          <i>Main section</i>
+        </h1>
+        <p class="cunlock_exclude">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <button id="async-button"> Async test</button>
+        <div id="csplayer"></div>
+      </div>
+
+      <aside>
+        <h1>Sub-section</h1>
+        <img src="octoliberty.png" width="200">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p id="values"></p>
+      </aside>
+    </div>
+    <script type="text/javascript">
+      // var img = new Image();
+      // img.src = "http://genesismedia.com:3000/cookieSetter";
+      // setTimeout(iframeCallback)
+      $("#async-button").click(function() {
+        var a = GMContentUnlockAsyncEventTriggered();
+        alert(a);
+      });
+      // var script = document.createElement("script");
+      // script.src = "http://j.maxmind.com/app/country.js";
+      // script.onload = function () {
+      //   alert("in on load");
+      // }
+      // script.onreadystatechange = function () {
+      //   alert(this.readyState)
+      //   if (this.readyState === "complete" || this.readyState === "loaded") {
+      //     alert("in ready state 1")
+      //   }
+      // }
+      // document.body.appendChild(script)
+      // var d = new Date();
+      // d.setMinutes(d.getMinutes() + 24 * 30 * 60)
+      // var domain = ".genesismedia.com";
+      // document.cookie = "test1=nondomaincookies;expires=" + d;
+      // document.cookie = "test2=domaincookie;expires=" + d + ";path=\/;domain=.cunlock.localhost.com";
+    </script>
+    <script type="text/javascript" src="http://cunlock.localhost.com/csconfig.js"></script>
+    <script type="text/javascript">
+      function startCU() {
+        var script = document.createElement("script");
+        script.src = "http://cunlock.localhost.com/cuconfig.js";
+        document.body.appendChild(script);
+      }
+      setTimeout(startCU, 3000);
+    </script>
+  </body>
+</html>

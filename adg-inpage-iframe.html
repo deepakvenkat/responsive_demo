@@ -1,0 +1,35 @@
+<html>
+<head>
+  <title></title>
+</head>
+
+<body>
+<script type="text/javascript">
+  var config = {
+    skip_time : 2,
+    intercept_id : 2001,
+    css_path : "#adg-main",
+    passback_url : "http://www.passbackurl.com",
+    autoplay : false,
+    countdown_after_play : true,
+    frameBuster : "http://cunlock.localhost.com/adg/build/frameBuster.html",
+    excluded_browsers : "IE7, Opera",
+    ad_url : "http://rtr.innovid.com/r1.53e128ae0715e7.35544741;cb=357377117]",
+    // ad_url : "http://pubads.g.doubleclick.net/gampad/ads?sz=640x360&iu=/6062/iab_vast_samples/skippable&ciu_szs=300x250,728x90&impl=s&gdfp_req=1&env=vp&output=xml_vast2&unviewed_position_start=1&url=[referrer_url]&correlator=[timestamp]",
+    is_white_list : true
+  }
+  var querystring = "";
+  for (var i in config) {
+    if (config.hasOwnProperty(i)) {
+      querystring += (i + "=" + encodeURIComponent(config[i]) + "&");
+    }
+  }
+  var src = "http://adgenesis.localhost.com/adg/build/config.js?";
+  var scr = document.createElement("script");
+  scr.src = src + querystring;
+  scr.id = "gm-script-tag";
+  document.body.appendChild(scr);
+</script>
+<!-- <script type="text/javascript" id="gm-script-tag" src="http://adgenesis.localhost.com/adg/build/config.js?skip_time=10&intercept_id=2001&autoplay=true&passback_url=http%3A%2F%2Fpassbackurl.com&ad_url=http%3A%2F%2Frtr.innovid.com%2Fr1.53e128ae0715e7.35544741%3Bcb%3D357377117&frameBuster=http%3A%2F%2Fcunlock.localhost.com%2Fadg%2Fbuild%2FframeBuster.html&excluded_browsers=IE7,Opera&autoplay=false&css_path=%23main&is_white_list=true"></script> -->
+</body>
+</html>

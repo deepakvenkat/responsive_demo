@@ -1,0 +1,32 @@
+/* ---- [
+    !!** image.css used in conjunction with secureimage.css **!!
+        The following CSS files use this to display images
+            base.css
+        make sure to add the same id or class calls into secureimage.css
+] ---- */
+
+/* ---- [ base.css ] ---- */
+body{background:url("http://images.meredith.com/fc/images/template/shell/bg_main.gif") repeat;}
+
+a.smPink{background:url("http://images.meredith.com/parents/images/template/shell/smPinkbuttonL.gif") no-repeat left top;}
+a.smPink span{background:url("http://images.meredith.com/parents/images/template/shell/smPinkbuttonR.gif") no-repeat right top;}
+
+.searchBGBox{background:url("http://images.meredith.com/fc/images/template/shell/searchBg_231.gif") no-repeat;}
+
+#menuWrap {background:url("http://images.meredith.com/fc/images/template/shell/nav/navBg.png") no-repeat;}
+
+.fpPromo a{background:url(http://images.meredith.com/fc/images/template/DreamFamilyVacSweeps.png) no-repeat;}
+
+/*persistent module tabs w/ cozi*/
+#pModTabs #tabheader li.bulb span{background:url("http://images.meredith.com/parents/images/template/shell/icons/new.gif") no-repeat 0 4px;padding-left:20px;}
+#pModTabs #tabheader li.calendar span{background:url("http://images.meredith.com/parents/images/template/shell/icons/calendar.gif") no-repeat 0 4px;padding-left:20px;}
+#pModTabs #tabheader li.win span{background:url("http://images.meredith.com/parents/images/template/shell/icons/win.gif") no-repeat 0 4px;padding-left:19px;}
+
+/* ---- [ Slideshows ] ---- */
+#viewBtns .tab{background:url("http://images.meredith.com//fc/images/template/shell/icons/thumbnail_squares.gif") no-repeat 10px center #fff;}
+
+/* ----[Outbrain]--- */
+#outbrainContainer{background:url("http://images.meredith.com/fc/images/template/shell/bg_border.gif");}
+
+.slideshowNav .ssNext .ssNextArrow{background: url("http://images.meredith.com/fc/images/template/shell/buttons/btn_next.gif") no-repeat;}
+.slideshowNav .ssPrev .ssPrevArrow{background: url("http://images.meredith.com/fc/images/template/shell/buttons/btn_prev.gif") no-repeat;}
