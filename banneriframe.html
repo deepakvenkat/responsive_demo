@@ -1,0 +1,46 @@
+<html>
+<head>
+  <title></title>
+</head>
+
+<body>
+<script type="text/javascript">
+  var d = (new Date()).getTime()
+  var adg_config = {
+    // ad_url : "http://adserver.genesismediaus.com/call/pubj/81352/589162/35287/M/__TIMESTAMP__/?",
+    //Filling direct
+    // ad_url: "http://ad.crwdcntrl.net/5/c=1890/pe=y?http://adserver.genesismediaus.com/ac?out=js&nwid=1316&siteid=90679&pgid=589411&fmtid=35261&visit=m&tmstp=[timestamp]&clcturl=[countgo]&tgt=abbr%3D${aud_ids:%3Babbr%3D}",
+    //Filling pubmatic
+    ad_url : "http://ad.crwdcntrl.net/5/c=1890/pe=y?http://adserver.genesismediaus.com/ac?out=js&nwid=1316&siteid=80679&pgid=599350&fmtid=35261&visit=m&tmstp=[timestamp]&clcturl=[countgo]&tgt=abbr%3D${aud_ids:%3Babbr%3D}",
+    mode : "display",
+    intercept_id : "1001",
+    frameBuster : "http://cunlock.localhost.com/adg/build/frameBuster.html",
+    mobile_display_intercept_id: '1001',
+    //Filling Direct
+    // mobile_display_ad_url :"http://ad.crwdcntrl.net/5/c=1890/pe=y?http://adserver.genesismediaus.com/ac?out=js&nwid=1316&siteid=90679&pgid=589411&fmtid=35261&visit=m&tmstp=[timestamp]&clcturl=[countgo]&tgt=abbr%3D${aud_ids:%3Babbr%3D}",
+    // mobile_display_ad_url: "http://ad.crwdcntrl.net/5/c=1890/pe=y?http://adserver.genesismediaus.com/ac?out=js&nwid=1316&siteid=80679&pgid=598504&fmtid=35261&visit=m&tmstp=[timestamp]&clcturl=[countgo]&tgt=abbr%3D${aud_ids:%3Babbr%3D}",  //Mobile Stick 728x90
+    //Filling Pubmatic
+    mobile_display_ad_url :"http://ad.crwdcntrl.net/5/c=1890/pe=y?http://adserver.genesismediaus.com/ac?out=js&nwid=1316&siteid=80679&pgid=599350&fmtid=35261&visit=m&tmstp=[timestamp]&clcturl=[countgo]&tgt=abbr%3D${aud_ids:%3Babbr%3D}",
+    //Default
+    // mobile_display_ad_url : "http://adserver.genesismediaus.com/ac?out=js&nwid=1316&siteid=80679&pgid=595753&fmtid=35261&tgt=[sas_target]&visit=m&tmstp=[timestamp]&clcturl=[countgo]",
+    // display_ad_url: "http://adserver.genesismediaus.com/call2/pubmj/80679/589411/35261/M/[timestamp]/[target]?[countgo]",
+    // display_ad_url: 'http://adserver.genesismediaus.com/call2/pubmj/80679/589411/35261/M/[timestamp]',
+    //Filling
+    includeMobile : true
+  }
+  var querystring = "";
+  for (var i in adg_config) {
+    if (adg_config.hasOwnProperty(i)) {
+      querystring += (i + "=" + encodeURIComponent(adg_config[i]) + "&");
+    }
+  }
+  var src = "http://adgenesis.localhost.com/adg/build/config.js?";
+  var scr = document.createElement("script");
+  scr.src = src + querystring;
+  scr.id = "gm-script-tag";
+  document.body.appendChild(scr);
+</script>
+<!-- <script type="text/javascript" id="gm-script-tag" src="http://adgenesis.localhost.com/adg/build/config.js?skip_time=10&intercept_id=2001&autoplay=true&passback_url=http%3A%2F%2Fpassbackurl.com&ad_url=http%3A%2F%2Frtr.innovid.com%2Fr1.53e128ae0715e7.35544741%3Bcb%3D357377117&frameBuster=http%3A%2F%2Fcunlock.localhost.com%2Fadg%2Fbuild%2FframeBuster.html&excluded_browsers=IE7,Opera&autoplay=false&css_path=%23main&is_white_list=true"></script> -->
+<!-- <script type="text/javascript" id="gm-script-tag" src="http://adgenesis.localhost.com/adg/build/config.js?skip_time=10&intercept_id=1001&autoplay=true&ad_url=zzzhttp%3A%2F%2Frtr.innovid.com%2Fr1.53e128ae0715e7.35544741%3Bcb%3D357377117&frameBuster=http%3A%2F%2Fdemoadg.localhost.com%2FframeBuster.html&excluded_browsers=IE7,Opera,Chrome&autoplay=true&css_path=zzz%23adg-main&is_white_list=false&volume=low&view_url=http%3A%2F%2Fadgviewurl.com&click_url=http%3A%2F%2Fadgclickurl.com&autoplay_muted=true&publisher_name=RadioOnline&site_id=123456&passback_tag=%3Cscript%20type%3D%27text%2Fjavascript%27%20src%3D%27http%3A%2F%2Fwww.googletagservices.com%2Ftag%2Fjs%2Fgpt.js%27%3E%0A%20%20%20%20googletag.pubads().definePassback(%271008049%2Frectangle_passback%27%2C%20%5B%5B300%2C250%5D%5D).setTargeting(%27network%27%2C%5B%27openx%27%5D).display()%3B%3C%2Fscript%3E"></script> -->
+</body>
+</html>

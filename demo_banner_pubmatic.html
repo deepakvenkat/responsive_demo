@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="keywords" content="news breaking news business">
+		<title> Demo | Responsive Web</title>
+		<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
+		<link href="styles/main.css" type="text/css" rel="stylesheet">
+
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+
+		<script type='text/javascript' src='scripts/respond.min.js'></script>
+
+  	     <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+  	     <!-- // <script type="text/javascript" src="http://adgenesis.localhost.com/adg/build/data.js"></script> -->
+  	     <!-- // <script type="text/javascript" src="http://adgenesis.localhost.com/adg/build/adg.js"></script> -->
+
+          <style type="text/css">
+            #adg-main {
+              visibility : hidden;
+              height : 0px;
+              width : 600px;
+            }
+            #cuplayer_wreapper {
+            	width : 640px;
+            	height : 480px;
+            }
+          </style>
+          <!-- Config on the page -->
+`
+               <!-- Iframe with adg on the page -->
+                  <!--script type="text/javascript" src="http://cunlock.localhost.com/demo/adg.js"></script-->
+                  <!-- <iframe src="http://someotherdomain.com/demo/adgiframe.html" width=0 height=0></iframe> -->
+            <!-- <iframe src="http://someotherdomain.com/demo/banneriframe.html"></iframe> -->
+
+            <!-- Config insde DFP no frame buster. No ADG on page. data on page -->
+            <!-- <iframe src="http://someotherdomain.com/demo/banneriframe.html"></iframe> -->
+
+	</head>
+	<body>
+
+		<!-- PubMatic ad tag (Javascript) : GenesisMedia_Test_Web_728x90 | http://www.genesismedia.com/ | 728 x 90 Leaderboard-728X90 -->
+	<script type="text/javascript">
+		function load(params, successCB, failureCB) {
+		var xhr = new XMLHttpRequest();
+		if (!params.url){
+			console.warn("GMData.XMLHttpRequest - AJAX: URL not present");
+			return;
+		}
+		xhr.open(params.method || 'GET', params.url, true);
+		// xhr.setRequestHeader("User-Agent", navigator.userAgent);
+        xhr.setRequestHeader("Accept-Language", "en-US,en;q=0.5");
+        xhr.setRequestHeader("RLNClientIpAddr", "50.75.193.138");
+        xhr.onload = successCB;
+		if (failureCB){
+            xhr.onerror = failureCB;
+        }
+
+		xhr.onreadystatechange = function () {
+			if (this.readyState === 4) {
+				if (successCB){
+                    successCB(this.response);
+                }
+			}
+		};
+		xhr.send(params.data || null);
+	}
+	var url = "http://showads.pubmatic.com/AdServer/AdServerServlet?"
+	var pubmaticConfig = {
+		operId : 102, 
+		pubId : 93915,
+		siteId : 108927,
+		adId : 386061,
+		kadwidth : 320, 
+		kadheight : 50,
+		adtype : 11,
+		pageURL : "radaronline.com", //document.location.href,
+		kltstamp : getTS(),
+		inIframe : window.top === self,
+		timezone : "-4:00",
+		screenResolution : screen.availWidth + "X" + screen.availHeight,
+		ranreq : Math.round(0,1),
+		adPosition : "-1X-1",
+		adVisibility : 1,
+		cors: true
+	};
+
+	  var querystring = "";
+	  for (var i in pubmaticConfig) {
+	    if (pubmaticConfig.hasOwnProperty(i)) {
+	      querystring += (i + "=" + encodeURIComponent(pubmaticConfig[i]) + "&");
+	    }
+	  }
+
+	// load({
+	//   url : url + querystring
+	// }, function (data) {
+	//   console.log(data);
+	// });
+
+	function getTS() {
+		var d = new Date();
+		var dd = d.getDate()
+			if ( dd < 10 ) dd = '0' + dd
+		var mm = d.getMonth()+1
+			if ( mm < 10 ) mm = '0' + mm
+			var yy = d.getFullYear();
+
+		return yy + "-" +
+				mm + "-" + 
+				dd + " "  + d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
+	}
+	</script>
+		<div id="wrapper">
+
+			<header>
+
+				<nav id="skipTo">
+					<ul>
+						<li>
+							<a href="#main" title="Skip to Main Content">Skip to Main Content</a>
+						</li>
+					</ul>
+				</nav>
+
+				<h1 id="head">Demo</h1>
+
+				<nav>
+					<ul>
+						<li><a href="#" title="Home">Home</a></li>
+						<li><a href="#" title="About">About</a></li>
+						<li><a href="#" title="Work">Work</a></li>
+						<li><a href="#" title="Contact">Contact</a></li>
+					</ul>
+				</nav>
+
+				<div id="banner">
+
+				</div>
+
+			</header>
+
+			<div class="cunlock_main_content" id="main">
+				<h1 class="first cunlok_first_paragraph" id="adg.main">
+				<div id="gmBannerDiv"></div>
+
+                    <i>Main section</i>
+                    </h1 id="head">
+                    <iframe src="http://www.ardmoreite.com/section/widget-genesis-ads?Adsize=728&C=90&Map=genesisvideo&X-IgnoreUserAgent=1" frameborder="0" id="test"></iframe>
+				<p class="cunlock_exclude">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				<button id="async-button"> Async test</button>
+			</div>
+
+			<aside>
+				<h1>Sub-section</h1>
+                      <img src="octoliberty.png" width="200">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dosure lor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                      <p id="values"></p>
+			</aside>
+                <aside>
+                  <h1>another subsection</h1>
+                  <h1>yet another subsection</h1>
+                </aside>
+                
+		</div>
+
+			<script type="text/javascript">
+	//Banner code
+
+		//ADG
+		function getWrapperID() {
+		  return "gmBannerDiv";
+		}
+		function adLoaded(){
+			addTag();
+		}
+
+    $(document).ready(function() {
+        var isOverIFrame = false;
+
+        function processMouseOut() {
+            console.log("IFrame mouse >> OUT << detected.");
+            isOverIFrame = false;
+            top.focus();
+        }
+
+        function processMouseOver() {
+            console.log("IFrame mouse >> OVER << detected.");
+            isOverIFrame = true;
+        }
+
+        function processIFrameClick() {
+            if(isOverIFrame) {
+                // replace with your function
+                // console.log("IFrame >> CLICK << detected. ");
+                var a = new Image();
+                a.src = "http://clickthrupixel.com/clickthru";
+            }
+        }
+
+        function log(message) {
+            var console = document.getElementById("console");
+            var text = console.value;
+            text = text + message + "\n";
+            console.value = text;
+        }
+
+        function attachOnloadEvent(func, obj) {
+            if(typeof window.addEventListener != 'undefined') {
+                window.addEventListener('load', func, false);
+            } else if (typeof document.addEventListener != 'undefined') {
+                document.addEventListener('load', func, false);
+            } else if (typeof window.attachEvent != 'undefined') {
+                window.attachEvent('onload', func);
+            } else {
+                if (typeof window.onload == 'function') {
+                    var oldonload = onload;
+                    window.onload = function() {
+                        oldonload();
+                        func();
+                    };
+                } else {
+                    window.onload = func;
+                }
+            }
+        }
+
+        function init() {
+            var element = document.getElementsByTagName("iframe");
+            for (var i=0; i<element.length; i++) {
+                element[i].onmouseover = processMouseOver;
+                element[i].onmouseout = processMouseOut;
+            }
+            if (typeof window.attachEvent != 'undefined') {
+                top.attachEvent('onblur', processIFrameClick);
+            }
+            else if (typeof window.addEventListener != 'undefined') {
+                top.addEventListener('blur', processIFrameClick, false);
+            }
+        }
+
+        attachOnloadEvent(init);
+    });
+
+
+		</script>
+
+
+		<script type="text/javascript">
+// sas_tmstp=Math.round(Math.random()*10000000000);sas_masterflag=1;
+// function SmartAdServer(sas_pageid,sas_formatid,sas_target) {
+//  if (sas_masterflag==1) {sas_masterflag=0;sas_master='M';} else {sas_master='S';};
+//  document.write('<scr'+'ipt src="http://adserver.genesismediaus.com/call/pubj/' + sas_pageid + '/' + sas_formatid + '/' + sas_master + '/' + sas_tmstp + '/' + escape(sas_target) + '?"></scr'+'ipt>');
+// }
+
+// sas_pageid='81352/589162';	// Page : tech_test/universal_desktop_test_page
+// sas_formatid=35287;		// Format : Universal_Desktop_Sticky 0x0
+// sas_target='';			// Targeting
+// SmartAdServer(sas_pageid,sas_formatid,sas_target);
+</script>
+<noscript>
+<a href="http://adserver.genesismediaus.com/call/pubjumpi/81352/589162/35287/S/[timestamp]/?" target="_blank">
+<img src="http://adserver.genesismediaus.com/call/pubi/81352/589162/35287/S/[timestamp]/?" border="0" alt="" /></a>
+</noscript>
+	</body>
+</html>

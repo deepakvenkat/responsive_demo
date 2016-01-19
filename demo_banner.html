@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="keywords" content="news breaking news business">
+		<title> Demo | Responsive Web</title>
+		<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
+		<link href="styles/main.css" type="text/css" rel="stylesheet">
+
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+
+		<script type='text/javascript' src='scripts/respond.min.js'></script>
+
+  	     <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+  	     // <script type="text/javascript" src="http://adgenesis.localhost.com/adg/build/data.js"></script>
+  	     <!-- // <script type="text/javascript" src="http://adgenesis.localhost.com/adg/build/adg.js"></script> -->
+
+          <style type="text/css">
+            #adg-main {
+              visibility : hidden;
+              height : 0px;
+              width : 600px;
+            }
+            #cuplayer_wreapper {
+            	width : 640px;
+            	height : 480px;
+            }
+          </style>
+          <!-- Config on the page -->
+          <!-- // <script type="text/javascript" id="gm-script-tag" src="http://adgenesis.localhost.com/adg/build/config.js?skip_time=10&intercept_id=1&autoplay=true&passback_url=http%3A%2F%2Fpassbackurl.com&ad_url=http%3A%2F%2Fad.doubleclick.net%2Fpfadx%2FN4270.928084.GENESISMEDIA%2FB7992273.4%3Bsz%3D0x0%3Bord%3D244599573%3Bdcmt%3Dtext%2Fxml"></script> -->
+
+               <!-- Iframe with adg on the page -->
+                  <!--script type="text/javascript" src="http://cunlock.localhost.com/demo/adg.js"></script-->
+                  <!-- <iframe src="http://someotherdomain.com/demo/adgiframe.html" width=0 height=0></iframe> -->
+            <!-- <iframe src="http://someotherdomain.com/demo/banneriframe.html"></iframe> -->
+
+            <!-- Config insde DFP no frame buster. No ADG on page. data on page -->
+            <iframe src="http://someotherdomain.com/demo/banneriframe.html"></iframe>
+
+	</head>
+	<body>
+		<!-- PubMatic ad tag (Javascript) : GenesisMedia_Test_Web_728x90 | http://www.genesismedia.com/ | 728 x 90 Leaderboard-728X90 -->
+
+		<div id="wrapper">
+
+			<header>
+
+				<nav id="skipTo">
+					<ul>
+						<li>
+							<a href="#main" title="Skip to Main Content">Skip to Main Content</a>
+						</li>
+					</ul>
+				</nav>
+
+				<h1 id="head">Demo</h1>
+
+				<nav>
+					<ul>
+						<li><a href="#" title="Home">Home</a></li>
+						<li><a href="#" title="About">About</a></li>
+						<li><a href="#" title="Work">Work</a></li>
+						<li><a href="#" title="Contact">Contact</a></li>
+					</ul>
+				</nav>
+
+				<div id="banner">
+
+				</div>
+
+			</header>
+
+			<div class="cunlock_main_content" id="main">
+				<h1 class="first cunlok_first_paragraph" id="adg.main">
+				<div id="gmBannerDiv"></div>
+
+                    <i>Main section</i>
+                    </h1 id="head">
+
+				<p class="cunlock_exclude">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				<button id="async-button"> Async test</button>
+			</div>
+
+			<aside>
+				<h1>Sub-section</h1>
+                      <img src="octoliberty.png" width="200">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dosure lor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                      <p id="values"></p>
+			</aside>
+                <aside>
+                  <h1>another subsection</h1>
+                  <h1>yet another subsection</h1>
+                </aside>
+                
+		</div>
+
+			<script type="text/javascript">
+	//Banner code
+
+		//ADG
+		function getWrapperID() {
+		  return "gmBannerDiv";
+		}
+		function adLoaded(){
+			addTag();
+		}
+		</script>
+
+
+		<script type="text/javascript">
+// sas_tmstp=Math.round(Math.random()*10000000000);sas_masterflag=1;
+// function SmartAdServer(sas_pageid,sas_formatid,sas_target) {
+//  if (sas_masterflag==1) {sas_masterflag=0;sas_master='M';} else {sas_master='S';};
+//  document.write('<scr'+'ipt src="http://adserver.genesismediaus.com/call/pubj/' + sas_pageid + '/' + sas_formatid + '/' + sas_master + '/' + sas_tmstp + '/' + escape(sas_target) + '?"></scr'+'ipt>');
+// }
+
+// sas_pageid='81352/589162';	// Page : tech_test/universal_desktop_test_page
+// sas_formatid=35287;		// Format : Universal_Desktop_Sticky 0x0
+// sas_target='';			// Targeting
+// SmartAdServer(sas_pageid,sas_formatid,sas_target);
+</script>
+<noscript>
+<a href="http://adserver.genesismediaus.com/call/pubjumpi/81352/589162/35287/S/[timestamp]/?" target="_blank">
+<img src="http://adserver.genesismediaus.com/call/pubi/81352/589162/35287/S/[timestamp]/?" border="0" alt="" /></a>
+</noscript>
+	</body>
+</html>

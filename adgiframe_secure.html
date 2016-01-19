@@ -1,0 +1,76 @@
+<html>
+<head>
+  <title></title>
+</head>
+
+<body>
+<script type="text/javascript">
+  var d = (new Date()).getTime()
+  var adg_config = {
+    skip_time :30,
+    intercept_id : '1001',
+    passback_url : "http://www.passbackurl.com",
+    autoplay : true,
+    autoplay_muted : true,
+    countdown_after_play : true,
+    // frameBuster : "http://cunlock.localhost.com/adg/build/frameBuster.html",
+    excluded_browsers : "IE7, Opera",
+    site_id : "shape-12345",
+    publisher_name : "ami",
+    // ad_url : "http://rtr.innovid.com/r1.53e128ae0715e7.35544741;cb=357377117",
+    // ad_url : "http://pubads.g.doubleclick.net/gampad/ads?sz=640x360&iu=/6062/iab_vast_samples/skippable&ciu_szs=300x250,728x90&impl=s&gdfp_req=1&env=vp&output=xml_vast2&unviewed_position_start=1&url=http://www.google.com&correlator=" + d,
+    // ad_url : "http://ad4.liverail.com/?LR_PUBLISHER_ID=83553&LR_SCHEMA=vast2-vpaid",
+    // ad_url : "http://ad4.liverail.com/?LR_ORDER_ID=183538&LR_ORDER_LINE_ID=58212124&LR_PUBLISHER_ID=83553&LR_CREATIVE_ID=247387&LR_SCHEMA=vast2&LR_ADMAP=in::0",
+    // "ad_url" : "http://cunlock.localhost.com:3000/vast",
+    // "ad_url" : "http://cunlock.localhost.com:3000/vast_vpaid",
+    // ad_url : "http://cunlock.localhost.com:3000/vast_empty",
+    // ad_url : "http://vast.brandads.net/vast?line_item=13416452&ba_cb=_ADTIME_",
+    // ad_url : "http://cunlock.localhost.com:3000/something",
+    // ad_url : "http://qa.contentunlock.s3.amazonaws.com/QA_SprintTesting/Sprint56/ADG-CUPlayer/vast.xml",
+    // ad_url : "http://ad4.liverail.com/?LR_PUBLISHER_ID=77387&LR_SCHEMA=vast2-vpaid&LR_AUTOPLAY=1&LR_VIDEO_ID=_ADBNUID_&LR_TITLE=genesis_media&LR_PARTNERS=762505",
+    // ad_url : "http://adserver.adtechus.com/adrawdata/3.0/5372.1/3136182/0/16/ADTECH",
+    // ad_url : "http://adserver.adtechus.com/adrawdata/3.0/5372.1/3241369/0/16/ADTECH;cfp=1",
+    // ad_url : "http://u-ads.adap.tv/a/h/1CW2wE25cbXdL6y_x+HaRT+XMx38Jqq4?cb=[TIMESTAMP]&pet=preroll&pageUrl=[LR_URL]&eov=eov",
+    // ad_url : "http://qa.contentunlock.s3.amazonaws.com/QA_SprintTesting/Sprint56/ADG-CUPlayer/vast.xml",
+    // ad_url : "http://cunlock.localhost.com:3000/third_party",
+    // ad_url : "http://ad4.liverail.com/?LR_ORDER_ID=188323&LR_PUBLISHER_ID=85314&LR_SCHEMA=vast2-vpaid&LR_ADMAP=in::0",
+    // ad_url : "http://ad.crwdcntrl.net/5/c=1890/pe=y?http://adserver.adtechus.com/adrawdata/3.0/5372.1/3501012/0/16/ADTECH;KVabbr=${aud_ids}", //Invalid Liverail
+    // ad_url : "http://ad.crwdcntrl.net/5/c=1890/pe=y?http://adserver.adtechus.com/adrawdata/3.0/5372.1/3501308/0/16/ADTECH;KVabbr=${aud_ids}", //valid Liverail
+    // ad_url : "http://ad4.liverail.com/?LR_ORDER_ID=196180&LR_ORDER_LINE_ID=58235005&LR_PUBLISHER_ID=88666&LR_SCHEMA=vast2-vpaid&LR_ADMAP=in::0",
+    // ad_url: "http://ad4.liverail.com/?LR_ORDER_ID=194977&LR_PUBLISHER_ID=88666&LR_SCHEMA=vast2-vpaid&LR_ADMAP=in::0",   //LIVERAIL third party vast
+    // ad_url : "http://ad.crwdcntrl.net/5/c=1890/pe=y?http://adserver.adtechus.com/adrawdata/3.0/5372.1/3603335/0/16/ADTECH;KVabbr=${aud_ids};KVst=__KVST__;KViid=__KVIID__;KVcap=__KVCAP__;KVap=__KVAP__;KVapm=__KVapm__", //TubeMogul RTB,
+    // ad_url: "http://ad.crwdcntrl.net/5/c=1890/pe=y?http://adserver.adtechus.com/adrawdata/3.0/5372.1/3545630/0/16/ADTECH;KVabbr=${aud_ids};KVst=__KVST__;KViid=__KVIID__;KVcap=__KVCAP__;KVap=__KVAP__;KVapm=__KVapm__", //videology,
+    // ad_url : "http://ad.crwdcntrl.net/5/c=1890/pe=y?http://adserver.genesismediaus.com/ac?siteid=79118&pgid=577836&fmtid=31360&ab=1&oc=1&out=vast&ps=1&pb=0&visit=S&vcn=c&tgt=abbr%3D${aud_ids:%3Babbr%3D};st%3D__KVST__;iid%3D__KVIID__;cap%3D__KVCAP__;ap%3D__KVAP__;apm%3D__KVapm__",
+    // ad_url : "http://cdn.tvgenesis.tv.s3.amazonaws.com/Testpages/alex/sheeesh.xml",
+    // ad_url : "http://ad.crwdcntrl.net/5/c=1890/pe=y?http://adserver.genesismediaus.com/ac?siteid=79118&pgid=577985&fmtid=31360&ab=1&oc=1&out=vast&ps=1&pb=0&visit=S&vcn=c&tsmp=[timestamp]&tgt=abbr%3D${aud_ids:%3Babbr%3D};st%3D__KVST__;iid%3D__KVIID__;cap%3D__KVCAP__;ap%3D__KVAP__;apm%3D__KVapm__", //Smart Videology (Video Works)
+    // ad_url: "http://ad.crwdcntrl.net/5/c=1890/pe=y?http://adserver.adtechus.com/adrawdata/3.0/5372.1/3462337/0/16/ADTECH;KVabbr=${aud_ids};KVst=__KVST__;KViid=__KVIID__;KVcap=__KVCAP__;KVap=__KVAP__;KVapm=__KVapm__",
+    // ad_url: "http://ad.crwdcntrl.net/5/c=1890/pe=y?http://adserver.adtechus.com/adrawdata/3.0/5372.1/3507978/0/16/ADTECH;KVabbr=${aud_ids};KVst=__KVST__;KViid=__KVIID__;KVcap=__KVCAP__;KVap=__KVAP__;KVapm=__KVapm__", // Liverail FLV
+    // ad_url: "http://ad.crwdcntrl.net/5/c=1890/pe=y?http://adserver.adtechus.com/adrawdata/3.0/5372.1/3510531/0/16/ADTECH;KVabbr=${aud_ids};KViid=__KVIID__;KVcap=__KVCAP__;KVap=__KVAP__;KVapm=__KVapm__", //Yahoo Adtech TPP
+    // ad_url : "https://ad.crwdcntrl.net/5/c=1890/pe=y?http://adserver.genesismediaus.com/ac?siteid=79118&pgid=577985&fmtid=31360&ab=1&oc=1&out=vast&ps=1&pb=0&visit=S&vcn=c&tsmp=[timestamp]&tgt=abbr%3D${aud_ids:%3Babbr%3D};st%3D__KVST__;iid%3D__KVIID__;cap%3D__KVCAP__;ap%3D__KVAP__;apm%3D__KVapm__", //Smart Videology (Video Works)
+    ad_url : "http://ad.crwdcntrl.net/5/c=1890/pe=y?http://adserver.genesismediaus.com/ac?siteid=79477&pgid=585501&fmtid=31360&ab=1&oc=1&out=vast&ps=1&pb=0&visit=S&vcn=c&tmstp=[timestamp]&tgt=abbr%3D${aud_ids:%3Babbr%3D};st%3D__KVST__;iid%3D__KVIID__;cap%3D__KVCAP__;ap%3D__KVAP__;apm%3D__KVapm__",
+    ad_url : "http://ad.crwdcntrl.net/5/c=1890/pe=y?http://adserver.genesismediaus.com/ac?siteid=79118&pgid=578214&fmtid=31360&ab=1&oc=1&out=vast&ps=1&pb=0&visit=S&vcn=c&tmstp=[timestamp]&tgt=abbr%3D${aud_ids:%3Babbr%3D};st%3D__KVST__;iid%3D__KVIID__;cap%3D__KVCAP__;ap%3D__KVAP__;apm%3D__KVapm__",
+    is_white_list : false,
+    referral_categories : "test",
+    css_path : "#adg-main > div",
+    // css_path : "body > div.trb_allContentWrapper > div.trb_Article_panelWrapper > div > article > section > div > div:nth-child(1) > p:nth-child(3)",
+    // css_path : "#main",
+    volume : "low",
+    passback_url : "http://passback.com/passback.js"
+    // passback_tag : "%3Cscript%20type%3D'text%2Fjavascript'%20src%3D'http%3A%2F%2Fwww.googletagservices.com%2Ftag%2Fjs%2Fgpt.js'%3Egoogletag.pubads().defineP…5D%5D).setTargeting('network'%2C%5B'openx'%5D).display()%3B%3C%2Fscript%3E"
+  }
+  var querystring = "";
+  for (var i in adg_config) {
+    if (adg_config.hasOwnProperty(i)) {
+      querystring += (i + "=" + encodeURIComponent(adg_config[i]) + "&");
+    }
+  }
+  var src = "https://localhost/adg/build/config.js?";
+  var scr = document.createElement("script");
+  scr.src = src + querystring;
+  scr.id = "gm-script-tag";
+  document.body.appendChild(scr);
+</script>
+<!-- <script type="text/javascript" id="gm-script-tag" src="http://adgenesis.localhost.com/adg/build/config.js?skip_time=10&intercept_id=2001&autoplay=true&passback_url=http%3A%2F%2Fpassbackurl.com&ad_url=http%3A%2F%2Frtr.innovid.com%2Fr1.53e128ae0715e7.35544741%3Bcb%3D357377117&frameBuster=http%3A%2F%2Fcunlock.localhost.com%2Fadg%2Fbuild%2FframeBuster.html&excluded_browsers=IE7,Opera&autoplay=false&css_path=%23main&is_white_list=true"></script> -->
+<!-- <script type="text/javascript" id="gm-script-tag" src="http://adgenesis.localhost.com/adg/build/config.js?skip_time=10&intercept_id=1001&autoplay=true&ad_url=zzzhttp%3A%2F%2Frtr.innovid.com%2Fr1.53e128ae0715e7.35544741%3Bcb%3D357377117&frameBuster=http%3A%2F%2Fdemoadg.localhost.com%2FframeBuster.html&excluded_browsers=IE7,Opera,Chrome&autoplay=true&css_path=zzz%23adg-main&is_white_list=false&volume=low&view_url=http%3A%2F%2Fadgviewurl.com&click_url=http%3A%2F%2Fadgclickurl.com&autoplay_muted=true&publisher_name=RadioOnline&site_id=123456&passback_tag=%3Cscript%20type%3D%27text%2Fjavascript%27%20src%3D%27http%3A%2F%2Fwww.googletagservices.com%2Ftag%2Fjs%2Fgpt.js%27%3E%0A%20%20%20%20googletag.pubads().definePassback(%271008049%2Frectangle_passback%27%2C%20%5B%5B300%2C250%5D%5D).setTargeting(%27network%27%2C%5B%27openx%27%5D).display()%3B%3C%2Fscript%3E"></script> -->
+</body>
+</html>
