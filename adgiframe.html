@@ -7,87 +7,31 @@
 <script type="text/javascript">
   var d = (new Date()).getTime()
   var adg_config = {
-    skip_time : 15,
+    skip_time : 5,
     max_skip_time : 15,
     dynamic_skip : false,
-    intercept_id : '1001',
+    intercept_id : '9001',
     passback_url : "http://www.passbackurl.com",
-    autoplay : true,
-    autoplay_muted : false,
-    countdown_after_play : true,
-    // frameBuster : "http://cunlock.localhost.com/adg/build/frameBuster.html",
+    // autoplay_muted : false,
+    // volume : "muted",
+    frameBuster : "http://cunlock.localhost.com/adg/build/frameBuster.html",
     excluded_browsers : "IE7, Opera",
     site_id : "shape-12345",
     publisher_name : "ami",
-    
-    // //Viewability Task Force 
-    // ad_url : "http://ad.crwdcntrl.net/5/c=1890/pe=y?http://adserver.adtechus.com/adrawdata/3.0/5372.1/3638831/0/16/ADTECH;KVabbr=${aud_ids}",//Videology
-
-    // ad_url : "https://adserver.genesismediaus.com/ac?siteid=79119&pgid=587070&fmtid=31360&ab=1&oc=1&out=vast&ps=1&pb=0&visit=S&vcn=s&tmstp=[timestamp]&tgt=abbr%3D${aud_ids:%3Babbr%3D};st%3D__KVST__;iid%3D__KVIID__;cap%3D__KVCAP__;ap%3D__KVAP__;apm%3D__KVapm__",//TubeMogul
-
-    // ad_url : "http://ad.crwdcntrl.net/5/c=1890/pe=y?http://adserver.adtechus.com/adrawdata/3.0/5372.1/3584911/0/16/ADTECH;KVabbr=${aud_ids}", //Adapt adtech
-    // ad_url : "http://ad.crwdcntrl.net/5/c=1890/pe=y?http://adserver.genesismediaus.com/ac?siteid=80325&pgid=590511&fmtid=31360&ab=1&oc=1&out=vast&ps=1&pb=0&visit=S&vcn=c&tmstp=[timestamp]&tgt=abbr%3D$%7Baud_ids:%3Babbr%3D%7D;st%3D__KVST__;iid%3D__KVIID__;cap%3D__KVCAP__;ap%3D__KVAP__;apm%3D__KVapm__",
-    // ad_url : "http://ad.crwdcntrl.net/5/c=1890/pe=y?http://adserver.adtechus.com/adrawdata/3.0/5372.1/3638832/0/16/ADTECH;KVabbr=${aud_ids}", //ADAP Liverail
-    // ad_url : "http://ad.crwdcntrl.net/5/c=1890/pe=y?http://adserver.genesismediaus.com/ac?siteid=80325&pgid=590524&fmtid=31360&ab=1&oc=1&out=vast&ps=1&pb=0&visit=S&vcn=c&tmstp=[timestamp]&tgt=abbr%3D$%7Baud_ids:%3Babbr%3D%7D;st%3D__KVST__;iid%3D__KVIID__;cap%3D__KVCAP__;ap%3D__KVAP__;apm%3D__KVapm__",
-
-    // ad_url : "http://adserver.genesismediaus.com/ac?siteid=79119&pgid=587282&fmtid=31360&ab=1&tgt=&oc=1&out=vast&ps=1&pb=0&visit=S&vcn=s&tmstp=[timestamp]", //Tube Mogul Smart
-
-    //Smart Ad server always fills
-    // ad_url : "http://ad.crwdcntrl.net/5/c=1890/pe=y?http://adserver.genesismediaus.com/ac?siteid=79118&pgid=577983&fmtid=31360&ab=1&oc=1&out=vast&ps=1&pb=0&visit=S&vcn=c&tmstp=[timestamp]&tgt=abbr%3D${aud_ids:%3Babbr%3D};st%3D__KVST__;iid%3D__KVIID__;cap%3D__KVCAP__;ap%3D__KVAP__;apm%3D__KVapm__",
-    // ad_url : "http://us.xs.mookie1.com/r?width=1&height=1&gmttb=1&gmti=xs_us_video&gmtctrl=8&gmtt=vast2&gmtprod=video&gmttu=26182&gmtcp=outstream&gmtpn=Genesis&gmtr=[CACHEBUSTER]&gmth=[DOMAIN_PAGE]",
-    // ad_url : "http://ad4.liverail.com/?LR_PUBLISHER_ID=77387&LR_TITLE=[INSERT_PAGE_TITLE]&LR_SCHEMA=vast2-vpaid&LR_AUTOPLAY=1&LR_VIDEO_ID=_ADBNUID_&LR_VERTICALS=videology&LR_CONTENT=1&LR_DESCRIPTION=adgenesis_outstream&LR_VIDEO_DURATION=120&LR_TIMEOUT_ADSOURCE=7]]%3E",
-
-    // ad_url : "http://ad.crwdcntrl.net/5/c=1890/pe=y?http://adserver.genesismediaus.com/ac?siteid=79118&pgid=577988&fmtid=31360&ab=1&oc=1&out=vast&ps=1&pb=0&visit=S&vcn=c&tmstp=[timestamp]&tgt=abbr%3D${aud_ids:%3Babbr%3D};st%3D__KVST__;iid%3D__KVIID__;cap%3D__KVCAP__;ap%3D__KVAP__;apm%3D__KVapm__",
-    // ad_url : "http://ad.crwdcntrl.net/5/c=1890/pe=y?http://adserver.genesismediaus.com/ac?siteid=79457&pgid=579634&fmtid=31360&ab=1&oc=1&out=vast&ps=1&pb=0&visit=S&vcn=c&tmstp=1444161578507&tgt=abbr%3D$%7Baud_ids:%3Babbr%3D%7D;st%3D15;iid%3D1003;cap%3Dtrue;ap%3Dtrue;apm%3Dtrue;ss%3Dcdn;ss%3DTestpages;sp%3DTestpages",
-    // ad_url : "http://adserver.genesismediaus.com/ac?siteid=71346&pgid=538438&fmtid=31360&ab=1&oc=1&out=vast&ps=1&pb=0&visit=S&vcn=c&tmstp=1444254700202&tgt=abbr=;st=22;iid=1001;cap=true;ap=true;apm=false;ss=videos;sp=videos",
-    // ad_url : "https://ad.crwdcntrl.net/5/c=1890/pe=y?http://adserver.genesismediaus.com/ac?siteid=79118&pgid=578214&fmtid=31360&ab=1&oc=1&out=vast&ps=1&pb=0&visit=S&vcn=c&tmstp=[timestamp]&tgt=abbr%3D${aud_ids:%3Babbr%3D};st%3D__KVST__;iid%3D__KVIID__;cap%3D__KVCAP__;ap%3D__KVAP__;apm%3D__KVapm__",
-    // ad_url : "http://ad.crwdcntrl.net/5/c=1890/pe=y?http://adserver.genesismediaus.com/ac?siteid=79118&pgid=597525&fmtid=31360&ab=1&oc=1&out=vast&ps=3&pb=0&visit=S&vcn=c&tmstp=[timestamp]&tgt=abbr%3D${aud_ids:%3Babbr%3D};st%3D__KVST__;iid%3D__KVIID__;cap%3D__KVCAP__;ap%3D__KVAP__;apm%3D__KVapm__",
-    // ad_url : "http://ad.crwdcntrl.net/5/c=1890/pe=y?http://adserver.genesismediaus.com/ac?siteid=80325&pgid=999999&fmtid=31360&ab=1&oc=1&out=vast&ps=1&pb=0&visit=S&vcn=c&tmstp=[timestamp]&tgt=abbr%3D${aud_ids:%3Babbr%3D};st%3D__KVST__;iid%3D__KVIID__;cap%3D__KVCAP__;ap%3D__KVAP__;apm%3D__KVapm__",
-    //IASwith smart
-    // ad_url : "http://adserver.genesismediaus.com/ac?siteid=79118&pgid=592167&fmtid=31360&ab=1&tgt=&oc=1&out=vast&ps=1&pb=0&visit=S&vcn=s&tmstp=[timestamp]",
-    // ad_url : "http://ad.crwdcntrl.net/5/c=1890/pe=y?http://adserver.genesismediaus.com/ac?siteid=79118&pgid=578216&fmtid=31360&ab=1&oc=1&out=vast&ps=1&pb=0&visit=S&vcn=c&tmstp=[timestamp]&tgt=abbr%3D${aud_ids:%3Babbr%3D};st%3D__KVST__;iid%3D__KVIID__;cap%3D__KVCAP__;ap%3D__KVAP__;apm%3D__KVapm__",
-    /** AD POD **/
-    // ad_url : "http://ad.crwdcntrl.net/5/c=1890/pe=y?http://adserver.genesismediaus.com/ac?siteid=79118&pgid=599939&fmtid=31360&ab=1&oc=1&out=vast&ps=2&pb=0&visit=S&vcn=c&tmstp=[timestamp]&tgt=abbr%3D${aud_ids:%3Babbr%3D};st%3D__KVST__;iid%3D__KVIID__;cap%3D__KVCAP__;ap%3D__KVAP__;apm%3D__KVapm__",
-    //First defaults
-    // ad_url : "http://ad.crwdcntrl.net/5/c=1890/pe=y?http://adserver.genesismediaus.com/ac?siteid=79118&pgid=599940&fmtid=31360&ab=1&oc=1&out=vast&ps=3&pb=0&visit=S&vcn=c&tmstp=[timestamp]&tgt=abbr%3D${aud_ids:%3Babbr%3D};st%3D__KVST__;iid%3D__KVIID__;cap%3D__KVCAP__;ap%3D__KVAP__;apm%3D__KVapm__",
-    //All default
-    // ad_url : "http://ad.crwdcntrl.net/5/c=1890/pe=y?http://adserver.genesismediaus.com/ac?siteid=79118&pgid=602253&fmtid=31360&ab=1&oc=1&out=vast&ps=5&pb=0&visit=S&vcn=c&tmstp=[timestamp]&tgt=abbr%3D${aud_ids:%3Babbr%3D};st%3D__KVST__;iid%3D__KVIID__;cap%3D__KVCAP__;ap%3D__KVAP__;apm%3D__KVapm__",
-    //Opportunity default 
-    // ad_url : "http://ad.crwdcntrl.net/5/c=1890/pe=y?http://adserver.genesismediaus.com/ac?siteid=79118&pgid=602244&fmtid=31360&ab=1&oc=1&out=vast&ps=5&pb=0&visit=S&vcn=c&tmstp=[timestamp]&tgt=abbr%3D${aud_ids:%3Babbr%3D};st%3D__KVST__;iid%3D__KVIID__;cap%3D__KVCAP__;ap%3D__KVAP__;apm%3D__KVapm__",
-    // ad_url : "http://ad.crwdcntrl.net/5/c=1890/pe=y?http://adserver.genesismediaus.com/ac?siteid=79118&pgid=599940&fmtid=31360&ab=1&oc=1&out=vast&ps=5&pb=0&visit=S&vcn=c&tmstp=[timestamp]&tgt=abbr%3D${aud_ids:%3Babbr%3D};st%3D__KVST__;iid%3D__KVIID__;cap%3D__KVCAP__;ap%3D__KVAP__;apm%3D__KVapm__",
-    // ad_url:"http://ad.crwdcntrl.net/5/c=1890/pe=y?http://adserver.genesismediaus.com/ac?siteid=79118&pgid=602305&fmtid=31360&ab=1&oc=1&out=vast&ps=11&pb=0&visit=S&vcn=c&tmstp=[timestamp]&tgt=abbr%3D${aud_ids:%3Babbr%3D};st%3D__KVST__;iid%3D__KVIID__;cap%3D__KVCAP__;ap%3D__KVAP__;apm%3D__KVapm__",
-    // ad_url:"http://ad.crwdcntrl.net/5/c=1890/pe=y?http://adserver.genesismediaus.com/ac?siteid=79118&pgid=602252&fmtid=31360&ab=1&oc=1&out=vast&ps=5&pb=0&visit=S&vcn=c&tmstp=[timestamp]&tgt=abbr%3D${aud_ids:%3Babbr%3D};st%3D__KVST__;iid%3D__KVIID__;cap%3D__KVCAP__;ap%3D__KVAP__;apm%3D__KVapm__",
-    // ad_url : "http://ad.crwdcntrl.net/5/c=1890/pe=y?http://adserver.genesismediaus.com/ac?siteid=79118&pgid=597525&fmtid=31360&ab=1&oc=1&out=vast&ps=3&pb=0&visit=S&vcn=c&tmstp=[timestamp]&tgt=abbr%3D${aud_ids:%3Babbr%3D};st%3D__KVST__;iid%3D__KVIID__;cap%3D__KVCAP__;ap%3D__KVAP__;apm%3D__KVapm__", 
-    //All fails with reatil ad error.
-    // ad_url:"http://ad.crwdcntrl.net/5/c=1890/pe=y?http://adserver.genesismediaus.com/ac?siteid=79118&pgid=602253&fmtid=31360&ab=1&oc=1&out=vast&ps=1&pb=0&visit=S&vcn=c&tmstp=[timestamp]&tgt=abbr%3D${aud_ids:%3Babbr%3D};st%3D__KVST__;iid%3D__KVIID__;cap%3D__KVCAP__;ap%3D__KVAP__;apm%3D__KVapm__",
-    //Liverail fails, tremor fails
-    // ad_url : "http://ad.crwdcntrl.net/5/c=1890/pe=y?http://adserver.genesismediaus.com/ac?siteid=79118&pgid=602253&fmtid=31360&ab=1&oc=1&out=vast&ps=2&pb=0&visit=S&vcn=c&tmstp=[timestamp]&tgt=abbr%3D${aud_ids:%3Babbr%3D};st%3D__KVST__;iid%3D__KVIID__;cap%3D__KVCAP__;ap%3D__KVAP__;apm%3D__KVapm__",
-    //Liverail fail tremor fail normal Load
-    // ad_url:"http://ad.crwdcntrl.net/5/c=1890/pe=y?http://adserver.genesismediaus.com/ac?siteid=83952&pgid=602267&fmtid=31360&ab=1&oc=1&out=vast&ps=5&pb=0&visit=S&vcn=c&tmstp=[timestamp]&tgt=abbr%3D${aud_ids:%3Babbr%3D};st%3D__KVST__;iid%3D__KVIID__;cap%3D__KVCAP__;ap%3D__KVAP__;apm%3D__KVapm__",
-    // ad_url : "http://ad.crwdcntrl.net/5/c=1890/pe=y?http://adserver.genesismediaus.com/ac?siteid=79118&pgid=597525&fmtid=31360&ab=1&oc=1&out=vast&ps=3&pb=0&visit=S&vcn=c&tmstp=[timestamp]&tgt=abbr%3D${aud_ids:%3Babbr%3D};st%3D__KVST__;iid%3D__KVIID__;cap%3D__KVCAP__;ap%3D__KVAP__;apm%3D__KVapm__", //waterfall test"
-   // ad_url : "http://ad.crwdcntrl.net/5/c=1890/pe=y?http://adserver.genesismediaus.com/ac?siteid=79118&pgid=577836&fmtid=31360&ab=1&oc=1&out=vast&ps=1&pb=0&visit=S&vcn=c&tmstp=[timestamp]&tgt=abbr%3D${aud_ids:%3Babbr%3D};st%3D__KVST__;iid%3D__KVIID__;cap%3D__KVCAP__;ap%3D__KVAP__;apm%3D__KVapm__",
-    // ad_url : "http://ad.crwdcntrl.net/5/c=1890/pe=y?http://adserver.genesismediaus.com/ac?siteid=79118&pgid=578214&fmtid=31360&ab=1&oc=1&out=vast&ps=1&pb=0&visit=S&vcn=c&tmstp=[timestamp]&tgt=abbr%3D${aud_ids:%3Babbr%3D};st%3D__KVST__;iid%3D__KVIID__;cap%3D__KVCAP__;ap%3D__KVAP__;apm%3D__KVapm__", 
-    // ad_url : "http://ad.crwdcntrl.net/5/c=1890/pe=y?http://adserver.genesismediaus.com/ac?siteid=79118&pgid=577990&fmtid=31360&ab=1&oc=1&out=vast&ps=1&pb=0&visit=S&vcn=c&tmstp=[timestamp]&tgt=abbr%3D${aud_ids:%3Babbr%3D};st%3D__KVST__;iid%3D__KVIID__;cap%3D__KVCAP__;ap%3D__KVAP__;apm%3D__KVapm__",//Smart Youtube TPP
-     // ad_url : "http://ad.crwdcntrl.net/5/c=1890/pe=y?http://adserver.genesismediaus.com/ac?siteid=79118&pgid=577836&fmtid=31360&ab=1&oc=1&out=vast&ps=1&pb=0&visit=S&vcn=c&tmstp=[timestamp]&tgt=abbr%3D${aud_ids:%3Babbr%3D};st%3D__KVST__;iid%3D__KVIID__;cap%3D__KVCAP__;ap%3D__KVAP__;apm%3D__KVapm__",  //Smart VAST Wrapper (Video Works)
-    /* Viewaility*/ 
-    //IAS with liverail 
-    // ad_url : "http://ad.crwdcntrl.net/5/c=1890/pe=y?http://adserver.genesismediaus.com/ac?siteid=79119&pgid=592169&fmtid=31360&ab=1&oc=1&out=vast&ps=1&pb=0&visit=S&vcn=c&tmstp=[timestamp]&tgt=abbr%3D${aud_ids:%3Babbr%3D};st%3D__KVST__;iid%3D__KVIID__;cap%3D__KVCAP__;ap%3D__KVAP__;apm%3D__KVapm__",
-    // ad_url : "http://adserver.genesismediaus.com/video/vpaid?siteid=79118&pgid=577836&fmtid=31360&ab=1&oc=1&out=vast&ps=1&pb=0&visit=S&vcn=c&tmstp=[timestamp]&tgt=st%3D__KVST__;iid%3D__KVIID__;cap%3D__KVCAP__;ap%3D__KVAP__;apm%3D__KVapm__",  //Smart VAST1
-    // ad_url : "http://ad.crwdcntrl.net/5/c=1890/pe=y?http://adserver.genesismediaus.com/ac?siteid=79118&pgid=578216&fmtid=31360&ab=1&oc=1&out=vast&ps=1&pb=0&visit=S&vcn=c&tmstp=[timestamp]&tgt=abbr%3D${aud_ids:%3Babbr%3D};st%3D__KVST__;iid%3D__KVIID__;cap%3D__KVCAP__;ap%3D__KVAP__;apm%3D__KVapm__", 
-    // ad_url : "http://adserver.genesismediaus.com/ac?siteid=79118&pgid=602305&fmtid=31360&ab=1&oc=1&out=vast&ps=11&pb=0&visit=S&vcn=c&tmstp=[timestamp]&tgt=abbr%3D${aud_ids:%3Babbr%3D};st%3D__KVST__;iid%3D__KVIID__;cap%3D__KVCAP__;ap%3D__KVAP__;apm%3D__KVapm__",
-    // ad_url : "http://adserver.genesismediaus.com/ac?siteid=86468&pgid=609605&fmtid=31360&ab=1&oc=1&out=vast&ps=1&pb=0&visit=S&vcn=c&tmstp=[timestamp]&tgt=abbr%3D$%7Baud_ids:%3Babbr%3D%7D;st%3D__KVST__;iid%3D__KVIID__;cap%3D__KVCAP__;ap%3D__KVAP__;apm%3D__KVapm__",
-    ad_url : "http://adserver.genesismediaus.com/ac?siteid=79118&pgid=612753&fmtid=31360&ab=1&oc=1&out=vast&ps=3&pb=0&visit=S&vcn=c&tmstp=[timestamp]&tgt=abbr%3D${aud_ids:%3Babbr%3D};st%3D__KVST__;iid%3D__KVIID__;cap%3D__KVCAP__;ap%3D__KVAP__;apm%3D__KVapm__",
+    enableNASA : true,
+   
+        ad_url:"https://ad.crwdcntrl.net/5/c=1890/pe=y?http://adserver.genesismediaus.com/ac?siteid=83952&pgid=602267&fmtid=31360&ab=1&oc=1&out=vast&ps=5&pb=0&visit=S&vcn=c&=[timestamp]&tgt=abbr%3D${aud_ids:%3Babbr%3D};st%3D__KVST__;iid%3D__KVIID__;cap%3D__KVCAP__;ap%3D__KVAP__;apm%3D__KVapm__",//
     is_white_list : false,
     referral_categories : "test",
     css_path : "#adg-main",
-    // css_path : "body > div.trb_allContentWrapper > div.trb_Article_panelWrapper > div > article > section > div > div:nth-child(1) > p:nth-child(3)",
-    // css_path : "#main",
-    volume : "low",
+    css_path : "#main",
     passback_url : "http://passback.com/passback.js",
-    // comscore_id : "1234567",
-    // comscore_name : "enterprise"
-    // passback_tag : "%3Cscript%20type%3D'text%2Fjavascript'%20src%3D'http%3A%2F%2Fwww.googletagservices.com%2Ftag%2Fjs%2Fgpt.js'%3Egoogletag.pubads().defineP…5D%5D).setTargeting('network'%2C%5B'openx'%5D).display()%3B%3C%2Fscript%3E"
-    close_button : false
+   
+    close_button : true,
+    view_url : "http://www.test.com/view",
+    click_url : "http://www.test.com/click",
+    allowed_intercepts : "4, 5"
+
   }
   var querystring = "";
   for (var i in adg_config) {
@@ -103,5 +47,6 @@
 </script>
 <!-- <script type="text/javascript" id="gm-script-tag" src="http://adgenesis.localhost.com/adg/build/config.js?skip_time=10&intercept_id=2001&autoplay=true&passback_url=http%3A%2F%2Fpassbackurl.com&ad_url=http%3A%2F%2Frtr.innovid.com%2Fr1.53e128ae0715e7.35544741%3Bcb%3D357377117&frameBuster=http%3A%2F%2Fcunlock.localhost.com%2Fadg%2Fbuild%2FframeBuster.html&excluded_browsers=IE7,Opera&autoplay=false&css_path=%23main&is_white_list=true"></script> -->
 <!-- <script type="text/javascript" id="gm-script-tag" src="http://adgenesis.localhost.com/adg/build/config.js?skip_time=10&intercept_id=1001&autoplay=true&ad_url=zzzhttp%3A%2F%2Frtr.innovid.com%2Fr1.53e128ae0715e7.35544741%3Bcb%3D357377117&frameBuster=http%3A%2F%2Fdemoadg.localhost.com%2FframeBuster.html&excluded_browsers=IE7,Opera,Chrome&autoplay=true&css_path=zzz%23adg-main&is_white_list=false&volume=low&view_url=http%3A%2F%2Fadgviewurl.com&click_url=http%3A%2F%2Fadgclickurl.com&autoplay_muted=true&publisher_name=RadioOnline&site_id=123456&passback_tag=%3Cscript%20type%3D%27text%2Fjavascript%27%20src%3D%27http%3A%2F%2Fwww.googletagservices.com%2Ftag%2Fjs%2Fgpt.js%27%3E%0A%20%20%20%20googletag.pubads().definePassback(%271008049%2Frectangle_passback%27%2C%20%5B%5B300%2C250%5D%5D).setTargeting(%27network%27%2C%5B%27openx%27%5D).display()%3B%3C%2Fscript%3E"></script> -->
+<!-- *.local, 169.254/16 -->
 </body>
 </html>

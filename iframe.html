@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	 <script type="text/javascript">
+	  var d = (new Date()).getTime()
+	  var config = {
+	  	site_id: "Dennis",
+	  	publisher_name: "TestPage",
+	  	comscore_id: "1234567",
+	  	comscore_name: "enterprise_comscore",
+	  	moat_account: "enterprise_moat",
+	  	gp_internal_id: 6221988,
+       	gp_author_id: "Dennis_Malanga",
+	  	frequency_cap: 100,
+	  	mode: "video",
+	  	includeMobile: true,
+	    mobile_display_intercept_id: '1001',
+	    intercept_id : 1001,   
+	   	skip_time : 15,
+	    max_skip_time: 15,
+	    dynamic_skip: true,
+	    volume: "muted",
+	    autoplay_muted: true,
+	    countdown_after_play: false,
+	    close_button: true,
+	    branding: false,
+	    excluded_browsers : "IE7",
+	    filter_referrers: "",
+	    referral_categories: [],
+	    is_white_list : false,
+	    css_path: "#adg_path",
+		//img_asset_path : "http://qa.contentunlock.s3.amazonaws.com/QA_SprintTesting/ADG-Sprint29/ADG-946/build/img/",
+
+	    //ad_url : "https://ad.crwdcntrl.net/5/c=1890/pe=y?http://adserver.genesismediaus.com/ac?siteid=79118&pgid=577836&fmtid=31360&ab=1&oc=1&out=vast&ps=1&pb=0&visit=S&vcn=c&tmstp=[timestamp]&tgt=abbr%3D${aud_ids:%3Babbr%3D};st%3D__KVST__;iid%3D__KVIID__;cap%3D__KVCAP__;ap%3D__KVAP__;apm%3D__KVapm__",  //Smart VAST Wrapper (Video Works)
+		
+		
+       // ad_url : "https://ad.crwdcntrl.net/5/c=1890/pe=y?http://adserver.genesismediaus.com/ac?siteid=79118&pgid=632151&fmtid=31360&/ab=1&oc=1&out=vast&ps=1&pb=0&visit=S&vcn=c&tmstp=[timestamp]&tgt=abbr%3D${aud_ids:%3Babbr%3D};st%3D__KVST__;iid%3D__KVIID__;cap%3D__KVCAP__;ap%3D__KVAP__;apm%3D__KVapm__",  //HTML5 VG
+
+       	// ad_url : "https://ad.crwdcntrl.net/5/c=1890/pe=y?http://adserver.genesismediaus.com/ac?siteid=79118&pgid=577987&fmtid=31360&ab=1&oc=1&out=vast&ps=1&pb=0&visit=S&vcn=c&tmstp=[timestamp]&tgt=abbr%3D${aud_ids:%3Babbr%3D};st%3D__KVST__;iid%3D__KVIID__;cap%3D__KVCAP__;ap%3D__KVAP__;apm%3D__KVapm__", //Smart BrandAds (Video Works)
+
+       	// ad_url : "https://ad.crwdcntrl.net/5/c=1890/pe=y?http://adserver.genesismediaus.com/ac?siteid=79118&pgid=577985&fmtid=31360&ab=1&oc=1&out=vast&ps=1&pb=0&visit=S&vcn=c&tmstp=[timestamp]&tgt=abbr%3D${aud_ids:%3Babbr%3D};st%3D__KVST__;iid%3D__KVIID__;cap%3D__KVCAP__;ap%3D__KVAP__;apm%3D__KVapm__", //Smart Videology (Video Works)
+
+       	// ad_url : "https://ad.crwdcntrl.net/5/c=1890/pe=y?http://adserver.genesismediaus.com/ac?siteid=79118&pgid=577988&fmtid=31360&ab=1&oc=1&out=vast&ps=1&pb=0&visit=S&vcn=c&tmstp=[timestamp]&tgt=abbr%3D${aud_ids:%3Babbr%3D};st%3D__KVST__;iid%3D__KVIID__;cap%3D__KVCAP__;ap%3D__KVAP__;apm%3D__KVapm__", //Smart IndexExchange (Video Works)
+// 
+       	// ad_url : "https://ad.crwdcntrl.net/5/c=1890/pe=y?http://adserver.genesismediaus.com/ac?siteid=79118&pgid=577990&fmtid=31360&ab=1&oc=1&out=vast&ps=1&pb=0&visit=S&vcn=c&tmstp=[timestamp]&tgt=abbr%3D${aud_ids:%3Babbr%3D};st%3D__KVST__;iid%3D__KVIID__;cap%3D__KVCAP__;ap%3D__KVAP__;apm%3D__KVapm__", //Smart TubeMogul (Video Works)
+
+       //	ad_url:"https://ad.crwdcntrl.net/5/c=1890/pe=y?http://adserver.genesismediaus.com/ac?siteid=79118&pgid=594315&fmtid=31360&ab=1&oc=1&out=vast&ps=5&pb=0&visit=S&vcn=c&tmstp=[timestamp]&tgt=abbr%3D${aud_ids:%3Babbr%3D};st%3D__KVST__;iid%3D__KVIID__;cap%3D__KVCAP__;ap%3D__KVAP__;apm%3D__KVapm__",// Smart Innovid
+
+       	// ad_url : "https://ad.crwdcntrl.net/5/c=1890/pe=y?http://adserver.genesismediaus.com/ac?siteid=79118&pgid=577982&fmtid=31360&ab=1&oc=1&out=vast&ps=1&pb=0&visit=S&vcn=c&tmstp=[timestamp]&tgt=abbr%3D${aud_ids:%3Babbr%3D};st%3D__KVST__;iid%3D__KVIID__;cap%3D__KVCAP__;ap%3D__KVAP__;apm%3D__KVapm__",  //Smart FLV
+
+       	ad_url : "https://ad.crwdcntrl.net/5/c=1890/pe=y?http://adserver.genesismediaus.com/ac?siteid=79118&pgid=577983&fmtid=31360&/ab=1&oc=1&out=vast&ps=1&pb=0&visit=S&vcn=c&tmstp=[timestamp]&tgt=abbr%3D${aud_ids:%3Babbr%3D};st%3D__KVST__;iid%3D__KVIID__;cap%3D__KVCAP__;ap%3D__KVAP__;apm%3D__KVapm__",  //Smart MP4
+
+       	// ad_url : "https://ad.crwdcntrl.net/5/c=1890/pe=y?http://adserver.genesismediaus.com/ac?siteid=79118&pgid=578216&fmtid=31360&ab=1&oc=1&out=vast&ps=1&pb=0&visit=S&vcn=c&tmstp=[timestamp]&tgt=abbr%3D${aud_ids:%3Babbr%3D};st%3D__KVST__;iid%3D__KVIID__;cap%3D__KVCAP__;ap%3D__KVAP__;apm%3D__KVapm__", //Smart Liverail VAST
+
+       //	 ad_url : "https://ad.crwdcntrl.net/5/c=1890/pe=y?http://adserver.genesismediaus.com/ac?siteid=79118&pgid=580276&fmtid=31360&ab=1&oc=1&out=vast&ps=1&pb=0&visit=S&vcn=c&tmstp=[timestamp]&tgt=abbr%3D${aud_ids:%3Babbr%3D};st%3D__KVST__;iid%3D__KVIID__;cap%3D__KVCAP__;ap%3D__KVAP__;apm%3D__KVapm__", //Smart IMA VAST 
+
+       	// ad_url : "https://ad.crwdcntrl.net/5/c=1890/pe=y?http://adserver.genesismediaus.com/ac?siteid=79118&pgid=578214&fmtid=31360&ab=1&oc=1&out=vast&ps=1&pb=0&visit=S&vcn=c&tmstp=[timestamp]&tgt=abbr%3D${aud_ids:%3Babbr%3D};st%3D__KVST__;iid%3D__KVIID__;cap%3D__KVCAP__;ap%3D__KVAP__;apm%3D__KVapm__", //Smart Youtube TPP
+
+       	// ad_url : "https://ad.crwdcntrl.net/5/c=1890/pe=y?http://adserver.genesismediaus.com/ac?siteid=79118&pgid= 578212&fmtid=31360&ab=1&oc=1&out=vast&ps=1&pb=0&visit=S&vcn=c&tmstp=[timestamp]&tgt=abbr%3D${aud_ids:%3Babbr%3D};st%3D__KVST__;iid%3D__KVIID__;cap%3D__KVCAP__;ap%3D__KVAP__;apm%3D__KVapm__",  //Smart ViralGains TPP
+
+       	// ad_url : "https://ad.crwdcntrl.net/5/c=1890/pe=y?http://adserver.genesismediaus.com/ac?siteid=79477&pgid=612553&fmtid=31360&ab=1&oc=1&out=vast&ps=1&pb=0&visit=S&vcn=c&tmstp=[timestamp]&tgt=abbr%3D${aud_ids:%3Babbr%3D};st%3D__KVST__;iid%3D__KVIID__;cap%3D__KVCAP__;ap%3D__KVAP__;apm%3D__KVapm__",  //Smart Tremor
+
+       	// ad_url : "https://ad.crwdcntrl.net/5/c=1890/pe=y?http://adserver.genesismediaus.com/ac?siteid=80325&pgid=999999&fmtid=31360&ab=1&oc=1&out=vast&ps=1&pb=0&visit=S&vcn=c&tmstp=[timestamp]&tgt=abbr%3D${aud_ids:%3Babbr%3D};st%3D__KVST__;iid%3D__KVIID__;cap%3D__KVCAP__;ap%3D__KVAP__;apm%3D__KVapm__",  //Smart Default
+
+       	// ad_url : "https://ad.crwdcntrl.net/5/c=1890/pe=y?http://adserver.genesismediaus.com/ac?siteid=79118&pgid=602305&fmtid=31360&ab=1&oc=1&out=vast&ps=11&pb=0&visit=S&vcn=c&tmstp=[timestamp]&tgt=abbr%3D${aud_ids:%3Babbr%3D};st%3D__KVST__;iid%3D__KVIID__;cap%3D__KVCAP__;ap%3D__KVAP__;apm%3D__KVapm__",  //Waterfall 10
+
+       	// ad_url : "https://ad.crwdcntrl.net/5/c=1890/pe=y?http://adserver.genesismediaus.com/ac?siteid=79118&pgid=612753&fmtid=31360&ab=1&oc=1&out=vast&ps=3&pb=0&visit=S&vcn=c&tmstp=[timestamp]&tgt=abbr%3D${aud_ids:%3Babbr%3D};st%3D__KVST__;iid%3D__KVIID__;cap%3D__KVCAP__;ap%3D__KVAP__;apm%3D__KVapm__", //Conde
+
+       	// ad_url:"https://ad.crwdcntrl.net/5/c=1890/pe=y?http://adserver.genesismediaus.com/ac?siteid=79118&pgid=602252&fmtid=31360&ab=1&oc=1&out=vast&ps=5&pb=0&visit=S&vcn=c&tmstp=[timestamp]&tgt=abbr%3D${aud_ids:%3Babbr%3D};st%3D__KVST__;iid%3D__KVIID__;cap%3D__KVCAP__;ap%3D__KVAP__;apm%3D__KVapm__",// brandads,IMA,MP4
+
+       	// ad_url:"https://ad.crwdcntrl.net/5/c=1890/pe=y?http://adserver.genesismediaus.com/ac?siteid=87762&pgid=627540&fmtid=31360&ab=1&oc=1&out=vast&ps=5&pb=0&visit=S&vcn=c&tmstp=[timestamp]&tgt=abbr%3D${aud_ids:%3Babbr%3D};st%3D__KVST__;iid%3D__KVIID__;cap%3D__KVCAP__;ap%3D__KVAP__;apm%3D__KVapm__",// ADG-800 test media file error 
+
+       	// ad_url:"http://vastx.moatads.com/anheuserpointrollvpaid213705610/MensFitness_2015_Michelob_ULTRA_Superior_Coaching_000_NATIONAL_DESKTOP_VID_Men_s_Fitness_Pre_Roll_15s_1x1_Pointroll.xml",
+
+
+       	
+
+	  	passback_tag : "<script type='text/javascript' src='http://www.googletagservices.com/tag/js/gpt.js'>googletag.pubads().definePassback('/35178183/Passback_Test_Unit', [1,1]).display();<\/script>",
+	    view_url: "www.dennisviewpixel.com",
+	    click_url: "www.dennisclickpixel.com"
+	  }
+	  var querystring = "";
+	  for (var i in config) {
+	    if (config.hasOwnProperty(i)) {
+	      querystring += (i + "=" + encodeURIComponent(config[i]) + "&");
+	    }
+	  }
+	  var src = "http://qa.contentunlock.s3.amazonaws.com/QA_SprintTesting/ADG-Sprint29/ADG-946/build/config.js?";
+	  var scr = document.createElement("script");
+	  scr.src = src + querystring;
+	  scr.id = "gm-script-tag";
+	  document.body.appendChild(scr);
+	</script>
+
+
+
+
+
+</body>
+</html>

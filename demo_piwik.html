@@ -11,6 +11,21 @@
 
 		<script type='text/javascript' src='scripts/respond.min.js'></script>
   	     <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+         <!-- Piwik -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//192.241.252.154/piwik/piwik/";
+    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    _paq.push(['setSiteId', 1]);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<noscript><p><img src="//192.241.252.154/piwik/piwik/piwik.php?idsite=1" style="border:0;" alt="" /></p></noscript>
+<!-- End Piwik Code -->
 	<body>
 		<div id="wrapper">
 
@@ -64,5 +79,20 @@
                 </aside>
                 
 		</div>
+        <script type="text/javascript">
+    //   var a = "<script type='text/javascript' src='http://www.googletagservices.com/tag/js/gpt.js'>
+    // googletag.pubads().definePassback('1008049/rectangle_passback', [[300,250]]).setTargeting('network',['openx']).display();
+    // s = document.createElement("script");
+    // s.src = "http://www.googletagservices.com/tag/js/gpt.js";
+    // s.onload =  "alert('in here');googletag.pubads().definePassback('1008049/rectangle_passback', [[300,250]]).setTargeting('network',['openx']).display();"
+    // document.body.appendChild(s);
+
+    $("#press-not-open").click(function () {
+     console.log("press not open");
+    });
+        $("#press-open").click(function () {
+          console.log("press open");
+    });
+    // </script>
 	</body>
 </html>
